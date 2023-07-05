@@ -1,3 +1,4 @@
+import 'package:campus_connect_app/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomPage extends StatefulWidget {
@@ -10,8 +11,9 @@ class WelcomPage extends StatefulWidget {
 class _WelcomPageState extends State<WelcomPage> {
 
   List images=[
-    
-   "11.png",
+   
+   "2f.png",
+   "1f.png"
    
   ];
   @override
@@ -31,12 +33,45 @@ class _WelcomPageState extends State<WelcomPage> {
 
             decoration: BoxDecoration(
               image: DecorationImage(
+                alignment: Alignment.bottomCenter, 
                 image: AssetImage(
+                 
                   "img/"+images[index]
                   ),
+                  fit: BoxFit.contain
+
+                  
                 
               )
             ),
+
+          child: Container(
+            margin:const EdgeInsets.only(top:30,left:10),
+            // alignment: Alignment.topLeft, 
+            child: Row(children: [
+              Column(children: [
+                // const Text(
+                //   "Campus Connect ",
+                //   style: TextStyle(
+                //   fontSize: 20,
+                  
+                //   fontWeight: FontWeight.bold,
+                //   color: Color.fromARGB(255, 0, 0, 0)
+                // ),),
+                
+
+                Image.asset(
+                       alignment: Alignment.topCenter,
+                        "img/cc.png",
+                        
+                        width: 350,
+                        height: 300,
+                        fit: BoxFit.contain,
+                      ),
+                Button(),
+              ],)
+            ],)
+          ),  
           );
 
       }),
