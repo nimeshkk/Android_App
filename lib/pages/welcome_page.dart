@@ -11,9 +11,10 @@ class WelcomPage extends StatefulWidget {
 class _WelcomPageState extends State<WelcomPage> {
 
   List images=[
-   
-   "2f.png",
-   "1f.png"
+
+    "1f.png",
+    "2f.png",
+    
    
   ];
   @override

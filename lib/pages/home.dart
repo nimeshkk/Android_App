@@ -1,5 +1,7 @@
+import 'package:campus_connect_app/pages/event.dart';
 import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
+import 'welcome_Page.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,15 +23,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void navigateToCalendarApp(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) =>CalendarApp1()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final List<String> titles = [
-      "RED",
-      "YELLOW",
-      "BLACK",
-      "CYAN",
-      "BLUE",
-      "GREY",
+      "Bus Schedule",
+      "Lost And Found",
+      "Events",
+      "GPA Cal",
+      "Bodim",
     ];
 
     final List<Widget> images = [
@@ -48,10 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
       Container(
         color: Colors.blue,
       ),
-      Container(
-        color: Colors.grey,
-      ),
     ];
+
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -68,12 +75,18 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 child: VerticalCardPager(
                   textStyle: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                   titles: titles,
                   images: images,
                   onPageChanged: (page) {},
                   align: ALIGN.CENTER,
-                  onSelectedItem: (index) {},
+                  onSelectedItem: (index) {
+                    if (titles[index] == 'Events') {
+                      navigateToCalendarApp(context);
+                    }
+                  },
                 ),
               ),
             ),
@@ -83,3 +96,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
