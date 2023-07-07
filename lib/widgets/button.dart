@@ -1,3 +1,4 @@
+import 'package:campus_connect_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -16,7 +17,7 @@ class Button extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) =>const Home()),
+          MaterialPageRoute(builder: (context) =>MyHomePage()), // Updated line
         );
       },
       child: Container(

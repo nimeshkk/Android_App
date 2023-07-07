@@ -36,6 +36,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   device_preview: ^1.1.0
+  draggable_home: ^1.0.4
+  responsive_grid_list: ^1.3.2
+  page_transition: ^2.0.9
+  vertical_card_pager: ^1.5.0
 
 dev_dependencies:
   flutter_test:
@@ -53,14 +57,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-    uses-material-design: true
+ uses-material-design: true
 
   
-   assets:
-     -assets/img/1f.png
-     -assets/img/2f.png
-     -assets/img/cc.png
-     -assets/img/click.png
+assets:
+ -assets/img/1f.png
+ -assets/img/2f.png
+ -assets/img/cc.png
+ -assets/img/click.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
