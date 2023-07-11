@@ -2,6 +2,7 @@ import 'package:campus_connect_app/pages/event.dart';
 import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 import 'welcome_Page.dart';
+import 'lost.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,14 @@ class _MyHomePageState extends State<MyHomePage> {
   void navigateToCalendarApp(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) =>CalendarApp1()),
+      MaterialPageRoute(builder: (context) => Calender1()),
+    );
+  }
+
+  void navigateToLostPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Lost1()),
     );
   }
 
@@ -58,7 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     ];
 
-
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -85,6 +92,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   onSelectedItem: (index) {
                     if (titles[index] == 'Events') {
                       navigateToCalendarApp(context);
+                    } else if (titles[index] == 'Lost And Found') {
+                      navigateToLostPage(context);
                     }
                   },
                 ),
@@ -96,4 +105,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
 

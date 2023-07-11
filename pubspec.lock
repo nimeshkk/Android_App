@@ -73,6 +73,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+  expansion_tile_group:
+    dependency: "direct main"
+    description:
+      name: expansion_tile_group
+      sha256: c829743aaf97a4c2cfbf74a40cb1c3e603e709fb879b4bdef842d2ab3b88d39f
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.1"
   fake_async:
     dependency: transitive
     description:
@@ -102,6 +110,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_dismissible_tile:
+    dependency: "direct main"
+    description:
+      name: flutter_dismissible_tile
+      sha256: "0879d0ec9cbc12799ecd827ea771329c24b40bf126b599d5a80c419a72ab4ea4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -386,30 +402,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  syncfusion_flutter_calendar:
-    dependency: "direct main"
-    description:
-      name: syncfusion_flutter_calendar
-      sha256: "0060cb4220d8ed585e52d251274db5e3ac198b7848164e30748de0e56fafd697"
-      url: "https://pub.dev"
-    source: hosted
-    version: "22.1.37"
-  syncfusion_flutter_core:
-    dependency: transitive
-    description:
-      name: syncfusion_flutter_core
-      sha256: e2b49a16805a54714ba0712d62e9f3c6311081ec2bec835529b778cc5349430a
-      url: "https://pub.dev"
-    source: hosted
-    version: "22.1.37"
-  syncfusion_flutter_datepicker:
-    dependency: transitive
-    description:
-      name: syncfusion_flutter_datepicker
-      sha256: e398ec1e7a0afa74f9a7c1fc62e245757f19cf564e51ea308d4f587a87ea4372
-      url: "https://pub.dev"
-    source: hosted
-    version: "22.1.37"
   term_glyph:
     dependency: transitive
     description:
@@ -426,14 +418,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.5.1"
-  timezone:
-    dependency: transitive
-    description:
-      name: timezone
-      sha256: "1cfd8ddc2d1cfd836bc93e67b9be88c3adaeca6f40a00ca999104c30693cdca0"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.9.2"
   vector_math:
     dependency: transitive
     description:
