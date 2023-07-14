@@ -1,6 +1,5 @@
-import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/material.dart';
-
+import 'package:draggable_home/draggable_home.dart';
 
 void main() => runApp(const MyApp());
 
@@ -20,8 +19,13 @@ class Lost1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DraggableHome(
-      leading: const Icon(Icons.arrow_back_ios),
-      title: const Text("Draggable Home"),
+      leading: IconButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+        icon: const Icon(Icons.arrow_back_ios),
+      ),
+      title: const Text(""),
       actions: [
         IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
       ],
@@ -31,7 +35,6 @@ class Lost1 extends StatelessWidget {
         listView(),
       ],
       fullyStretchable: true,
-      
       backgroundColor: Colors.white,
       appBarColor: Colors.teal,
     );
@@ -56,7 +59,7 @@ class Lost1 extends StatelessWidget {
       color: Colors.blue,
       child: Center(
         child: Text(
-          "Title",
+          "Lost & Found",
           style: Theme.of(context)
               .textTheme
               .headline2!
@@ -79,7 +82,7 @@ class Lost1 extends StatelessWidget {
             child: Text("$index"),
           ),
           title: const Text("Title"),
-          subtitle: const Text("Subtitile"),
+          subtitle: const Text("Subtitle"),
         ),
       ),
     );

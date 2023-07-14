@@ -1,3 +1,4 @@
+import 'package:campus_connect_app/pages/home.dart';
 import 'package:campus_connect_app/widgets/button.dart';
 import 'package:flutter/material.dart';
 
@@ -9,73 +10,83 @@ class WelcomPage extends StatefulWidget {
 }
 
 class _WelcomPageState extends State<WelcomPage> {
-
-  List images=[
-
-    "1f.png",
-    "2f.png",
-    
-   
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView.builder(
-        
+      body:Container(
 
-        scrollDirection:Axis.vertical ,
-        itemCount:images.length,
-        itemBuilder: (_, index){
+        width:double.infinity,
+        height:MediaQuery.of(context).size.height,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.bottomRight,
+            end: Alignment.topLeft,
+            tileMode: TileMode.clamp,
+          colors: [
+             Color.fromARGB(255, 25, 25, 250),     // Blue
+             Color.fromARGB(255, 50, 90, 250),    // Blue
+             Color.fromARGB(255, 75, 129, 254),    // Blue
+             Color.fromARGB(255, 120, 168, 250),    // Blue
+             Color.fromARGB(255, 152, 207, 251),   // Blue
+             Color.fromARGB(255, 183, 227, 253),   // Blue
+             Color.fromARGB(255, 226, 245, 250),   // Blue
+             Color.fromARGB(255, 255, 255, 255),   // Blue
+             ],
 
+          )
+        ),
 
-          return Container(
-            width: double.maxFinite,
-            height: double.maxFinite,
+        child: Center(
+          child: Stack(
+            children:[
+              Positioned(
+                bottom: 350,
+                right: 0,
+                left: 0,
 
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                alignment: Alignment.bottomCenter, 
-                image: AssetImage(
-                 
-                  "img/"+images[index]
-                  ),
-                  fit: BoxFit.contain
+                child:Column(
+                  children: [
+                    Image.asset('assets/campus.png',width:820,height: 500,)
+                  ],)
+              ),
 
-                  
-                
-              )
-            ),
-
-          child: Container(
-            margin:const EdgeInsets.only(top:30,left:10),
-            // alignment: Alignment.topLeft, 
-            child: Row(children: [
-              Column(children: [
-                // const Text(
-                //   "Campus Connect ",
-                //   style: TextStyle(
-                //   fontSize: 20,
-                  
-                //   fontWeight: FontWeight.bold,
-                //   color: Color.fromARGB(255, 0, 0, 0)
-                // ),),
-                
-
-                Image.asset(
-                       alignment: Alignment.topCenter,
-                        "img/cc.png",
-                        
-                        width: 350,
-                        height: 300,
-                        fit: BoxFit.contain,
+              Positioned(
+                bottom:100,
+                left:0,
+                right:0,
+                child: Padding(
+                  padding: const EdgeInsets.all(40.0),
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> MyHomePage()));
+                    },
+                    child: Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(50),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(.3),
+                            blurRadius: 30,
+                            offset: const Offset(0, 15),
+                          )
+                        ]
                       ),
-                Button(),
-              ],)
-            ],)
-          ),  
-          );
+                      child: const Icon(Icons.arrow_forward,color: Colors.black,),
+                    ),
+                    
+                  )
+                ),
+              ),
+            ],
+          ),
 
-      }),
+        ),
+      ),
+    
+     
     );
   }
 }

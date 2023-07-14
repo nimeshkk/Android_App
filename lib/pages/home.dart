@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 import 'welcome_Page.dart';
 import 'lost.dart';
+import 'clubs.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -38,31 +40,38 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  //  void navigateToClubs(BuildContext context) {
+  //   Navigator.push(
+  //     context,
+  //     MaterialPageRoute(builder: (context) =>  clubs()),
+  //   );
+  // }
+
   @override
   Widget build(BuildContext context) {
     final List<String> titles = [
       "Bus Schedule",
       "Lost And Found",
       "Events",
-      "GPA Cal",
-      "Bodim",
+      "Clubs",
+      "Bodime",
     ];
 
     final List<Widget> images = [
       Container(
-        color: Colors.red,
+        color: Color.fromARGB(255, 45, 158, 96),
       ),
       Container(
-        color: Colors.yellow,
+        color:Color.fromARGB(255, 45, 158, 96),
       ),
       Container(
-        color: Colors.black,
+        color: Color.fromARGB(255, 45, 158, 96),
       ),
       Container(
-        color: Colors.cyan,
+        color:Color.fromARGB(255, 45, 158, 96),
       ),
       Container(
-        color: Colors.blue,
+        color:Color.fromARGB(255, 45, 158, 96),
       ),
     ];
 
@@ -95,6 +104,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     } else if (titles[index] == 'Lost And Found') {
                       navigateToLostPage(context);
                     }
+                    //  else if (titles[index] == 'GPA Cal') {
+                    //   navigateToClubs(context);
+                    // }
                   },
                 ),
               ),
