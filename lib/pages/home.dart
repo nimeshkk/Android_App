@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+             Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> WelcomPage()));
           },
         ),
       ),
