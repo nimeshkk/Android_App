@@ -75,20 +75,20 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
           Expanded(
             child: Container(
               margin: const EdgeInsets.only(left: 20, right: 20),
-              height: 300,
+              height: 500,
               child: TabBarView(
                 controller: _tabController,
                 children: [
                   ListView.builder(
-                    itemCount: 3,
+                    itemCount: 4,
                     scrollDirection: Axis.vertical,
                     itemBuilder: (BuildContext context, int index) {
                       List<String> imagePaths = [
                         'assets/bus.jpg',
                         'assets/events.jpg',
                         'assets/Lost.jpg',
-
-                        
+                        'assets/accomadation.jpg'
+                       
                       ];
 
                       return Container(

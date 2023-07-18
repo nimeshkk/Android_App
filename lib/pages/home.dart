@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 import 'welcome_Page.dart';
 import 'lost.dart';
-import 'clubs.dart';
+
 
 
 void main() {
