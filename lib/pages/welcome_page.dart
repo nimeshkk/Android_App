@@ -4,7 +4,7 @@ import 'package:campus_connect_app/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomPage extends StatefulWidget {
-  const WelcomPage({super.key});
+  const WelcomPage({key});
 
   @override
   _WelcomPageState createState() => _WelcomPageState();
@@ -57,7 +57,7 @@ class _WelcomPageState extends State<WelcomPage> {
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (_) => home2()),
+                        MaterialPageRoute(builder: (_) => Home2()),
                       );
                     },
                     child: Container(
