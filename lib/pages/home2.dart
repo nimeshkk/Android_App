@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'welcome_page.dart'; // Import the welcomepage.dart file
 
 class Home2 extends StatefulWidget {
   const Home2({Key? key});
@@ -24,100 +25,113 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.only(top: 70, left: 20),
-            child: Row(
-              children: [
-                Icon(Icons.menu, size: 30, color: Colors.black),
-                Expanded(child: Container()),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
-                  width: 50,
-                  height: 50,
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 40),
-          Container(
-            margin: const EdgeInsets.only(left: 20),
-            child: Text(
-              'Campus Connect',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            ),
-          ),
-          SizedBox(height: 30),
-          Container(
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: TabBar(
-                labelPadding: const EdgeInsets.only(left: 20, right: 20),
-                controller: _tabController,
-                labelColor: Colors.black,
-                unselectedLabelColor: Colors.grey,
-                indicatorSize: TabBarIndicatorSize.label,
-                isScrollable: true,
-                tabs: [
-                  Tab(text: 'Main'),
-                  Tab(text: 'Feature'),
-                  Tab(text: 'About'),
-                ],
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              height: 500,
-              child: TabBarView(
-                controller: _tabController,
+    return WillPopScope(
+      onWillPop: () async {
+      
+        Navigator.pop(context); 
+        return true; 
+      },
+      child: Scaffold(
+        body: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.only(top: 70, left: 20),
+              child: Row(
                 children: [
-                  ListView.builder(
-                    itemCount: 4,
-                    scrollDirection: Axis.vertical,
-                    itemBuilder: (BuildContext context, int index) {
-                      List<String> imagePaths = [
-                        'assets/bus.jpg',
-                        'assets/events.jpg',
-                        'assets/Lost.jpg',
-                        'assets/accomadation.jpg'
-                       
-                      ];
-
-                      return Container(
-                        margin: const EdgeInsets.only(right: 15, top: 10),
-                        width: 200,
-                        height: 150,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                            image: AssetImage(imagePaths[index]),
-                          
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      );
+                  IconButton(
+                    icon: Icon(Icons.arrow_back, size: 30, color: Colors.black),
+                    onPressed: () {
+                      
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> WelcomPage())); 
                     },
                   ),
-                  Text('hello world!'),
-                  Text('how are you?'),
+                  Expanded(child: Container()),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    width: 50,
+                    height: 50,
+                  ),
                 ],
               ),
             ),
-          ),
-        ],
+            SizedBox(height: 40),
+            Container(
+              margin: const EdgeInsets.only(left: 20),
+              child: Text(
+                'Campus Connect',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            SizedBox(height: 30),
+            Container(
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: TabBar(
+                  labelPadding: const EdgeInsets.only(left: 20, right: 20),
+                  controller: _tabController,
+                  labelColor: Colors.black,
+                  unselectedLabelColor: Colors.grey,
+                  indicatorSize: TabBarIndicatorSize.label,
+                  isScrollable: true,
+                  tabs: [
+                    Tab(text: 'Main'),
+                    Tab(text: 'Feature'),
+                    Tab(text: 'About'),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                margin: const EdgeInsets.only(left: 20, right: 20),
+                child: TabBarView(
+                  controller: _tabController,
+                  children: [
+                    ListView.builder(
+                      itemCount: 5,
+                      scrollDirection: Axis.vertical,
+                      itemBuilder: (BuildContext context, int index) {
+                        List<String> imagePaths = [
+                          'assets/bus.jpg',
+                          'assets/events.jpg',
+                          'assets/Lost.jpg',
+                          'assets/accomadation.jpg',
+                          'assets/community.png',
+                        ];
+
+                        return Container(
+                          margin: const EdgeInsets.only(right: 15, top: 10),
+                          width: 200,
+                          height: 150,
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                              image: AssetImage(imagePaths[index]),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    Text('feature items'),
+                    Text('aboutus'),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
+
 
 
 
