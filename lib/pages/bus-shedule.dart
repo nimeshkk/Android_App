@@ -1,4 +1,5 @@
 import 'package:campus_connect_app/pages/event.dart';
+import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 import 'welcome_Page.dart';
@@ -15,30 +16,30 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: MyHomePage(),
+      home: Bus(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class Bus extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _BusState createState() => _BusState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  void navigateToCalendarApp(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Calender1()),
-    );
-  }
+class _BusState extends State<Bus> {
+  // void navigateToCalendarApp(BuildContext context) {
+  //   Navigator.push(
+  //     context,
+  //     MaterialPageRoute(builder: (context) => Calender1()),
+  //   );
+  // }
 
-  void navigateToLostPage(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Lost1()),
-    );
-  }
+  // void navigateToLostPage(BuildContext context) {
+  //   Navigator.push(
+  //     context,
+  //     MaterialPageRoute(builder: (context) => Lost1()),
+  //   );
+  // }
 
   //  void navigateToClubs(BuildContext context) {
   //   Navigator.push(
@@ -50,11 +51,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final List<String> titles = [
-      "Bus Schedule",
-      "Lost And Found",
-      "Events",
-      "Clubs",
-      "Bodime",
+      "Bus Schedule ",
+      "Bus Schedule2",
+      "Bus Schedule3",
+      "Bus Schedule4",
+      "Bus Schedule5",
     ];
 
     final List<Widget> images = [
@@ -80,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-             Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> WelcomPage()));
+             Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> Home2()));
           },
         ),
       ),
@@ -98,16 +99,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   images: images,
                   onPageChanged: (page) {},
                   align: ALIGN.CENTER,
-                  onSelectedItem: (index) {
-                    if (titles[index] == 'Events') {
-                      navigateToCalendarApp(context);
-                    } else if (titles[index] == 'Lost And Found') {
-                      navigateToLostPage(context);
-                    }
-                    //  else if (titles[index] == 'GPA Cal') {
-                    //   navigateToClubs(context);
-                    // }
-                  },
+                  // onSelectedItem: (index) {
+                  //   if (titles[index] == 'Events') {
+                  //     navigateToCalendarApp(context);
+                  //   } else if (titles[index] == 'Lost And Found') {
+                  //     navigateToLostPage(context);
+                  //   }
+                  //    else if (titles[index] == 'GPA Cal') {
+                  //     navigateToClubs(context);
+                  //   }
+                  // },
                 ),
               ),
             ),

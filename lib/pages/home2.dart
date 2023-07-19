@@ -1,5 +1,6 @@
+import 'package:campus_connect_app/pages/bus-shedule.dart';
 import 'package:flutter/material.dart';
-import 'welcome_page.dart'; // Import the welcomepage.dart file
+import 'welcome_page.dart';
 
 class Home2 extends StatefulWidget {
   const Home2({Key? key});
@@ -8,28 +9,13 @@ class Home2 extends StatefulWidget {
   _Home2State createState() => _Home2State();
 }
 
-class _Home2State extends State<Home2> with TickerProviderStateMixin {
-  late TabController _tabController;
-
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(length: 3, vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _tabController.dispose();
-    super.dispose();
-  }
-
+class _Home2State extends State<Home2> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-      
-        Navigator.pop(context); 
-        return true; 
+        Navigator.pop(context);
+        return true;
       },
       child: Scaffold(
         body: Column(
@@ -41,8 +27,10 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
                   IconButton(
                     icon: Icon(Icons.arrow_back, size: 30, color: Colors.black),
                     onPressed: () {
-                      
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> WelcomPage())); 
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (_) => WelcomPage()),
+                      );
                     },
                   ),
                   Expanded(child: Container()),
@@ -67,60 +55,55 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
               ),
             ),
             SizedBox(height: 30),
-            Container(
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: TabBar(
-                  labelPadding: const EdgeInsets.only(left: 20, right: 20),
-                  controller: _tabController,
-                  labelColor: Colors.black,
-                  unselectedLabelColor: Colors.grey,
-                  indicatorSize: TabBarIndicatorSize.label,
-                  isScrollable: true,
-                  tabs: [
-                    Tab(text: 'Main'),
-                    Tab(text: 'Feature'),
-                    Tab(text: 'About'),
-                  ],
-                ),
-              ),
-            ),
             Expanded(
               child: Container(
-                margin: const EdgeInsets.only(left: 20, right: 20),
-                child: TabBarView(
-                  controller: _tabController,
-                  children: [
-                    ListView.builder(
-                      itemCount: 5,
-                      scrollDirection: Axis.vertical,
-                      itemBuilder: (BuildContext context, int index) {
-                        List<String> imagePaths = [
-                          'assets/bus.jpg',
-                          'assets/events.jpg',
-                          'assets/Lost.jpg',
-                          'assets/accomadation.jpg',
-                          'assets/community.png',
-                        ];
+                margin: const EdgeInsets.only(left: 10, right: 10),
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 6.0,
+                    mainAxisSpacing: 6.0,
+                  ),
+                  itemCount: 6,
+                  itemBuilder: (BuildContext context, int index) {
+                    List<String> imagePaths = [
+                      'assets/bus.jpg',
+                      'assets/events.jpg',
+                      'assets/Lost.jpg',
+                      'assets/accomadation.jpg',
+                      'assets/community.png',
+                      'assets/Time-Table.png'
+                      
+                    ];
 
-                        return Container(
-                          margin: const EdgeInsets.only(right: 15, top: 10),
-                          width: 200,
-                          height: 150,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                              image: AssetImage(imagePaths[index]),
-                              fit: BoxFit.cover,
+                    String imagePath = imagePaths[index % imagePaths.length];
+
+                    return GestureDetector(
+                      onTap: () {
+                        if (imagePath == 'assets/bus.jpg') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Bus(),
                             ),
-                          ),
-                        );
+                          );
+                        }
                       },
-                    ),
-                    Text('feature items'),
-                    Text('aboutus'),
-                  ],
+                      child: Container(
+                        margin: const EdgeInsets.only(right: 10, top: 10),
+                        width: 200,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage(imagePath),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
@@ -130,28 +113,3 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
     );
   }
 }
-
-
-
-
-
-// class CircleTabIndicator extends Decoration{
- 
-//   @override
-//   BoxPainter createBoxPainter([VoidCallback? onChanged]){
-//     return _CirclePainter(color:color,radius:radius);
-//   }
-  
-// }
-
-// class _CirclePainter extends BoxPainter{
-//    final Color color;
-//   final double radius;
-//   _CirclePainter({required this.color,required this.radius});
-//   @override
-//   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration)
-//    {
-//     // TODO: implement paint
-//   }
-
-// }

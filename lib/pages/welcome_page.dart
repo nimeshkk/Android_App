@@ -1,6 +1,5 @@
-import 'package:campus_connect_app/pages/home.dart';
+
 import 'package:campus_connect_app/pages/home2.dart';
-import 'package:campus_connect_app/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomPage extends StatefulWidget {
