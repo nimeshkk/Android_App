@@ -1,9 +1,8 @@
-import 'package:campus_connect_app/pages/event.dart';
+
 import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
-import 'welcome_Page.dart';
-import 'lost.dart';
+
 
 
 

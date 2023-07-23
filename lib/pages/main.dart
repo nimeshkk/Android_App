@@ -1,4 +1,5 @@
 
+import 'package:campus_connect_app/pages/add_pages/add_item.dart';
 import 'package:campus_connect_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter ',
       theme: ThemeData(
         
        
