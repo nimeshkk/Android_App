@@ -2,6 +2,7 @@
 import 'package:campus_connect_app/pages/add_pages/add_item.dart';
 import 'package:campus_connect_app/pages/bus-shedule.dart';
 import 'package:flutter/material.dart';
+import 'event.dart';
 import 'welcome_page.dart';
 
 class Home2 extends StatefulWidget {
@@ -89,6 +90,44 @@ class _Home2State extends State<Home2> {
                               builder: (_) => Bus(),
                             ),
                           );
+
+                        }if (imagePath =='assets/events.jpg'){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Calender1(),
+                            ),
+                          );
+                        }if (imagePath =='assets/Lost.jpg'){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Bus(),
+                            ),
+                          );
+                        }if (imagePath =='assets/accomadation.jpg'){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Bus(),
+                            ),
+                          );
+                        }if (imagePath =='assets/community.png'){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Bus(),
+                            ),
+                          );
+                        }if (imagePath =='assets/Time-Table.png'){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Bus(),
+                            ),
+                          );
+
+
                         }
                       },
                       child: Container(
