@@ -25,6 +25,8 @@ class _BusState extends State<Event> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor:
+            Color.fromARGB(218, 75, 145, 225), // Set the background color here
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -32,6 +34,8 @@ class _BusState extends State<Event> {
                 context, MaterialPageRoute(builder: (_) => Home2()));
           },
         ),
+        title: Text('Event Page'), // You can set the title here
+        // You can add more actions if needed using the `actions` property
       ),
       body: SafeArea(
         child: Column(
