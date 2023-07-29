@@ -1,6 +1,6 @@
-
 import 'package:campus_connect_app/pages/add_pages/add_item.dart';
 import 'package:campus_connect_app/pages/bus-shedule.dart';
+import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
 import 'package:flutter/material.dart';
 import 'welcome_page.dart';
 
@@ -75,7 +75,6 @@ class _Home2State extends State<Home2> {
                       'assets/accomadation.jpg',
                       'assets/community.png',
                       'assets/Time-Table.png'
-                      
                     ];
 
                     String imagePath = imagePaths[index % imagePaths.length];
@@ -87,6 +86,14 @@ class _Home2State extends State<Home2> {
                             context,
                             MaterialPageRoute(
                               builder: (_) => Bus(),
+                            ),
+                          );
+                        }
+                        if (imagePath == 'assets/events.jpg') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Event(),
                             ),
                           );
                         }
