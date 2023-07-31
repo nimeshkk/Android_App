@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
 
 class Event extends StatefulWidget {
   @override
-  _BusState createState() => _BusState();
+  _EventState createState() => _EventState();
 }
 
-class _BusState extends State<Event> {
+class _EventState extends State<Event> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
