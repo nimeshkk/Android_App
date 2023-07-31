@@ -25,8 +25,7 @@ class _EventState extends State<Event> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:
-            Color.fromARGB(180, 80, 156, 244), // Set the background color here
+        backgroundColor: Color.fromARGB(180, 80, 156, 244),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -34,12 +33,38 @@ class _EventState extends State<Event> {
                 context, MaterialPageRoute(builder: (_) => Home2()));
           },
         ),
-        title: Text('Events'), // You can set the title here
-        // You can add more actions if needed using the `actions` property
+        title: Text('Events'),
       ),
       body: SafeArea(
         child: Column(
-          children: <Widget>[],
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Color.fromARGB(255, 127, 21,
+                    159), // You can set the background color for the 2/3 section here
+                // Add your content for the 2/3 section here
+                alignment: Alignment.center,
+                child: Text(
+                  'Two-Thirds Section',
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                color: Colors
+                    .red, // You can set the background color for the 1/3 section here
+                // Add your content for the 1/3 section here
+                alignment: Alignment.center,
+                child: Text(
+                  'One-Third Section',
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
