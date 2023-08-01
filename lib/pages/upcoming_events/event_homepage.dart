@@ -30,7 +30,9 @@ class _EventState extends State<Event> {
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (_) => Home2()));
+              context,
+              MaterialPageRoute(builder: (_) => Home2()),
+            );
           },
         ),
         title: Text('Events'),
@@ -41,9 +43,12 @@ class _EventState extends State<Event> {
             Expanded(
               flex: 2,
               child: Container(
-                color: Color.fromARGB(255, 127, 21,
-                    159), // You can set the background color for the 2/3 section here
-                // Add your content for the 2/3 section here
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/homeevent.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 alignment: Alignment.center,
                 child: Text(
                   'Two-Thirds Section',
