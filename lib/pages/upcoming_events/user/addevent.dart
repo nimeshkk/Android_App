@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class eventdetails extends StatelessWidget {
+class addevent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User Page'),
+        title: Text('Admin Page'),
       ),
       body: Center(
-        child: Text('Welcome, User!'),
+        child: Text('Welcome, Admin!'),
       ),
     );
   }

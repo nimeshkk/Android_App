@@ -1,4 +1,5 @@
-import 'package:campus_connect_app/pages/home2.dart';
+import 'package:campus_connect_app/pages/upcoming_events/user/addevent.dart';
+import 'package:campus_connect_app/pages/upcoming_events/user/eventdetails.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,6 +22,22 @@ class Event extends StatefulWidget {
 }
 
 class _EventState extends State<Event> {
+  bool isAdmin = true; // Set this to false if the user is not an admin
+
+  void _navigateToPage() {
+    if (isAdmin) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => addevent()),
+      );
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => eventdetails()),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,10 +46,7 @@ class _EventState extends State<Event> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (_) => Home2()),
-            );
+            _navigateToPage(); // Navigate based on the role
           },
         ),
         title: Text('Events'),
@@ -59,13 +73,42 @@ class _EventState extends State<Event> {
             Expanded(
               flex: 1,
               child: Container(
-                color: Colors
-                    .red, // You can set the background color for the 1/3 section here
-                // Add your content for the 1/3 section here
+                color: Colors.red,
                 alignment: Alignment.center,
-                child: Text(
-                  'One-Third Section',
-                  style: TextStyle(fontSize: 24, color: Colors.white),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'One-Third Section',
+                      style: TextStyle(fontSize: 24, color: Colors.white),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Go Away',
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    ),
+                    SizedBox(
+                        height:
+                            20), // Add some space between the labels and buttons
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => eventdetails()),
+                        );
+                      },
+                      child: Text('User Page'),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => addevent()),
+                        );
+                      },
+                      child: Text('Admin Page'),
+                    ),
+                  ],
                 ),
               ),
             ),
