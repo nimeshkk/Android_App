@@ -1,5 +1,4 @@
 
-import 'package:campus_connect_app/pages/add_pages/add_item.dart';
 import 'package:campus_connect_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
