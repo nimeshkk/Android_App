@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'package:campus_connect_app/pages/upcoming_events/user/addevent.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/eventdetails.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 import '../welcome_page.dart';
 
@@ -26,18 +28,52 @@ class Event extends StatefulWidget {
 class _EventState extends State<Event> {
   bool isAdmin = true; // Set this to false if the user is not an admin
 
+  final List<String> imagePaths = [
+    'assets/homeevent.jpg',
+    'assets/homeevent01.png',
+    // Add more image paths here
+  ];
+
+  Timer? _timer;
+  int _currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _startTimer();
+  }
+
+  void _startTimer() {
+    const Duration slideDuration = Duration(seconds: 5);
+    _timer = Timer.periodic(slideDuration, (timer) {
+      setState(() {
+        _currentPage = (_currentPage + 1) % imagePaths.length;
+      });
+    });
+  }
+
   void _navigateToPage() {
     if (isAdmin) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => addevent()),
+        MaterialPageRoute(
+            builder: (_) =>
+                addevent()), // Use the correct class name (capitalize the first letter)
       );
     } else {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => eventdetails()),
+        MaterialPageRoute(
+            builder: (_) =>
+                eventdetails()), // Use the correct class name (capitalize the first letter)
       );
     }
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
   }
 
   @override
@@ -58,7 +94,9 @@ class _EventState extends State<Event> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (_) => WelcomPage()),
+              MaterialPageRoute(
+                  builder: (_) =>
+                      WelcomPage()), // Use the correct class name (capitalize the first letter)
             );
           },
         ),
@@ -67,22 +105,25 @@ class _EventState extends State<Event> {
       body: ListView(
         children: <Widget>[
           Container(
-            height: 200, // Reduced height for the image container
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/homeevent.jpg'),
-                fit: BoxFit.cover,
+            height: 250,
+            child: CarouselSlider.builder(
+              itemCount: imagePaths.length,
+              options: CarouselOptions(
+                autoPlay: true,
+                enlargeCenterPage: true,
+                aspectRatio: 16 / 9,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _currentPage = index;
+                  });
+                },
               ),
-            ),
-            alignment: Alignment.center,
-            child: Text(
-              'Two-Thirds Section',
-              style: TextStyle(
-                fontSize: 32,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Roboto',
-              ),
+              itemBuilder: (context, index, realIndex) {
+                return Image.asset(
+                  imagePaths[index],
+                  fit: BoxFit.cover,
+                );
+              },
             ),
           ),
           Container(
@@ -93,7 +134,7 @@ class _EventState extends State<Event> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'One-Third Section',
+                  'hello',
                   style: TextStyle(
                     fontSize: 28,
                     color: Colors.white,
@@ -115,15 +156,17 @@ class _EventState extends State<Event> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (_) => eventdetails()),
+                      MaterialPageRoute(
+                          builder: (_) =>
+                              eventdetails()), // Use the correct class name (capitalize the first letter)
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
+                    backgroundColor: Colors.blue,
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   ),
                   child: Text(
-                    'User Page',
+                    'i am a user',
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
@@ -136,15 +179,17 @@ class _EventState extends State<Event> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (_) => addevent()),
+                      MaterialPageRoute(
+                          builder: (_) =>
+                              addevent()), // Use the correct class name (capitalize the first letter)
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.green,
+                    backgroundColor: Colors.green,
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   ),
                   child: Text(
-                    'Admin Page',
+                    'i am an admin ',
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
