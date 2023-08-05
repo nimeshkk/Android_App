@@ -2,6 +2,8 @@ import 'package:campus_connect_app/pages/upcoming_events/user/addevent.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/eventdetails.dart';
 import 'package:flutter/material.dart';
 
+import '../welcome_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -46,7 +48,11 @@ class _EventState extends State<Event> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            _navigateToPage(); // Navigate based on the role
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => WelcomPage()),
+            );
+            // Navigate based on the role
           },
         ),
         title: Text('Events'),
