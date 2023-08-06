@@ -43,6 +43,7 @@ dependencies:
   expansion_tile_group: ^1.2.1
   math_expressions: ^2.0.0
   http: ^1.1.0
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -69,4 +70,8 @@ flutter:
     - assets/accomadation.jpg
     - assets/community.png
     - assets/Time-Table.png
-    - assets/homeevent.jpg
+
+    - assets/fiesta01.png
+    - assets/fiesta02.png
+    - assets/praana.png
+    - assets/praana02.png
