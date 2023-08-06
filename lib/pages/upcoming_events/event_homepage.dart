@@ -132,18 +132,48 @@ class _EventState extends State<Event> {
             ),
           ),
           Container(
-            color: Color.fromARGB(255, 32, 161, 186),
-            height: MediaQuery.of(context).size.height * 0.34,
+            height: 40, // You can adjust the height as per your preference
+            color: Colors.green,
+            // You can use any color or remove this line for no color
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [
+                  Text(
+                    'Welcome to Campus Connect!',
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  // Add other widgets you want to include inside the container
+                ],
+              ),
+            ),
+          ),
+
+          //this is the second part
+          Container(
+            height: MediaQuery.of(context).size.height * 0.55,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                    'assets/fiesta02.png'), // Replace with your image path
+                fit: BoxFit.cover,
+              ),
+            ),
             alignment: Alignment.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'hello',
+                  'Discover upcoming events, effortlessly.',
                   style: TextStyle(
                     fontSize: 28,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
                     fontFamily: 'Roboto',
                   ),
                 ),
