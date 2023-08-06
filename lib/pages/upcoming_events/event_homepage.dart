@@ -36,6 +36,11 @@ class _EventState extends State<Event> {
 
     // Add more image paths here
   ];
+  final List<String> welcomeMessages = [
+    'Welcome to Campus Connect!',
+    'Stay connected with events!',
+    'Discover exciting opportunities',
+  ];
 
   Timer? _timer;
   int _currentPage = 0;
@@ -131,25 +136,31 @@ class _EventState extends State<Event> {
               },
             ),
           ),
+
           Container(
-            height: 40, // You can adjust the height as per your preference
+            height: 35,
             color: Colors.green,
-            // You can use any color or remove this line for no color
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                children: [
-                  Text(
-                    'Welcome to Campus Connect!',
+            child: CarouselSlider.builder(
+              itemCount: welcomeMessages.length,
+              options: CarouselOptions(
+                autoPlay: true,
+                enlargeCenterPage: true,
+                onPageChanged: (index, reason) {
+                  // We don't need to do anything here as we are not using the index.
+                },
+              ),
+              itemBuilder: (context, index, realIndex) {
+                return Center(
+                  child: Text(
+                    welcomeMessages[index],
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  // Add other widgets you want to include inside the container
-                ],
-              ),
+                );
+              },
             ),
           ),
 
