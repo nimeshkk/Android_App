@@ -105,6 +105,7 @@ class _EventState extends State<Event> {
         ),
         title: Text('Events'),
       ),
+      backgroundColor: Color.fromARGB(255, 171, 197, 219),
       body: ListView(
         children: <Widget>[
           Container(
