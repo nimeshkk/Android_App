@@ -193,7 +193,8 @@ class _EventState extends State<Event> {
                   'Go Away',
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.white,
+                    backgroundColor: Colors.black,
+                    color: const Color.fromRGBO(3, 169, 244, 1),
                     fontFamily: 'Roboto',
                   ),
                 ),
