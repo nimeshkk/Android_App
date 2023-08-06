@@ -29,8 +29,11 @@ class _EventState extends State<Event> {
   bool isAdmin = true; // Set this to false if the user is not an admin
 
   final List<String> imagePaths = [
-    'assets/homeevent.jpg',
-    'assets/homeevent01.png',
+    'assets/fiesta01.png',
+    'assets/fiesta02.png',
+    'assets/praana.png',
+    'assets/praana02.png',
+
     // Add more image paths here
   ];
 
@@ -105,7 +108,8 @@ class _EventState extends State<Event> {
       body: ListView(
         children: <Widget>[
           Container(
-            height: 250,
+            height: 230,
+            width: 200,
             child: CarouselSlider.builder(
               itemCount: imagePaths.length,
               options: CarouselOptions(
@@ -127,7 +131,7 @@ class _EventState extends State<Event> {
             ),
           ),
           Container(
-            color: Colors.red,
+            color: Color.fromARGB(255, 175, 20, 100),
             height: MediaQuery.of(context).size.height * 0.34,
             alignment: Alignment.center,
             child: Column(
