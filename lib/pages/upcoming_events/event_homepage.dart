@@ -109,8 +109,7 @@ class _EventState extends State<Event> {
       body: ListView(
         children: <Widget>[
           Container(
-            height: 230,
-            width: 200,
+            height: 200,
             child: CarouselSlider.builder(
               itemCount: imagePaths.length,
               options: CarouselOptions(
@@ -127,12 +126,13 @@ class _EventState extends State<Event> {
                 return Image.asset(
                   imagePaths[index],
                   fit: BoxFit.cover,
+                  width: 1000,
                 );
               },
             ),
           ),
           Container(
-            color: Color.fromARGB(255, 175, 20, 100),
+            color: Color.fromARGB(255, 32, 161, 186),
             height: MediaQuery.of(context).size.height * 0.34,
             alignment: Alignment.center,
             child: Column(
