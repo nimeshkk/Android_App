@@ -144,7 +144,7 @@ class _Home2State extends State<Home2> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => Bus(),
+                              builder: (_) => Buspage(),
                             ),
                           );
                         }
