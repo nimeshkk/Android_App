@@ -93,6 +93,61 @@ class Page3 extends StatelessWidget {
                 ),
               ),
             ),
+            // row 2
+
+            const SizedBox(
+              height: 15,
+            ),
+
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 214, 218, 219),
+                child: Row(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: const Image(
+                        image: AssetImage("assets/van2.png"),
+                        width: 80,
+                        height: 80,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        ' janindu Transport.journey begins at chilaw, providing a convenient starting point for easy accessibility.As we traverse through negombo main road,.our route  enters the highway at Katunayaka.  please contact us at [Contact Number]',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '0720221458',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
