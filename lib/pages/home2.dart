@@ -18,9 +18,9 @@ class _Home2State extends State<Home2> {
   bool isAdmin = true; // Set this to false if the user is not an admin
 
   final List<String> imagePaths = [
-    'assets/NSBM.jpg',
-    'assets/NSBM.jpg',
-    'assets/NSBM.jpg',
+    'assets/NSBM1.png',
+    'assets/NSBM2.png',
+    'assets/NSBM3.png',
   ];
 
   Timer? _timer;
@@ -99,7 +99,7 @@ class _Home2State extends State<Home2> {
                 options: CarouselOptions(
                   autoPlay: true,
                   enlargeCenterPage: true,
-                  aspectRatio: 16 / 9,
+                  aspectRatio: 22 / 10,
                   onPageChanged: (index, reason) {
                     setState(() {
                       _currentPage = index;
@@ -125,7 +125,7 @@ class _Home2State extends State<Home2> {
                     crossAxisSpacing: 6.0,
                     mainAxisSpacing: 6.0,
                   ),
-                  itemCount: 6,
+                  itemCount: 8,
                   itemBuilder: (BuildContext context, int index) {
                     List<String> imagePaths = [
                       'assets/bus.png',
@@ -133,7 +133,10 @@ class _Home2State extends State<Home2> {
                       'assets/Lost2.png',
                       'assets/accommodation.png',
                       'assets/community2.png',
-                      'assets/timetable.png'
+                      'assets/timetable.png',
+                      'assets/GPA.png',
+                      'assets/about.png'
+
                     ];
 
                     String imagePath = imagePaths[index % imagePaths.length];
