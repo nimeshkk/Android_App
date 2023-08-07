@@ -1,4 +1,3 @@
-
 import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 
@@ -60,28 +59,22 @@ class _WelcomPageState extends State<WelcomPage> {
                       );
                     },
                     child: Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(50),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(.3),
-                            blurRadius: 30,
-                            offset: const Offset(0, 15),
-                          )
-                        ],
-                      ),
+                      height: 55,
+                      width: 300,
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          gradient: LinearGradient(colors: [
+                            Color.fromARGB(255, 55, 184, 23),
+                            Color.fromARGB(255, 236, 199, 10)
+                          ])),
                       child: Center(
                         child: Text(
                           'Get Started',
-                           style: TextStyle(
-                            color: Colors.black,
+                          style: TextStyle(
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
-                          
                         ),
                       ),
                     ),
@@ -95,4 +88,3 @@ class _WelcomPageState extends State<WelcomPage> {
     );
   }
 }
-
