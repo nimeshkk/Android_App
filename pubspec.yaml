@@ -77,12 +77,17 @@ flutter:
     - assets/bus.png
     - assets/Lost2.png
     - assets/events2.png
+    - assets/about.png
+    - assets/GPA.png
     - assets/accommodation.png
     - assets/community2.png
     - assets/timetable.png
     - assets/IEEE.jpeg
     - assets/sup.jpeg
     - assets/NSBM.jpg
+    - assets/NSBM1.png
+    - assets/NSBM2.png
+    - assets/NSBM3.png
 
 
     - assets/fiesta01.png
