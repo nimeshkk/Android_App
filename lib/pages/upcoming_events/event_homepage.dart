@@ -139,7 +139,7 @@ class _EventState extends State<Event> {
 
           Container(
             height: 35,
-            color: Colors.green,
+            color: Color.fromARGB(124, 77, 195, 81),
             child: CarouselSlider.builder(
               itemCount: welcomeMessages.length,
               options: CarouselOptions(
@@ -177,11 +177,29 @@ class _EventState extends State<Event> {
             alignment: Alignment.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Container(
+                  padding: EdgeInsets.only(
+                      top: 10), // Adjust the top padding as needed
+
+                  // Wrap the Text widget with Center widget
+                  child: Text(
+                    'Discover upcoming events, effortlessly.',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'Roboto',
+                    ),
+                  ),
+                ),
                 Text(
-                  'Discover upcoming events, effortlessly.',
+                  'Stay updated with exciting upcoming events in our university!',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 28,
+                    fontSize: 20,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.italic,
@@ -189,60 +207,86 @@ class _EventState extends State<Event> {
                   ),
                 ),
                 SizedBox(height: 10),
-                Text(
-                  'Go Away',
-                  style: TextStyle(
-                    fontSize: 18,
-                    backgroundColor: Colors.black,
-                    color: const Color.fromRGBO(3, 169, 244, 1),
-                    fontFamily: 'Roboto',
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      //no logic more for the go away
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 130, vertical: 10),
+                    ),
+                    child: Text(
+                      'Go Away',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: const Color.fromRGBO(3, 169, 244, 1),
+                        fontFamily: 'Roboto',
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) =>
-                              eventdetails()), // Use the correct class name (capitalize the first letter)
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  ),
-                  child: Text(
-                    'i am a user',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontFamily: 'Roboto',
+
+                // Replace the ElevatedButton section in the _EventState build method
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => eventdetails()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                      ),
+                      icon: Icon(
+                        Icons.person,
+                        color: Color.fromARGB(204, 0, 0, 0),
+                        size: 40,
+                      ),
+                      label: Text(
+                        'USER',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontFamily: 'Roboto',
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                SizedBox(height: 10),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) =>
-                              addevent()), // Use the correct class name (capitalize the first letter)
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green,
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  ),
-                  child: Text(
-                    'i am an admin ',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontFamily: 'Roboto',
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => addevent()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                      ),
+                      icon: Icon(
+                        Icons.admin_panel_settings,
+                        color: Color.fromARGB(255, 0, 28, 75),
+                        size: 40,
+                      ),
+                      label: Text(
+                        'ADMIN',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontFamily: 'Roboto',
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),
