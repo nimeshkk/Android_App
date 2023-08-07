@@ -1,5 +1,7 @@
 import 'dart:async';
+
 import 'package:campus_connect_app/pages/upcoming_events/user/addevent.dart';
+import 'package:campus_connect_app/pages/upcoming_events/user/calender_eventlist.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/eventdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -233,7 +235,7 @@ class _EventState extends State<Event> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (_) => addevent()),
+                            MaterialPageRoute(builder: (_) => CalendarScreen()),
                           );
                         },
                         style: ElevatedButton.styleFrom(
