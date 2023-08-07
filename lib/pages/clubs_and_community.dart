@@ -1,3 +1,11 @@
+import 'package:campus_connect_app/pages/Clubs/aiesec.dart';
+import 'package:campus_connect_app/pages/Clubs/csse.dart';
+import 'package:campus_connect_app/pages/Clubs/drama.dart';
+import 'package:campus_connect_app/pages/Clubs/football.dart';
+import 'package:campus_connect_app/pages/Clubs/foss.dart';
+import 'package:campus_connect_app/pages/Clubs/ieee.dart';
+import 'package:campus_connect_app/pages/Clubs/music.dart';
+import 'package:campus_connect_app/pages/Clubs/stemup.dart';
 import 'package:flutter/material.dart';
 
 class ClubsAndCommunity extends StatefulWidget {
@@ -31,7 +39,7 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 200.0),
+          padding: const EdgeInsets.only(top: 150.0),
           child: Container(
             decoration: const BoxDecoration(
                 color: Colors.white,
@@ -41,7 +49,10 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
             height: double.infinity,
             width: double.infinity,
             child: Padding(
-              padding: const EdgeInsets.only(left: 18.0, right: 18.0),
+              padding: const EdgeInsets.only(
+                left: 18.0,
+                right: 18.0,
+              ),
               child: Column(
                 children: [
                   // Container(
@@ -82,30 +93,70 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
 
                           return GestureDetector(
                             onTap: () {
-                              // if (imagePath == 'assets/bus.jpg') {
-                              //   Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //       builder: (_) => Bus(),
-                              //     ),
-                              //   );
-                              // }
-                              // if (imagePath == 'assets/events.jpg') {
-                              //   Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //       builder: (_) => Event(),
-                              //     ),
-                              //   );
-                              // }
-                              // if (imagePath == 'assets/community.png') {
-                              //   Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //       builder: (_) => ClubsAndCommunity(),
-                              //     ),
-                              //   );
-                              // }
+                              if (imagePath == 'assets/sup.jpeg') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => StemUp(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/IEEE.jpeg') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => IEEE(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/music.png') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => Music(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/drama.png') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => Drama(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/foss.png') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => FOSS(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/football.jpeg') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => FootBall(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/aiesec.png') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => Aiesec(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/csse.jpg') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => CSSE(),
+                                  ),
+                                );
+                              }
                             },
                             child: Container(
                               margin: const EdgeInsets.only(right: 10, top: 10),
