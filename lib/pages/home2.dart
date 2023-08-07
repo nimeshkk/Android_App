@@ -1,6 +1,8 @@
-import 'package:campus_connect_app/pages/add_pages/add_item.dart';
-import 'package:campus_connect_app/pages/bus-shedule.dart';
+import 'dart:async';
+
+import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
 import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'clubs_and_community.dart';
 import 'welcome_page.dart';
@@ -13,6 +15,38 @@ class Home2 extends StatefulWidget {
 }
 
 class _Home2State extends State<Home2> {
+  bool isAdmin = true; // Set this to false if the user is not an admin
+
+  final List<String> imagePaths = [
+    'assets/NSBM.jpg',
+    'assets/NSBM.jpg',
+    'assets/NSBM.jpg',
+  ];
+
+  Timer? _timer;
+  int _currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _startTimer();
+  }
+
+  void _startTimer() {
+    const Duration slideDuration = Duration(seconds: 5);
+    _timer = Timer.periodic(slideDuration, (timer) {
+      setState(() {
+        _currentPage = (_currentPage + 1) % imagePaths.length;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -39,13 +73,13 @@ class _Home2State extends State<Home2> {
                   Expanded(child: Container()),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
-                    width: 50,
-                    height: 50,
+                    width: 20,
+                    height: 20,
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 1),
             Container(
               margin: const EdgeInsets.only(left: 20),
               child: Text(
@@ -57,7 +91,31 @@ class _Home2State extends State<Home2> {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
+            Container(
+              height: 200,
+              child: CarouselSlider.builder(
+                itemCount: imagePaths.length,
+                options: CarouselOptions(
+                  autoPlay: true,
+                  enlargeCenterPage: true,
+                  aspectRatio: 16 / 9,
+                  onPageChanged: (index, reason) {
+                    setState(() {
+                      _currentPage = index;
+                    });
+                  },
+                ),
+                itemBuilder: (context, index, realIndex) {
+                  return Image.asset(
+                    imagePaths[index],
+                    fit: BoxFit.cover,
+                    width: 1000,
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: 20),
             Expanded(
               child: Container(
                 margin: const EdgeInsets.only(left: 10, right: 10),
@@ -70,27 +128,27 @@ class _Home2State extends State<Home2> {
                   itemCount: 6,
                   itemBuilder: (BuildContext context, int index) {
                     List<String> imagePaths = [
-                      'assets/bus.jpg',
-                      'assets/events.jpg',
-                      'assets/Lost.jpg',
-                      'assets/accomadation.jpg',
-                      'assets/community.png',
-                      'assets/Time-Table.png'
+                      'assets/bus.png',
+                      'assets/events2.png',
+                      'assets/Lost2.png',
+                      'assets/accommodation.png',
+                      'assets/community2.png',
+                      'assets/timetable.png'
                     ];
 
                     String imagePath = imagePaths[index % imagePaths.length];
 
                     return GestureDetector(
                       onTap: () {
-                        if (imagePath == 'assets/bus.jpg') {
+                        if (imagePath == 'assets/bus.png') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => Bus(),
+                              builder: (_) => Buspage(),
                             ),
                           );
                         }
-                        if (imagePath == 'assets/events.jpg') {
+                        if (imagePath == 'assets/events2.png') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -98,7 +156,7 @@ class _Home2State extends State<Home2> {
                             ),
                           );
                         }
-                        if (imagePath == 'assets/community.png') {
+                        if (imagePath == 'assets/community2.png') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
