@@ -108,6 +108,95 @@ class Page1 extends StatelessWidget {
                 ),
               ),
             ),
+            //row 3
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Maakubura to Nsbm ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '8.00 AM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            //row 4
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        ' Nsbm to Maharagama ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '3.30 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ], // first child
         ),
       ),
