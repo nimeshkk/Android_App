@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:campus_connect_app/pages/upcoming_events/user/addevent.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/eventdetails.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +53,7 @@ class _EventState extends State<Event> {
   }
 
   void _startTimer() {
-    const Duration slideDuration = Duration(seconds: 5);
+    const Duration slideDuration = Duration(seconds: 3);
     _timer = Timer.periodic(slideDuration, (timer) {
       setState(() {
         _currentPage = (_currentPage + 1) % imagePaths.length;
@@ -110,7 +111,7 @@ class _EventState extends State<Event> {
         ),
         title: Text('Events'),
       ),
-      backgroundColor: Color.fromARGB(255, 171, 197, 219),
+      backgroundColor: Colors.white,
       body: ListView(
         children: <Widget>[
           Container(
@@ -131,7 +132,7 @@ class _EventState extends State<Event> {
                 return Image.asset(
                   imagePaths[index],
                   fit: BoxFit.cover,
-                  width: 1000,
+                  width: 1500,
                 );
               },
             ),
@@ -139,7 +140,7 @@ class _EventState extends State<Event> {
 
           Container(
             height: 35,
-            color: Color.fromARGB(124, 77, 195, 81),
+            color: Color.fromARGB(255, 226, 230, 241),
             child: CarouselSlider.builder(
               itemCount: welcomeMessages.length,
               options: CarouselOptions(
@@ -154,7 +155,7 @@ class _EventState extends State<Event> {
                   child: Text(
                     welcomeMessages[index],
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 15,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
@@ -166,11 +167,11 @@ class _EventState extends State<Event> {
 
           //this is the second part
           Container(
-            height: MediaQuery.of(context).size.height * 0.55,
+            // height: MediaQuery.of(context).size.height * 0.55,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/fiesta02.png'), // Replace with your image path
+                    'assets/back.jpg'), // Replace with your image path
                 fit: BoxFit.cover,
               ),
             ),
@@ -181,14 +182,14 @@ class _EventState extends State<Event> {
               children: [
                 Container(
                   padding: EdgeInsets.only(
-                      top: 10), // Adjust the top padding as needed
+                      top: 40), // Adjust the top padding as needed
 
                   // Wrap the Text widget with Center widget
                   child: Text(
                     'Discover upcoming events, effortlessly.',
                     style: TextStyle(
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
                       fontFamily: 'Roboto',
@@ -200,7 +201,7 @@ class _EventState extends State<Event> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.italic,
                     fontFamily: 'Roboto',
@@ -231,62 +232,65 @@ class _EventState extends State<Event> {
                 SizedBox(height: 20),
 
                 // Replace the ElevatedButton section in the _EventState build method
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => eventdetails()),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-                      ),
-                      icon: Icon(
-                        Icons.person,
-                        color: Color.fromARGB(204, 0, 0, 0),
-                        size: 40,
-                      ),
-                      label: Text(
-                        'USER',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.black,
-                          fontFamily: 'Roboto',
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => eventdetails()),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 30, vertical: 20),
+                        ),
+                        icon: Icon(
+                          Icons.person,
+                          color: Color.fromARGB(204, 0, 0, 0),
+                          size: 30,
+                        ),
+                        label: Text(
+                          'USER',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                          ),
                         ),
                       ),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => addevent()),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-                      ),
-                      icon: Icon(
-                        Icons.admin_panel_settings,
-                        color: Color.fromARGB(255, 0, 28, 75),
-                        size: 40,
-                      ),
-                      label: Text(
-                        'ADMIN',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.black,
-                          fontFamily: 'Roboto',
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => addevent()),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 30, vertical: 20),
+                        ),
+                        icon: Icon(
+                          Icons.admin_panel_settings,
+                          color: Color.fromARGB(255, 0, 28, 75),
+                          size: 30,
+                        ),
+                        label: Text(
+                          'ADMIN',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontFamily: 'Roboto',
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
