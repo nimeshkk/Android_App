@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:another_carousel_pro/another_carousel_pro.dart';
 
 class Page1 extends StatelessWidget {
   @override
@@ -16,7 +17,29 @@ class Page1 extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            const SizedBox(
+              height: 15,
+            ),
+            SizedBox(
+              height: 230,
+              width: double.infinity,
+              child: AnotherCarousel(
+                images: const [
+                  AssetImage("assets/bus6.jpeg"),
+                  AssetImage("assets/bus1.jpeg"),
+                  AssetImage("assets/bus4.jpeg"),
+                  AssetImage("assets/bus5.jpeg"),
+
+                  // we have display image from netwrok as well
+                  // NetworkImage(
+                  // "https://i.cbc.ca/1.3907772.1565385567!/fileImage/httpImage/image.JPG_gen/derivatives/16x9_780/transit.JPG")
+                ],
+                dotSize: 6,
+                indicatorBgPadding: 5.0,
+              ),
+            ),
+          ], // first child
         ),
       ),
     );

@@ -44,6 +44,7 @@ dependencies:
   math_expressions: ^2.0.0
   http: ^1.1.0
   carousel_slider: ^4.2.1
+  another_carousel_pro: ^1.0.0
 
 dev_dependencies:
   flutter_test:
