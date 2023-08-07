@@ -11,7 +11,8 @@ class Page3 extends StatelessWidget {
         shadowColor: const Color.fromARGB(6, 36, 192, 240),
         title: const Text(
           "Private Bus Information",
-          style: TextStyle(fontWeight: FontWeight.w900, fontSize: 24),
+          style: TextStyle(
+              fontWeight: FontWeight.w900, fontSize: 24, color: Colors.white),
         ),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),

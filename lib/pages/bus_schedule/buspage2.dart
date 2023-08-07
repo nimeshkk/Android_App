@@ -11,7 +11,8 @@ class Page2 extends StatelessWidget {
         shadowColor: const Color.fromARGB(191, 4, 52, 142),
         title: const Text(
           "CTB Bus Scheudle",
-          style: TextStyle(fontWeight: FontWeight.w900, fontSize: 24),
+          style: TextStyle(
+              fontWeight: FontWeight.w900, fontSize: 24, color: Colors.white),
         ),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),

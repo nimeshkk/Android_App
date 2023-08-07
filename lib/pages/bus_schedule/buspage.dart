@@ -19,7 +19,8 @@ class Buspage extends StatelessWidget {
         shadowColor: const Color.fromARGB(255, 14, 8, 172),
         title: const Text(
           "Bus Schedule",
-          style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
+          style: TextStyle(
+              fontWeight: FontWeight.w900, fontSize: 30, color: Colors.white),
         ),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),
