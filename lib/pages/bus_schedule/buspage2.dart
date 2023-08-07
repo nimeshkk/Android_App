@@ -774,6 +774,567 @@ class Page2 extends StatelessWidget {
                 ),
               ),
             ),
+            //row  WEEKEND
+            const SizedBox(
+              height: 30,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 19, 19, 19),
+                child: Row(
+                  children: [
+                    //row 1
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: const Image(
+                        image: AssetImage("assets/weekend.png"),
+                        width: 300,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Nugegoda to Nsbm ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '7.00 AM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            //row 3
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Maharagama to Nsbm ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '7.30 AM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            //row 4
+
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'homagama to Nsbm ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '8.30 AM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // row 6
+
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        ' Nsbm to Nugegoda',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '12.30 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // row 8
+
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        ' Nsbm to colombo ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '2.30 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // ROW 11
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Nsbm to Kottawa ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '3.00 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // ROW 12
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Nsbm to Maharagama',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '4.00 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // row 13
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Nsbm to colombo ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '5.10 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // row 14
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        ' Nsbm to Maharagama ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '5.30 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            //row 15
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Nsbm to kottawa ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '5.40 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // row 16
+
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Nsbm to Maharagama',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '6.00 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            //ROW 17
+            const SizedBox(
+              height: 10,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                color: const Color.fromARGB(255, 202, 209, 209),
+                child: Row(
+                  children: [
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Nsbm to Nugegoda ',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 13, 1, 42),
+                        ),
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        color: Colors.white30,
+                        width: 80,
+                        height: 40,
+                        child: const Center(
+                          child: Text(
+                            '6.30 PM',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 15, 1, 57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
