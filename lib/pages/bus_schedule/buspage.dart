@@ -85,6 +85,60 @@ class Buspage extends StatelessWidget {
                   ),
                 ),
               ),
+              // second screeen
+
+              const SizedBox(
+                height: 50,
+              ),
+
+              const Text(
+                "NSBM CTB bus service",
+                style: TextStyle(
+                    color: Color.fromARGB(255, 12, 12, 12),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500),
+              ),
+
+              Center(
+                child: Image.asset(
+                  "assets/ctb.jpg",
+                  height: 300,
+                  scale: 2,
+                ),
+              ),
+              const Text(
+                "The NSBM CTB (Ceylon Transport Board) bus service is a collaborative initiative between NSBM Green University and the Sri Lanka Transport Board (CTB) to provide efficient and reliable transportation for students and staff. This service aims to facilitate easy commuting to and from the university campus, enhancing accessibility and connectivity for the NSBM community.Overall, the NSBM CTB bus service plays a crucial role in providing a convenient, cost-effective, and eco-friendly transportation solution for students and staff, fostering a well-connected and accessible environment at NSBM Green University.",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromARGB(255, 21, 20, 20),
+                    fontWeight: FontWeight.w400),
+              ),
+
+              const SizedBox(height: 30),
+              // button 02
+              GestureDetector(
+                // BUTTON FUNCTION WRITE CAN HERE
+                onTap: () {
+                  // Navigate to Page1 when Button is pressed
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                    return Page2();
+                  }));
+                },
+                child: Center(
+                  child: Container(
+                    padding: const EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: const Color.fromARGB(
+                            255, 121, 186, 239)), // all side padding
+
+                    child: const Text(
+                      "CTB bus time table",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
