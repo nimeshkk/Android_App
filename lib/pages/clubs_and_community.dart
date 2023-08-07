@@ -65,18 +65,17 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
                           crossAxisSpacing: 6.0,
                           mainAxisSpacing: 6.0,
                         ),
-                        itemCount: 9,
+                        itemCount: 8,
                         itemBuilder: (BuildContext context, int index) {
                           List<String> imagePaths = [
-                            'assets/IEEE.png',
-                            'assets/events.jpg',
                             'assets/sup.jpeg',
-                            'assets/accomadation.jpg',
-                            'assets/community.png',
-                            'assets/Time-Table.png',
-                            'assets/bus.jpg',
-                            'assets/events.jpg',
-                            'assets/Lost.jpg',
+                            'assets/IEEE.jpeg',
+                            'assets/aiesec.png',
+                            'assets/csse.jpg',
+                            'assets/music.png',
+                            'assets/drama.png',
+                            'assets/foss.png',
+                            'assets/football.jpeg',
                           ];
 
                           String imagePath =
