@@ -6,16 +6,14 @@ import 'buspage2.dart';
 import 'buspage3.dart';
 
 class Buspage extends StatelessWidget {
-  const Buspage({super.key});
-
-     @override
+  @override
   Widget build(BuildContext context) {
     // return MaterialApp(
     //debugShowCheckedModeBanner: false,
     // title: "bus shudelling",
     // home:
     return Scaffold(
-         backgroundColor: const Color.fromARGB(255, 244, 243, 246),
+      backgroundColor: const Color.fromARGB(255, 244, 243, 246),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 4, 100, 160),
         shadowColor: const Color.fromARGB(255, 14, 8, 172),
@@ -32,10 +30,7 @@ class Buspage extends StatelessWidget {
           child: Column(
             crossAxisAlignment:
                 CrossAxisAlignment.start, // get the text in rigth hand side
-            children: [
-
-
-      ],
+            children: [],
           ),
         ),
       ),
