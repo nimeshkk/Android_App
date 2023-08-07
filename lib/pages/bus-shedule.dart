@@ -1,10 +1,6 @@
-
 import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
-
-
-
 
 void main() {
   runApp(MyApp());
@@ -59,19 +55,19 @@ class _BusState extends State<Bus> {
 
     final List<Widget> images = [
       Container(
-        color: Color.fromARGB(255, 45, 158, 96),
+        color: const Color.fromARGB(255, 45, 158, 96),
       ),
       Container(
-        color:Color.fromARGB(255, 45, 158, 96),
+        color: const Color.fromARGB(255, 45, 158, 96),
       ),
       Container(
-        color: Color.fromARGB(255, 45, 158, 96),
+        color: const Color.fromARGB(255, 45, 158, 96),
       ),
       Container(
-        color:Color.fromARGB(255, 45, 158, 96),
+        color: const Color.fromARGB(255, 45, 158, 96),
       ),
       Container(
-        color:Color.fromARGB(255, 45, 158, 96),
+        color: const Color.fromARGB(255, 45, 158, 96),
       ),
     ];
 
@@ -80,7 +76,8 @@ class _BusState extends State<Bus> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-             Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> Home2()));
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (_) => Home2()));
           },
         ),
       ),
@@ -117,5 +114,3 @@ class _BusState extends State<Bus> {
     );
   }
 }
-
-
