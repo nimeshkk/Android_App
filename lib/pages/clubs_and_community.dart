@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'home2.dart';
 
 class ClubsAndCommunity extends StatefulWidget {
   const ClubsAndCommunity({Key? key}) : super(key: key);

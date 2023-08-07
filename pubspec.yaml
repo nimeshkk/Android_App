@@ -64,14 +64,15 @@ flutter:
   uses-material-design: true
   assets:
     - assets/campus.png
-    - assets/bus.jpg
-    - assets/Lost.jpg
-    - assets/events.jpg
-    - assets/accomadation.jpg
-    - assets/community.png
-    - assets/Time-Table.png
+    - assets/bus.png
+    - assets/Lost2.png
+    - assets/events2.png
+    - assets/accommodation.png
+    - assets/community2.png
+    - assets/timetable.png
     - assets/IEEE.png
     - assets/sup.jpeg
+    - assets/NSBM.jpg
 
     - assets/fiesta01.png
     - assets/fiesta02.png
