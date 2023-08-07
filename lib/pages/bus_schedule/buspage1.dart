@@ -488,6 +488,85 @@ class Page1 extends StatelessWidget {
                 ),
               ),
             ),
+            // footer
+
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+              height: 2,
+              width: 500,
+              decoration:
+                  const BoxDecoration(color: Color.fromARGB(255, 36, 35, 35)),
+            ),
+
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "Contact Information",
+              style: TextStyle(
+                  // Aligns the text to the left
+                  color: Color.fromARGB(255, 23, 22, 22),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600),
+              textAlign: TextAlign.left,
+            ),
+
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "Phone: +94-54 456-7890 / Email: info@busscheduling.com ,For any inquiries, feedback, or support related to our bus scheduling service, feel free to reach out to us using the provided contact information. Our team is ready to assist you and address any questions or concerns you may have.Please note that our support hours are Monday to Friday, 9:00 AM to 5:00 PM (local time). If you contact us outside these hours, we will get back to you as soon as possible on the next business day.We value your feedback and suggestions as they help us improve our service and provide you with a better user experience. Thank you for choosing our bus scheduling service.",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 26, 25, 25),
+                  fontSize: 10,
+                  fontWeight: FontWeight.w300),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment
+                    .spaceAround, // devide the space between each an every item
+                children: [
+                  Container(
+                    height: 30,
+                    width: 30,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: const Color.fromARGB(255, 140, 189, 229)),
+                  ),
+                  Container(
+                    height: 30,
+                    width: 30,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: const Color.fromARGB(255, 80, 164, 233)),
+                  ),
+                  Container(
+                    height: 30,
+                    width: 30,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: const Color.fromARGB(255, 4, 134, 239)),
+                  ),
+                  Container(
+                    height: 30,
+                    width: 30,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: const Color.fromARGB(255, 4, 88, 156)),
+                  ),
+                  Container(
+                    height: 30,
+                    width: 30,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: const Color.fromARGB(255, 2, 53, 94)),
+                  ),
+                ],
+              ),
+            ),
           ], // first child
         ),
       ),
