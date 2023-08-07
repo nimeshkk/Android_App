@@ -1,10 +1,8 @@
 import 'dart:async';
-
 import 'package:campus_connect_app/pages/upcoming_events/user/addevent.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/eventdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
 import '../welcome_page.dart';
 
 void main() {
@@ -36,11 +34,6 @@ class _EventState extends State<Event> {
     'assets/praana02.png',
 
     // Add more image paths here
-  ];
-  final List<String> welcomeMessages = [
-    'Welcome to Campus Connect!',
-    'Stay connected with events!',
-    'Discover exciting opportunities',
   ];
 
   Timer? _timer;
@@ -138,33 +131,6 @@ class _EventState extends State<Event> {
             ),
           ),
 
-          Container(
-            height: 35,
-            color: Color.fromARGB(255, 226, 230, 241),
-            child: CarouselSlider.builder(
-              itemCount: welcomeMessages.length,
-              options: CarouselOptions(
-                autoPlay: true,
-                enlargeCenterPage: true,
-                onPageChanged: (index, reason) {
-                  // We don't need to do anything here as we are not using the index.
-                },
-              ),
-              itemBuilder: (context, index, realIndex) {
-                return Center(
-                  child: Text(
-                    welcomeMessages[index],
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-
           //this is the second part
           Container(
             // height: MediaQuery.of(context).size.height * 0.55,
@@ -188,7 +154,7 @@ class _EventState extends State<Event> {
                   child: Text(
                     'Discover upcoming events, effortlessly.',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 17,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
@@ -200,7 +166,7 @@ class _EventState extends State<Event> {
                   'Stay updated with exciting upcoming events in our university!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 17,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.italic,
@@ -233,7 +199,7 @@ class _EventState extends State<Event> {
 
                 // Replace the ElevatedButton section in the _EventState build method
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.25,
+                  height: MediaQuery.of(context).size.height * 0.35,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -252,12 +218,12 @@ class _EventState extends State<Event> {
                         icon: Icon(
                           Icons.person,
                           color: Color.fromARGB(204, 0, 0, 0),
-                          size: 30,
+                          size: 25,
                         ),
                         label: Text(
                           'USER',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 17,
                             color: Colors.black,
                             fontFamily: 'Roboto',
                           ),
@@ -278,12 +244,12 @@ class _EventState extends State<Event> {
                         icon: Icon(
                           Icons.admin_panel_settings,
                           color: Color.fromARGB(255, 0, 28, 75),
-                          size: 30,
+                          size: 25,
                         ),
                         label: Text(
                           'ADMIN',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 17,
                             color: Colors.black,
                             fontFamily: 'Roboto',
                           ),
