@@ -139,6 +139,139 @@ class Buspage extends StatelessWidget {
                   ),
                 ),
               ),
+
+              // third screen
+
+              const SizedBox(
+                height: 50,
+              ),
+
+              const Text(
+                "Private bus service",
+                style: TextStyle(
+                    color: Color.fromARGB(255, 17, 17, 17),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500),
+              ),
+              Center(
+                child: Image.asset(
+                  "assets/private.png",
+                  height: 300,
+                  scale: 1,
+                ),
+              ),
+              const Text(
+                "Targeted transportation services for NSBM University encompass both monthly paid and daily paid buses, catering to the commuting needs of students, staff, and faculty members. These services are designed to offer convenient and reliable transportation options for individuals traveling to and from the university or any other desired locations.",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromARGB(255, 14, 14, 14),
+                    fontWeight: FontWeight.w400),
+              ),
+
+              const SizedBox(
+                height: 30,
+              ),
+              // button 03
+
+              GestureDetector(
+                // BUTTON FUNCTION WRITE CAN HERE
+                onTap: () {
+                  // Navigate to Page1 when Button is pressed
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                    return Page3();
+                  }));
+                },
+                child: Center(
+                  child: Container(
+                    padding: const EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: const Color.fromARGB(
+                            255, 121, 186, 239)), // all side padding
+
+                    child: const Text(
+                      "private bus details",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+
+              // footer
+              Container(
+                height: 2,
+                width: 500,
+                decoration:
+                    const BoxDecoration(color: Color.fromARGB(255, 17, 17, 17)),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                "Contact Information",
+                style: TextStyle(
+                    color: Color.fromARGB(255, 20, 20, 20),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600),
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                "Phone: +94-54 456-7890 / Email: info@busscheduling.com ,For any inquiries, feedback, or support related to our bus scheduling service, feel free to reach out to us using the provided contact information. Our team is ready to assist you and address any questions or concerns you may have.Please note that our support hours are Monday to Friday, 9:00 AM to 5:00 PM (local time). If you contact us outside these hours, we will get back to you as soon as possible on the next business day.We value your feedback and suggestions as they help us improve our service and provide you with a better user experience. Thank you for choosing our bus scheduling service.",
+                style: TextStyle(
+                    color: Color.fromARGB(255, 23, 22, 22),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w300),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment
+                      .spaceAround, // devide the space between each an every item
+                  children: [
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: const Color.fromARGB(255, 140, 189, 229)),
+                    ),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: const Color.fromARGB(255, 80, 164, 233)),
+                    ),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: const Color.fromARGB(255, 4, 134, 239)),
+                    ),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: const Color.fromARGB(255, 4, 88, 156)),
+                    ),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: const Color.fromARGB(255, 2, 53, 94)),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
