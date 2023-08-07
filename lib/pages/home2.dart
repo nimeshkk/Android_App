@@ -1,8 +1,8 @@
-
 import 'package:campus_connect_app/pages/add_pages/add_item.dart';
 import 'package:campus_connect_app/pages/bus-shedule.dart';
 import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
 import 'package:flutter/material.dart';
+import 'clubs_and_community.dart';
 import 'welcome_page.dart';
 
 class Home2 extends StatefulWidget {
@@ -98,6 +98,14 @@ class _Home2State extends State<Home2> {
                             ),
                           );
                         }
+                        if (imagePath == 'assets/community.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => ClubsAndCommunity(),
+                            ),
+                          );
+                        }
                       },
                       child: Container(
                         margin: const EdgeInsets.only(right: 10, top: 10),
@@ -123,4 +131,3 @@ class _Home2State extends State<Home2> {
     );
   }
 }
-
