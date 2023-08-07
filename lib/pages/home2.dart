@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:campus_connect_app/pages/bus-shedule.dart';
+import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
 import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -15,13 +15,12 @@ class Home2 extends StatefulWidget {
 }
 
 class _Home2State extends State<Home2> {
-   bool isAdmin = true; // Set this to false if the user is not an admin
+  bool isAdmin = true; // Set this to false if the user is not an admin
 
   final List<String> imagePaths = [
-      'assets/NSBM.jpg',
-      'assets/NSBM.jpg',
-      'assets/NSBM.jpg',
-     
+    'assets/NSBM.jpg',
+    'assets/NSBM.jpg',
+    'assets/NSBM.jpg',
   ];
 
   Timer? _timer;
@@ -41,7 +40,8 @@ class _Home2State extends State<Home2> {
       });
     });
   }
-    @override
+
+  @override
   void dispose() {
     _timer?.cancel();
     super.dispose();
@@ -57,9 +57,6 @@ class _Home2State extends State<Home2> {
       child: Scaffold(
         body: Column(
           children: [
-          
-            
-
             Container(
               padding: const EdgeInsets.only(top: 70, left: 20),
               child: Row(
@@ -83,7 +80,6 @@ class _Home2State extends State<Home2> {
               ),
             ),
             SizedBox(height: 1),
-            
             Container(
               margin: const EdgeInsets.only(left: 20),
               child: Text(
@@ -96,32 +92,31 @@ class _Home2State extends State<Home2> {
               ),
             ),
             SizedBox(height: 20),
-             Container(
-            height: 200,
-            child: CarouselSlider.builder(
-              itemCount: imagePaths.length,
-              options: CarouselOptions(
-                autoPlay: true,
-                enlargeCenterPage: true,
-                aspectRatio: 16 / 9,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    _currentPage = index;
-                  });
+            Container(
+              height: 200,
+              child: CarouselSlider.builder(
+                itemCount: imagePaths.length,
+                options: CarouselOptions(
+                  autoPlay: true,
+                  enlargeCenterPage: true,
+                  aspectRatio: 16 / 9,
+                  onPageChanged: (index, reason) {
+                    setState(() {
+                      _currentPage = index;
+                    });
+                  },
+                ),
+                itemBuilder: (context, index, realIndex) {
+                  return Image.asset(
+                    imagePaths[index],
+                    fit: BoxFit.cover,
+                    width: 1000,
+                  );
                 },
               ),
-              itemBuilder: (context, index, realIndex) {
-                return Image.asset(
-                  imagePaths[index],
-                  fit: BoxFit.cover,
-                  width: 1000,
-                );
-              },
             ),
-          ),
-         SizedBox(height: 20),  
+            SizedBox(height: 20),
             Expanded(
-              
               child: Container(
                 margin: const EdgeInsets.only(left: 10, right: 10),
                 child: GridView.builder(
@@ -165,7 +160,7 @@ class _Home2State extends State<Home2> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) =>  ClubsAndCommunity(),
+                              builder: (_) => ClubsAndCommunity(),
                             ),
                           );
                         }
