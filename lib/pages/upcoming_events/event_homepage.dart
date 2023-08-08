@@ -62,7 +62,7 @@ class _EventState extends State<Event> {
         context,
         MaterialPageRoute(
             builder: (_) =>
-                addevent()), // Use the correct class name (capitalize the first letter)
+                CalendarScreen()), // Use the correct class name (capitalize the first letter)
       );
     } else {
       Navigator.pushReplacement(
