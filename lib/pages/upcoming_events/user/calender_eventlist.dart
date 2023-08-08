@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+import 'addevent.dart'; // Import the AddEventScreen class
+
 void main() {
   runApp(MyApp());
 }
@@ -27,26 +29,75 @@ class _CalendarScreenState extends State<CalendarScreen> {
   CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _selectedDay = DateTime.now();
   DateTime _focusedDay = DateTime.now();
-  List<String> _onThisDayEvents = ['Event 1', 'Event 2'];
-  Map<DateTime, List<String>> _upcomingEvents = {
-    DateTime.now().add(Duration(days: 1)): ['Event 3'],
-    DateTime.now().add(Duration(days: 2)): ['Event 4'],
-    DateTime.now().add(Duration(days: 3)): ['Event 5'],
+  List<Map<String, dynamic>> _onThisDayEvents =
+      []; // Update event list to hold maps
+  Map<DateTime, List<Map<String, dynamic>>> _upcomingEvents = {
+    DateTime.now().add(Duration(days: 1)): [],
+    DateTime.now().add(Duration(days: 2)): [],
+    DateTime.now().add(Duration(days: 3)): [],
   };
-  List<String> _selectedEvents = [];
+  List<Map<String, dynamic>> _selectedEvents = [];
 
-  void _addEvent(DateTime date, String event) {
+  void _addEvent(DateTime date, String name, DateTime eventDate,
+      String description, String organization, String images) {
     setState(() {
       if (_upcomingEvents.containsKey(date)) {
-        _upcomingEvents[date]!.add(event);
+        _upcomingEvents[date]!.add({
+          'name': name,
+          'description': description,
+          'organization': organization,
+          'images': images,
+        });
       } else {
-        _upcomingEvents[date] = [event];
+        _upcomingEvents[date] = [
+          {
+            'name': name,
+            'description': description,
+            'organization': organization,
+            'images': images,
+          }
+        ];
       }
 
       if (isSameDay(date, DateTime.now())) {
-        _onThisDayEvents.add(event);
+        _onThisDayEvents.add({
+          'name': name,
+          'description': description,
+          'organization': organization,
+          'images': images,
+        });
       }
     });
+  }
+
+  void _updateSelectedEvents() {
+    if (isSameDay(_selectedDay, DateTime.now())) {
+      _selectedEvents = _onThisDayEvents;
+    } else {
+      _selectedEvents = [];
+      _onThisDayEvents = _upcomingEvents[_selectedDay] ?? [];
+      _upcomingEvents.forEach((date, events) {
+        if (date.isAfter(_selectedDay)) {
+          _selectedEvents.addAll(events);
+        }
+      });
+    }
+  }
+
+  void _showAddEventScreen() async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => AddEventScreen(
+          addEventCallback: _addEvent,
+          selectedDate: _selectedDay,
+        ),
+      ),
+    );
+
+    if (result != null) {
+      // Handle result from AddEventScreen if needed
+    }
   }
 
   @override
@@ -159,7 +210,15 @@ class _CalendarScreenState extends State<CalendarScreen> {
               itemCount: _selectedEvents.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text(_selectedEvents[index]),
+                  title: Text(_selectedEvents[index]['name']),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(_selectedEvents[index]['description']),
+                      Text(_selectedEvents[index]['organization']),
+                    ],
+                    // You can display more details here as needed
+                  ),
                 );
               },
             ),
@@ -171,64 +230,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
           _showAddEventScreen();
         },
         child: Icon(Icons.add),
-      ),
-    );
-  }
-
-  void _updateSelectedEvents() {
-    if (isSameDay(_selectedDay, DateTime.now())) {
-      _selectedEvents = _onThisDayEvents;
-    } else {
-      _selectedEvents = [];
-      _onThisDayEvents = _upcomingEvents[_selectedDay] ?? [];
-      _upcomingEvents.forEach((date, events) {
-        if (date.isAfter(_selectedDay)) {
-          _selectedEvents.addAll(events);
-        }
-      });
-    }
-  }
-
-  void _showAddEventScreen() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (BuildContext context) => AddEventScreen(
-          addEventCallback: _addEvent,
-          selectedDate: _selectedDay,
-        ),
-      ),
-    );
-  }
-}
-
-class AddEventScreen extends StatelessWidget {
-  final Function(DateTime, String) addEventCallback;
-  final DateTime selectedDate;
-
-  AddEventScreen({required this.addEventCallback, required this.selectedDate});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Add Event'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Selected Date: ${selectedDate.toString()}'),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                addEventCallback(selectedDate, 'New Event');
-                Navigator.pop(context);
-              },
-              child: Text('Add Event'),
-            ),
-          ],
-        ),
       ),
     );
   }
