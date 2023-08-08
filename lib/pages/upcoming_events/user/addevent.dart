@@ -19,7 +19,7 @@ class _AddEventScreenState extends State<AddEventScreen> {
   late DateTime date; // Changed 'place' to 'date'
   late String description;
   late String organization;
-  late String images;
+  late String location;
 
   @override
   void initState() {
@@ -28,7 +28,7 @@ class _AddEventScreenState extends State<AddEventScreen> {
     date = widget.selectedDate; // Initialize with the selected date
     description = '';
     organization = '';
-    images = '';
+    location = '';
   }
 
   @override
@@ -94,12 +94,12 @@ class _AddEventScreenState extends State<AddEventScreen> {
                 TextFormField(
                   onChanged: (value) {
                     setState(() {
-                      images = value;
+                      location = value;
                     });
                   },
                   decoration: InputDecoration(
-                    labelText: 'Images',
-                    hintText: 'Enter event images',
+                    labelText: 'location',
+                    hintText: 'Enter event location',
                   ),
                 ),
                 SizedBox(height: 20),
@@ -111,7 +111,7 @@ class _AddEventScreenState extends State<AddEventScreen> {
                       date,
                       description,
                       organization,
-                      images,
+                      location,
                     );
                     Navigator.pop(context);
                   },

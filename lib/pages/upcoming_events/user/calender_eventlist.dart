@@ -39,14 +39,14 @@ class _CalendarScreenState extends State<CalendarScreen> {
   List<Map<String, dynamic>> _selectedEvents = [];
 
   void _addEvent(DateTime date, String name, DateTime eventDate,
-      String description, String organization, String images) {
+      String description, String organization, String location) {
     setState(() {
       if (_upcomingEvents.containsKey(date)) {
         _upcomingEvents[date]!.add({
           'name': name,
           'description': description,
           'organization': organization,
-          'images': images,
+          'location': location,
         });
       } else {
         _upcomingEvents[date] = [
@@ -54,7 +54,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
             'name': name,
             'description': description,
             'organization': organization,
-            'images': images,
+            'location': location,
           }
         ];
       }
@@ -64,7 +64,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           'name': name,
           'description': description,
           'organization': organization,
-          'images': images,
+          'location': location,
         });
       }
     });
@@ -209,20 +209,33 @@ class _CalendarScreenState extends State<CalendarScreen> {
             child: ListView.builder(
               itemCount: _selectedEvents.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(_selectedEvents[index]['name']),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(_selectedEvents[index]['description']),
-                      Text(_selectedEvents[index]['organization']),
-                    ],
-                    // You can display more details here as needed
+                return Container(
+                  margin: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlue, // Set the background color
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 1.0,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: ListTile(
+                    title: Text(_selectedEvents[index]['name']),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(_selectedEvents[index]['description']),
+                        Text(_selectedEvents[index]['organization']),
+                        Text(_selectedEvents[index]['location']),
+                        // You can display more details here as needed
+                      ],
+                    ),
                   ),
                 );
               },
             ),
-          ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
