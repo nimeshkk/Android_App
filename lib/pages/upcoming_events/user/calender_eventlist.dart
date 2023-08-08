@@ -213,9 +213,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
                   margin: EdgeInsets.symmetric(vertical: 10),
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.lightBlue, // Set the background color
+                    color: Color.fromARGB(
+                        107, 78, 182, 230), // Set the background color
                     border: Border.all(
-                      color: Colors.grey,
+                      color: Color.fromARGB(255, 15, 90, 7),
                       width: 1.0,
                     ),
                     borderRadius: BorderRadius.circular(10),

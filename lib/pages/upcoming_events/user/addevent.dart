@@ -48,76 +48,85 @@ class _AddEventScreenState extends State<AddEventScreen> {
       ),
       body: Center(
         child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Selected Date: ${widget.selectedDate.toString()}'),
-                SizedBox(height: 20),
-                TextFormField(
-                  onChanged: (value) {
-                    setState(() {
-                      name = value;
-                    });
-                  },
-                  decoration: InputDecoration(
-                    labelText: 'Event Name',
-                    hintText: 'Enter event name',
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                    'assets/back.jpg'), // Replace with your image asset
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Selected Date: ${widget.selectedDate.toString()}'),
+                  SizedBox(height: 20),
+                  TextFormField(
+                    onChanged: (value) {
+                      setState(() {
+                        name = value;
+                      });
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'Event Name',
+                      hintText: 'Enter event name',
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                TextFormField(
-                  onChanged: (value) {
-                    setState(() {
-                      description = value;
-                    });
-                  },
-                  decoration: InputDecoration(
-                    labelText: 'Description',
-                    hintText: 'Enter event description',
+                  SizedBox(height: 20),
+                  TextFormField(
+                    onChanged: (value) {
+                      setState(() {
+                        description = value;
+                      });
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'Description',
+                      hintText: 'Enter event description',
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                TextFormField(
-                  onChanged: (value) {
-                    setState(() {
-                      organization = value;
-                    });
-                  },
-                  decoration: InputDecoration(
-                    labelText: 'Organization',
-                    hintText: 'Enter event organization',
+                  SizedBox(height: 20),
+                  TextFormField(
+                    onChanged: (value) {
+                      setState(() {
+                        organization = value;
+                      });
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'Organization',
+                      hintText: 'Enter event organization',
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                TextFormField(
-                  onChanged: (value) {
-                    setState(() {
-                      location = value;
-                    });
-                  },
-                  decoration: InputDecoration(
-                    labelText: 'location',
-                    hintText: 'Enter event location',
+                  SizedBox(height: 20),
+                  TextFormField(
+                    onChanged: (value) {
+                      setState(() {
+                        location = value;
+                      });
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'location',
+                      hintText: 'Enter event location',
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    widget.addEventCallback(
-                      widget.selectedDate,
-                      name,
-                      date,
-                      description,
-                      organization,
-                      location,
-                    );
-                    Navigator.pop(context);
-                  },
-                  child: Text('Add Event'),
-                ),
-              ],
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
+                      widget.addEventCallback(
+                        widget.selectedDate,
+                        name,
+                        date,
+                        description,
+                        organization,
+                        location,
+                      );
+                      Navigator.pop(context);
+                    },
+                    child: Text('Add Event'),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
