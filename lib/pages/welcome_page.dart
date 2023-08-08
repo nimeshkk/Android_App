@@ -64,14 +64,14 @@ class _WelcomPageState extends State<WelcomPage> {
                       decoration: const BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           gradient: LinearGradient(colors: [
-                            Color.fromARGB(255, 55, 184, 23),
-                            Color.fromARGB(255, 236, 199, 10)
+                            Color.fromARGB(255, 255, 255, 255),
+                            Color.fromARGB(255, 215, 215, 214)
                           ])),
                       child: Center(
                         child: Text(
                           'Get Started',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
