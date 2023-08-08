@@ -44,7 +44,12 @@ dependencies:
   math_expressions: ^2.0.0
   http: ^1.1.0
   carousel_slider: ^4.2.1
+
+  table_calendar: ^3.0.9
+  image_picker: ^1.0.2
+
   another_carousel_pro: ^1.0.0
+
 
 dev_dependencies:
   flutter_test:
@@ -93,6 +98,7 @@ flutter:
     - assets/fiesta01.png
     - assets/fiesta02.png
     - assets/praana.png
+    - assets/back.jpg
     - assets/praana02.png
     
     - assets/ctb.jpg
