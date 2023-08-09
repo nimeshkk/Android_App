@@ -44,8 +44,12 @@ dependencies:
   math_expressions: ^2.0.0
   http: ^1.1.0
   carousel_slider: ^4.2.1
+
   table_calendar: ^3.0.9
   image_picker: ^1.0.2
+
+  another_carousel_pro: ^1.0.0
+
 
 dev_dependencies:
   flutter_test:
@@ -66,15 +70,53 @@ flutter:
   uses-material-design: true
   assets:
     - assets/campus.png
-    - assets/bus.jpg
-    - assets/Lost.jpg
-    - assets/events.jpg
-    - assets/accomadation.jpg
-    - assets/community.png
-    - assets/Time-Table.png
+    - assets/IEEE.jpeg
+    - assets/sup.jpeg
+    - assets/foss.png
+    - assets/football.jpeg
+    - assets/csse.jpg
+    - assets/aiesec.png
+    - assets/drama.png
+    - assets/music.png
+
+    - assets/bus.png
+    - assets/Lost2.png
+    - assets/events2.png
+    - assets/about.png
+    - assets/GPA.png
+    - assets/accommodation.png
+    - assets/community2.png
+    - assets/timetable.png
+    - assets/IEEE.jpeg
+    - assets/sup.jpeg
+    - assets/NSBM.jpg
+    - assets/NSBM1.png
+    - assets/NSBM2.png
+    - assets/NSBM3.png
+
 
     - assets/fiesta01.png
     - assets/fiesta02.png
     - assets/praana.png
     - assets/back.jpg
     - assets/praana02.png
+    
+    - assets/ctb.jpg
+    - assets/private.png
+    - assets/shuttle-bus-main-image1.jpg
+    - assets/weekend.png
+    - assets/weekdays.png
+    - assets/bus1.jpeg
+    - assets/bus4.jpeg
+    - assets/bus5.jpeg
+    - assets/bus6.jpeg
+    - assets/ctb1.jpg
+    - assets/ctb2.jpg
+    - assets/private4.jpg
+    - assets/bus3.jpeg
+    - assets/bus7.jpg
+    - assets/private2.jpeg
+    - assets/private3.jpeg
+    - assets/private5.jpg
+    - assets/van1.jpg
+    - assets/van2.png
