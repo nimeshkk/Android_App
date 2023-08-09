@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:campus_connect_app/pages/upcoming_events/user/calender_eventlist.dart';
-import 'package:campus_connect_app/pages/upcoming_events/user/eventdetails.dart';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../welcome_page.dart';
@@ -55,14 +55,13 @@ class _EventState extends State<Event> {
   }
 
   void _navigateToPage() {
-    if (isAdmin) {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-            builder: (_) =>
-                CalendarScreen()), // Use the correct class name (capitalize the first letter)
-      );
-    } else {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+          builder: (_) =>
+              CalendarScreen()), // Use the correct class name (capitalize the first letter)
+    );
+    /*else {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -70,7 +69,7 @@ class _EventState extends State<Event> {
                   events: [],
                 )), // Use the correct class name (capitalize the first letter)
       );
-    }
+    }*/
   }
 
   @override
