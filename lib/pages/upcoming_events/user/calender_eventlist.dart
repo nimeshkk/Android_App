@@ -118,6 +118,17 @@ class _CalendarScreenState extends State<CalendarScreen> {
       body: Column(
         children: [
           Container(
+            color: Color.fromARGB(255, 0, 15, 94),
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              'Important Notice: only admin can do modifications for events',
+              style: TextStyle(
+                color: Colors.red, // Customize the text color
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Container(
             color: Color.fromARGB(255, 234, 235, 241),
             child: TableCalendar(
               firstDay: DateTime(2000),

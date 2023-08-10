@@ -1,3 +1,5 @@
+import 'package:campus_connect_app/pages/upcoming_events/user/delete_event.dart';
+import 'package:campus_connect_app/pages/upcoming_events/user/updateevent.dart';
 import 'package:flutter/material.dart';
 
 class AddEventScreen extends StatefulWidget {
@@ -34,107 +36,161 @@ class _AddEventScreenState extends State<AddEventScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Add Event'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+        appBar: AppBar(
+          title: Text('Add Event'),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
             ),
           ),
         ),
-      ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Container(
+        body: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/back.jpg'), // Replace with your image asset
+                    'assets/back.jpg'), // Set your background image asset
                 fit: BoxFit.cover,
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Selected Date: ${widget.selectedDate.toString()}'),
-                  SizedBox(height: 20),
-                  TextFormField(
-                    onChanged: (value) {
-                      setState(() {
-                        name = value;
-                      });
-                    },
-                    decoration: InputDecoration(
-                      labelText: 'Event Name',
-                      hintText: 'Enter event name',
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  TextFormField(
-                    onChanged: (value) {
-                      setState(() {
-                        description = value;
-                      });
-                    },
-                    decoration: InputDecoration(
-                      labelText: 'Description',
-                      hintText: 'Enter event description',
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  TextFormField(
-                    onChanged: (value) {
-                      setState(() {
-                        organization = value;
-                      });
-                    },
-                    decoration: InputDecoration(
-                      labelText: 'Organization',
-                      hintText: 'Enter event organization',
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  TextFormField(
-                    onChanged: (value) {
-                      setState(() {
-                        location = value;
-                      });
-                    },
-                    decoration: InputDecoration(
-                      labelText: 'location',
-                      hintText: 'Enter event location',
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {
-                      widget.addEventCallback(
-                        widget.selectedDate,
-                        name,
-                        date,
-                        description,
-                        organization,
-                        location,
-                      );
-                      Navigator.pop(context);
-                    },
-                    child: Text('Add Event'),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+            child: Center(
+                child: SingleChildScrollView(
+                    child: Container(
+                        child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                      'Selected Date: ${widget.selectedDate.toString()}'),
+                                  SizedBox(height: 20),
+                                  TextFormField(
+                                    onChanged: (value) {
+                                      setState(() {
+                                        name = value;
+                                      });
+                                    },
+                                    decoration: InputDecoration(
+                                      labelText: 'Event Name',
+                                      hintText: 'Enter event name',
+                                    ),
+                                  ),
+                                  SizedBox(height: 20),
+                                  TextFormField(
+                                    onChanged: (value) {
+                                      setState(() {
+                                        description = value;
+                                      });
+                                    },
+                                    decoration: InputDecoration(
+                                      labelText: 'Description',
+                                      hintText: 'Enter event description',
+                                    ),
+                                  ),
+                                  SizedBox(height: 20),
+                                  TextFormField(
+                                    onChanged: (value) {
+                                      setState(() {
+                                        organization = value;
+                                      });
+                                    },
+                                    decoration: InputDecoration(
+                                      labelText: 'Organization',
+                                      hintText: 'Enter event organization',
+                                    ),
+                                  ),
+                                  SizedBox(height: 20),
+                                  TextFormField(
+                                    onChanged: (value) {
+                                      setState(() {
+                                        location = value;
+                                      });
+                                    },
+                                    decoration: InputDecoration(
+                                      labelText: 'location',
+                                      hintText: 'Enter event location',
+                                    ),
+                                  ),
+                                  SizedBox(height: 20),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      widget.addEventCallback(
+                                        widget.selectedDate,
+                                        name,
+                                        date,
+                                        description,
+                                        organization,
+                                        location,
+                                      );
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text(
+                                      'Add Event',
+                                      style: TextStyle(
+                                        color: Colors
+                                            .black, // Set the font color to black
+                                        fontWeight: FontWeight
+                                            .bold, // Set the font weight to bold
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 20),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment
+                                        .spaceBetween, // Aligns children to the left
+                                    children: [
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DeleteEventScreen(),
+                                            ),
+                                          );
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor:
+                                              Color.fromARGB(255, 216, 43, 30),
+                                        ),
+                                        child: Text(
+                                          'Delete Event',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  UpdateEventScreen(),
+                                            ),
+                                          );
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor:
+                                              Color.fromARGB(255, 28, 255, 77),
+                                        ),
+                                        child: Text(
+                                          'Update Event',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ])))))));
   }
 }
-
 /*
 class AddEventScreen extends StatefulWidget {
   final Function(EventData eventData) addEventCallback;
