@@ -1,3 +1,4 @@
+import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 import 'gpapage.dart';
 
@@ -19,7 +20,7 @@ class Gpahome extends StatelessWidget {
             //   "assets/gpa7.png",
             //  fit: BoxFit.cover,
             // ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 0),
 
             GestureDetector(
               onTap: () {},
@@ -97,7 +98,7 @@ class Gpahome extends StatelessWidget {
                       ),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => GpaPage()));
+                            MaterialPageRoute(builder: (context) => Home2()));
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),

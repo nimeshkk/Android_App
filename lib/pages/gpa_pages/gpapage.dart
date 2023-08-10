@@ -108,7 +108,10 @@ class _GpaPageState extends State<GpaPage> {
                 fixedSize: const Size(200,
                     40), // Set the width and height of the button // Set your desired color here
               ),
-              child: const Text('Calculate GPA'),
+              child: const Text(
+                'Calculate GPA',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),
