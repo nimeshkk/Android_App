@@ -47,7 +47,9 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Update Event'),
+        title: Text(
+          'Update Event',
+        ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -111,7 +113,15 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: _updateEvent,
-                    child: Text('Update Event'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green, // Set button color here
+                    ),
+                    child: Text(
+                      'Update Event',
+                      style: TextStyle(
+                        color: Colors.black, // Set text color here
+                      ),
+                    ),
                   ),
                 ],
               ),
