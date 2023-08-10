@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:campus_connect_app/pages/upcoming_events/user/updateevent.dart';
 import 'package:flutter/material.dart';
 import 'delete_event.dart'; // Import the DeleteEventScreen class
 
@@ -62,6 +65,33 @@ class _AddEventScreenState extends State<AddEventScreen> {
 
     widget.deleteEventCallback(
         event); // Notify CalendarScreen about event deletion
+  }
+
+  void _navigateToUpdateEventScreen(Event event) async {
+    final updatedEvent = await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => UpdateEventScreen(
+          event: event,
+          updateEventCallback: _updateEventCallback,
+        ),
+      ),
+    );
+
+    if (updatedEvent != null) {
+      _updateEventCallback(updatedEvent);
+    }
+  }
+
+  void _updateEventCallback(Event updatedEvent) {
+    setState(() {
+      int index = widget.events
+          .indexWhere((event) => event.eventName == updatedEvent.eventName);
+
+      if (index != -1) {
+        widget.events[index] = updatedEvent;
+      }
+    });
   }
 
   @override
@@ -177,7 +207,9 @@ class _AddEventScreenState extends State<AddEventScreen> {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            // Navigate to UpdateEventScreen
+                            if (widget.events.isNotEmpty) {
+                              _showUpdateDialog(); // Show dialog to select event for update
+                            }
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color.fromARGB(255, 28, 255, 77),
@@ -275,6 +307,47 @@ class _AddEventScreenState extends State<AddEventScreen> {
               },
               child: Text('Close'),
             ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _showUpdateDialog() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Update Event'),
+          content: Text('Select the event to update:'),
+          actions: [
+            for (Event event in widget.events)
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.pop(context); // Close the dialog
+                    _navigateToUpdateEventScreen(
+                        event); // Navigate to update screen
+                  },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green, // Button background color
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        event.eventName,
+                        style: TextStyle(color: Colors.black), // Text color
+                      ),
+                      Text(
+                        event.location,
+                        style: TextStyle(color: Colors.black), // Text color
+                      ),
+                    ],
+                  ),
+                ),
+              ),
           ],
         );
       },
