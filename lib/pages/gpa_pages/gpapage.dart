@@ -70,46 +70,56 @@ class _GpaPageState extends State<GpaPage> {
               style: ElevatedButton.styleFrom(
                 primary: const Color.fromARGB(255, 70, 71, 183),
                 fixedSize: const Size(
-                    200, 40), // Set the width and height of the button
+                    300, 40), // Set the width and height of the button
               ),
               child: const Text(
                 'Add Course',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500),
               ),
             ),
             const SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-              onPressed: () {
-                double gpa = calculateGpa(courses);
-                String gpaMessage = getGpaMessage(gpa);
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AlertDialog(
-                      title: const Text('GPA Result'),
-                      content: Text('Your GPA is: $gpa\n$gpaMessage'),
-                      actions: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                primary: const Color.fromARGB(255, 70, 71, 183),
-                fixedSize: const Size(
-                    200, 40), // Set the width and height of the button
-              ),
-              child: const Text(
-                'Calculate GPA',
-                style: TextStyle(color: Colors.white),
+            Container(
+              margin: EdgeInsets.only(
+                  bottom: 20), // Add top margin to adjust the position
+              child: ElevatedButton(
+                onPressed: () {
+                  double gpa = calculateGpa(courses);
+                  String gpaMessage = getGpaMessage(gpa);
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: const Text('GPA Result'),
+                        content: Text('Your GPA is: $gpa\n$gpaMessage'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Text('OK'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: const Color.fromARGB(255, 70, 71, 183),
+                  fixedSize: const Size(
+                      300, 40), // Set the width and height of the button
+                ),
+                child: const Text(
+                  'Calculate GPA',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500),
+                ),
               ),
             ),
           ],
