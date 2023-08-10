@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:campus_connect_app/pages/home2.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/calender_eventlist.dart';
 
 import 'package:flutter/material.dart';
@@ -98,7 +99,7 @@ class _EventState extends State<Event> {
                 context,
                 MaterialPageRoute(
                     builder: (_) =>
-                        WelcomPage()), // Use the correct class name (capitalize the first letter)
+                        Home2()), // Use the correct class name (capitalize the first letter)
               );
             },
           ),
