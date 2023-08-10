@@ -12,6 +12,16 @@ class _GpaPageState extends State<GpaPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 70, 71, 183),
+        shadowColor: Color.fromARGB(255, 70, 71, 183),
+        title: const Text(
+          "UGC GPA Calculator",
+          style: TextStyle(
+              fontWeight: FontWeight.w900, fontSize: 30, color: Colors.white),
+        ),
+      ),
+    );
   }
 }
