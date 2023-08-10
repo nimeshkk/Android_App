@@ -133,7 +133,7 @@ class _EventState extends State<Event> {
 
           //this is the second part
           Container(
-              // height: MediaQuery.of(context).size.height * 0.55,
+              height: MediaQuery.of(context).size.height * 0.7,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
