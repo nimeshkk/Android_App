@@ -44,6 +44,33 @@ class _EditCoursePageState extends State<EditCoursePage> {
             ),
             SizedBox(height: 10),
             // Add more fields for editing credits and grade here
+            DropdownButton<String>(
+              value: editedGrade,
+              onChanged: (newValue) {
+                setState(() {
+                  editedGrade = newValue!;
+                });
+              },
+              items: gradePointMap.keys.map<DropdownMenuItem<String>>(
+                (String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                },
+              ).toList(),
+            ),
+            SizedBox(height: 10),
+            TextField(
+              onChanged: (value) {
+                setState(() {
+                  editedCredits = int.parse(value);
+                });
+              },
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(labelText: 'Credit Hours'),
+              controller: TextEditingController(text: editedCredits.toString()),
+            ),
             ElevatedButton(
               onPressed: () {
                 Course editedCourse = Course(
