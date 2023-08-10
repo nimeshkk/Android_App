@@ -48,7 +48,7 @@ class ProductDetaildPage extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 43,
+                height: 43.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(
                     kBorderRadius10
