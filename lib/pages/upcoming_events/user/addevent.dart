@@ -17,6 +17,7 @@ class Event {
   });
 }
 
+//add event screen update done
 class AddEventScreen extends StatefulWidget {
   final Function(DateTime, String, DateTime, String, String, String)
       addEventCallback;
@@ -341,14 +342,6 @@ class _AddEventScreenState extends State<AddEventScreen> {
     );
   }
 }
-
-
-
-
-
-
-
-
 
 /*
 class AddEventScreen extends StatefulWidget {
