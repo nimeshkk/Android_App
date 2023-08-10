@@ -21,13 +21,16 @@ class Event {
 class AddEventScreen extends StatefulWidget {
   final Function(DateTime, String, DateTime, String, String, String)
       addEventCallback;
+  final Function(Event) deleteEventCallback;
   final DateTime selectedDate;
   final List<Event> events;
 
   AddEventScreen({
     required this.addEventCallback,
+    required this.deleteEventCallback,
     required this.selectedDate,
     required this.events,
+    required List<Event> events01,
   });
 
   @override
@@ -49,6 +52,16 @@ class _AddEventScreenState extends State<AddEventScreen> {
     description = '';
     organization = '';
     location = '';
+  }
+
+  void _deleteEvent(Event event) {
+    setState(() {
+      widget.events.removeWhere((e) =>
+          e.eventName == event.eventName && e.location == event.location);
+    });
+
+    widget.deleteEventCallback(
+        event); // Notify CalendarScreen about event deletion
   }
 
   @override
@@ -306,13 +319,6 @@ class _AddEventScreenState extends State<AddEventScreen> {
         );
       },
     );
-  }
-
-  void _deleteEvent(Event event) {
-    setState(() {
-      widget.events.removeWhere((e) =>
-          e.eventName == event.eventName && e.location == event.location);
-    });
   }
 
   Widget _buildEventsList() {

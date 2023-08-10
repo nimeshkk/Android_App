@@ -36,6 +36,16 @@ class _CalendarScreenState extends State<CalendarScreen> {
   };
   List<Map<String, dynamic>> _selectedEvents = [];
 
+  void _deleteEventFromSelectedDate(Event event) {
+    setState(() {
+      _upcomingEvents[_selectedDay]?.removeWhere((e) =>
+          e['name'] == event.eventName && e['location'] == event.location);
+      _onThisDayEvents.removeWhere((e) =>
+          e['name'] == event.eventName && e['location'] == event.location);
+      _updateSelectedEvents();
+    });
+  }
+
   void _addEvent(DateTime date, String name, DateTime eventDate,
       String description, String organization, String location) {
     setState(() {
@@ -91,8 +101,21 @@ class _CalendarScreenState extends State<CalendarScreen> {
       MaterialPageRoute(
         builder: (BuildContext context) => AddEventScreen(
           addEventCallback: _addEvent,
-          selectedDate: _selectedDay,
+
           events: [],
+          deleteEventCallback:
+              _deleteEventFromSelectedDate, // Pass the callback
+          selectedDate: _selectedDay,
+          events01: _upcomingEvents[_selectedDay]?.map((eventData) {
+                return Event(
+                  eventName: eventData['name'],
+                  date: eventData['date'],
+                  description: eventData['description'],
+                  organization: eventData['organization'],
+                  location: eventData['location'],
+                );
+              }).toList() ??
+              [], // Pass the events
         ),
       ),
     );
