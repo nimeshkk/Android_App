@@ -23,6 +23,8 @@ class ProductDetaildPage extends StatelessWidget {
           child: Row(
             children: [
               Expanded(child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Price',
