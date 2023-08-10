@@ -22,29 +22,43 @@ class ProductDetaildPage extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Expanded(child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Price',
-                      style: kRalewayRegular.copyWith(
-                        color: kGrey85,
-                        fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
-                      ),
-                  ),
-                  SizedBox(
-                    height: SizeConfig.blockSizeVertical! * 0.5,
-                  ),
-                  Text(
-                    'Rs 10 000 / Month',
-                      style: kRalewayMedium.copyWith(
-                        color: kBlack,
-                        fontSize: SizeConfig.blockSizeHorizontal! * 4,
-                      ),
-                  ),
-                ],
-              ))
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Price',
+                        style: kRalewayRegular.copyWith(
+                          color: kGrey85,
+                          fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                        ),
+                    ),
+                    SizedBox(
+                      height: SizeConfig.blockSizeVertical! * 0.5,
+                    ),
+                    Text(
+                      'Rs 10 000 / Month',
+                        style: kRalewayMedium.copyWith(
+                          color: kBlack,
+                          fontSize: SizeConfig.blockSizeHorizontal! * 4,
+                        ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                height: 43,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(
+                    kBorderRadius10
+                    ),
+                    gradient: kLinearGradientBlue,
+                ),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: kPadding24,
+                ),
+              )
             ],
           ),
         ),
