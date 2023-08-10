@@ -14,8 +14,8 @@ class _GpaPage1State extends State<GpaPage1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 70, 71, 183),
-        shadowColor: Color.fromARGB(255, 70, 71, 183),
+        backgroundColor: const Color.fromARGB(255, 70, 71, 183),
+        shadowColor: const Color.fromARGB(255, 70, 71, 183),
         title: const Text(
           "Add Courses",
           style: TextStyle(
@@ -23,7 +23,7 @@ class _GpaPage1State extends State<GpaPage1> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
                 "assets/gpa11png.png"), // Replace with your image asset path
@@ -33,11 +33,11 @@ class _GpaPage1State extends State<GpaPage1> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Text(
                 "Add the course grade using the following button and select the corresponding GPA credit for each course",
                 style: TextStyle(
@@ -49,11 +49,11 @@ class _GpaPage1State extends State<GpaPage1> {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Text(
                 "select the grade",
                 style: TextStyle(
@@ -65,7 +65,7 @@ class _GpaPage1State extends State<GpaPage1> {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 1,
             ),
             DropdownButton<String>(
@@ -84,11 +84,11 @@ class _GpaPage1State extends State<GpaPage1> {
                 },
               ).toList(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 0,
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Text(
                 "select the corresponding GPA credit for above course",
                 style: TextStyle(
@@ -100,7 +100,7 @@ class _GpaPage1State extends State<GpaPage1> {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Slider(
               value: selectedCredits.toDouble(),
               onChanged: (newValue) {
@@ -113,7 +113,7 @@ class _GpaPage1State extends State<GpaPage1> {
               divisions: 4,
               label: selectedCredits.toString(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             ElevatedButton(
@@ -122,13 +122,13 @@ class _GpaPage1State extends State<GpaPage1> {
                 Navigator.pop(context, course);
               },
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(
+                primary: const Color.fromARGB(
                     255, 247, 249, 249), // Set your desired button color
-                minimumSize: Size(120, 48),
+                minimumSize: const Size(120, 48),
 
                 // Set the width and height of the button
               ),
-              child: Text(
+              child: const Text(
                 'Add',
                 style: TextStyle(
                   color: Color.fromARGB(255, 93, 7, 223),
