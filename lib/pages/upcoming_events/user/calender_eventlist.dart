@@ -95,14 +95,36 @@ class _CalendarScreenState extends State<CalendarScreen> {
     }
   }
 
+  void _updateEvent(Event updatedEvent) {
+    setState(() {
+      // Remove the old event and add the updated event
+      _upcomingEvents[_selectedDay]?.removeWhere((e) =>
+          e['name'] == updatedEvent.eventName &&
+          e['location'] == updatedEvent.location);
+      _onThisDayEvents.removeWhere((e) =>
+          e['name'] == updatedEvent.eventName &&
+          e['location'] == updatedEvent.location);
+      _addEvent(
+        _selectedDay,
+        updatedEvent.eventName,
+        updatedEvent.date,
+        updatedEvent.description,
+        updatedEvent.organization,
+        updatedEvent.location,
+      );
+      _updateSelectedEvents();
+    });
+  }
+
   void _showAddEventScreen() async {
     final result = await Navigator.push(
       context,
       MaterialPageRoute(
         builder: (BuildContext context) => AddEventScreen(
           addEventCallback: _addEvent,
-
+          updateEventCallback: _updateEvent,
           events: [],
+
           deleteEventCallback:
               _deleteEventFromSelectedDate, // Pass the callback
           selectedDate: _selectedDay,
@@ -139,14 +161,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
             ),
           ),
         ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.forward),
-            onPressed: () {
-              _showAddEventScreen();
-            },
-          ),
-        ],
       ),
       body: Column(
         children: [

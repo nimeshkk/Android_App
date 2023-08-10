@@ -25,12 +25,15 @@ class AddEventScreen extends StatefulWidget {
   final Function(DateTime, String, DateTime, String, String, String)
       addEventCallback;
   final Function(Event) deleteEventCallback;
+  final Function(Event) updateEventCallback; // Add the update callback
+
   final DateTime selectedDate;
   final List<Event> events;
 
   AddEventScreen({
     required this.addEventCallback,
     required this.deleteEventCallback,
+    required this.updateEventCallback, // Pass the updateEvent callback
     required this.selectedDate,
     required this.events,
     required List<Event> events01,
@@ -92,6 +95,9 @@ class _AddEventScreenState extends State<AddEventScreen> {
         widget.events[index] = updatedEvent;
       }
     });
+
+    widget.updateEventCallback(
+        updatedEvent); // Notify CalendarScreen about event update
   }
 
   @override

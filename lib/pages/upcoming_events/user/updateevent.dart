@@ -48,54 +48,74 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Update Event'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+        ),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              TextFormField(
-                initialValue: updatedName,
-                onChanged: (value) {
-                  setState(() {
-                    updatedName = value;
-                  });
-                },
-                decoration: InputDecoration(labelText: 'Event Name'),
+      body: Container(
+        height: MediaQuery.of(context).size.height * 0.9,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/back.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  TextFormField(
+                    initialValue: updatedName,
+                    onChanged: (value) {
+                      setState(() {
+                        updatedName = value;
+                      });
+                    },
+                    decoration: InputDecoration(labelText: 'Event Name'),
+                  ),
+                  TextFormField(
+                    initialValue: updatedDescription,
+                    onChanged: (value) {
+                      setState(() {
+                        updatedDescription = value;
+                      });
+                    },
+                    decoration: InputDecoration(labelText: 'Description'),
+                  ),
+                  TextFormField(
+                    initialValue: updatedOrganization,
+                    onChanged: (value) {
+                      setState(() {
+                        updatedOrganization = value;
+                      });
+                    },
+                    decoration: InputDecoration(labelText: 'Organization'),
+                  ),
+                  TextFormField(
+                    initialValue: updatedLocation,
+                    onChanged: (value) {
+                      setState(() {
+                        updatedLocation = value;
+                      });
+                    },
+                    decoration: InputDecoration(labelText: 'Location'),
+                  ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: _updateEvent,
+                    child: Text('Update Event'),
+                  ),
+                ],
               ),
-              TextFormField(
-                initialValue: updatedDescription,
-                onChanged: (value) {
-                  setState(() {
-                    updatedDescription = value;
-                  });
-                },
-                decoration: InputDecoration(labelText: 'Description'),
-              ),
-              TextFormField(
-                initialValue: updatedOrganization,
-                onChanged: (value) {
-                  setState(() {
-                    updatedOrganization = value;
-                  });
-                },
-                decoration: InputDecoration(labelText: 'Organization'),
-              ),
-              TextFormField(
-                initialValue: updatedLocation,
-                onChanged: (value) {
-                  setState(() {
-                    updatedLocation = value;
-                  });
-                },
-                decoration: InputDecoration(labelText: 'Location'),
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: _updateEvent,
-                child: Text('Update Event'),
-              ),
-            ],
+            ),
           ),
         ),
       ),
