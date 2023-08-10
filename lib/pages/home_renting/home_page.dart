@@ -79,6 +79,8 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: kPadding24,
               ),
+
+              /////////////////////////////////
               Padding(
                 padding: EdgeInsets.symmetric(
                 horizontal: kPadding20,
@@ -96,8 +98,11 @@ class _HomePageState extends State<HomePage> {
                           contentPadding: EdgeInsets.symmetric(
                             horizontal: kPadding16,
                           ),
-                          prefixIcon: SvgPicture.asset(
-                            'assets/icon_search.svg',
+                          prefixIcon: Padding(
+                            padding: const EdgeInsets.all(kPadding8),
+                            child: SvgPicture.asset(
+                              'assets/icon_search.svg',
+                            ),
                           ),
                           hintText: 'Search',
                           border: kInputBorder,
@@ -115,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                       )
                     ),
                     SizedBox(
-                      width: SizeConfig.blockSizeHorizontal! * 4,
+                      width: SizeConfig.blockSizeHorizontal! * 4.0,
                     ),
                     Container(
                       height: 49,
@@ -311,6 +316,7 @@ class _HomePageState extends State<HomePage> {
                                       ],
                                     ),
                                     Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           'Modern House',
@@ -342,7 +348,150 @@ class _HomePageState extends State<HomePage> {
                     );
                   }
                 ),
-              )
+              ),
+              const SizedBox(height: kPadding24,),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                horizontal: kPadding20,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Best for you', 
+                      style: kRalewayMedium.copyWith(
+                        color: kBlack,
+                        fontSize: SizeConfig.blockSizeHorizontal! * 4,
+                    ),
+                  ),
+                    Text(
+                      'See more', 
+                        style: kRalewayRegular.copyWith(
+                          color: kGrey85,
+                          fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: kPadding24,),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                horizontal: kPadding20,
+                ),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: 8,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 70,
+                      margin: const EdgeInsets.only(
+                        bottom: kPadding24,
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(
+                                kBorderRadius10,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  spreadRadius: 0,
+                                  offset: const Offset(0, 18),
+                                  blurRadius: 18,
+                                  color: kBlack.withOpacity(0.1),
+                                ),
+                              ],
+                              image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                //we can use imaegs from the assets folder like this
+                                // image: AssetImage('assets/house01.jpg'),
+                                // or we can use it as network image, like this
+                                image: NetworkImage(
+                                  'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: SizeConfig.blockSizeHorizontal! * 4.5
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Orchad House',
+                                    style: kRalewayMedium.copyWith(
+                                      color: kBlack,
+                                      fontSize: SizeConfig.blockSizeHorizontal! * 4,
+                                    ),
+                                  ),
+                                  SizedBox(height: SizeConfig.blockSizeVertical! * 0.5,),
+                                  Text(
+                                    'Rs 12000 / month',
+                                    style: kRalewayRegular.copyWith(
+                                      color: kBlue,
+                                      fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Row(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SvgPicture.asset(
+                                              'assets/icon_bedroom.svg',
+                                            ),
+                                            SizedBox(
+                                              width: SizeConfig.blockSizeHorizontal! * 0.5,
+                                            ),
+                                            Text(
+                                              '6 Beadrooms',
+                                              style: kRalewayRegular.copyWith(
+                                                color: kGrey85,
+                                                fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          width: SizeConfig.blockSizeHorizontal! * 1,
+                                        ),
+                                        Row(
+                                          children: [
+                                            SvgPicture.asset(
+                                              'assets/icon_bathroom.svg',
+                                            ),
+                                            SizedBox(
+                                              width: SizeConfig.blockSizeHorizontal! * 0.5,
+                                            ),
+                                            Text(
+                                              '2 Bathrooms',
+                                              style: kRalewayRegular.copyWith(
+                                                color: kGrey85,
+                                                fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
       )),
