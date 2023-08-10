@@ -1,7 +1,7 @@
-import 'package:campus_connect_app/pages/welcome_page.dart';
+import 'package:campus_connect_app/pages/home_renting/home_page.dart';
+// import 'package:campus_connect_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
-// import 'package:campus_connect_app/pages/home_renting/home_page.dart';
 
 void main() => runApp(
       DevicePreview(
@@ -26,6 +26,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: const WelcomPage());
+        home: const HomePage());
   }
 }
