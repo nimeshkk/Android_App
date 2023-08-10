@@ -56,7 +56,7 @@ class Gpahome extends StatelessWidget {
                 children: [
                   Expanded(
                     child: MaterialButton(
-                      color: Color.fromARGB(255, 70, 71, 183),
+                      color: const Color.fromARGB(255, 70, 71, 183),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
