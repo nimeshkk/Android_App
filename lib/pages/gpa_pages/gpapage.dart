@@ -38,14 +38,14 @@ class _GpaPageState extends State<GpaPage> {
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Text(
-                      'Course ${index + 1}: ${courses[index].grade}',
+                      'Course: ${courses[index].courseName}', // Display course name
                       style: const TextStyle(
                           color: Color.fromARGB(255, 4, 38, 116),
                           fontSize: 20,
                           fontWeight: FontWeight.w500),
                     ),
                     subtitle: Text(
-                      'Credit for course : ${courses[index].credits}',
+                      'Grade: ${courses[index].grade}\nCredit for course: ${courses[index].credits}',
                       style: const TextStyle(
                           color: Color.fromARGB(255, 4, 38, 116),
                           fontSize: 20,
@@ -69,9 +69,8 @@ class _GpaPageState extends State<GpaPage> {
               },
               style: ElevatedButton.styleFrom(
                 primary: const Color.fromARGB(255, 70, 71, 183),
-                fixedSize: const Size(200,
-                    40), // Set the width and height of the button// Set your desired button color
-                // Set the width and height of the button
+                fixedSize: const Size(
+                    200, 40), // Set the width and height of the button
               ),
               child: const Text(
                 'Add Course',
@@ -105,8 +104,8 @@ class _GpaPageState extends State<GpaPage> {
               },
               style: ElevatedButton.styleFrom(
                 primary: const Color.fromARGB(255, 70, 71, 183),
-                fixedSize: const Size(200,
-                    40), // Set the width and height of the button // Set your desired color here
+                fixedSize: const Size(
+                    200, 40), // Set the width and height of the button
               ),
               child: const Text(
                 'Calculate GPA',

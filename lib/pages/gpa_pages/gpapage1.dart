@@ -9,6 +9,7 @@ class GpaPage1 extends StatefulWidget {
 class _GpaPage1State extends State<GpaPage1> {
   String selectedGrade = 'A+';
   int selectedCredits = 1;
+  String courseName = ''; // Added course name variable
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +50,20 @@ class _GpaPage1State extends State<GpaPage1> {
                 textAlign: TextAlign.center,
               ),
             ),
+
+            // coures name
+            TextField(
+              onChanged: (value) {
+                setState(() {
+                  courseName = value;
+                });
+              },
+              decoration: const InputDecoration(
+                labelText: "Course Name",
+                border: OutlineInputBorder(),
+              ),
+            ),
+
             const SizedBox(
               height: 100,
             ),
@@ -118,7 +133,8 @@ class _GpaPage1State extends State<GpaPage1> {
             ),
             ElevatedButton(
               onPressed: () {
-                Course course = Course(selectedGrade, selectedCredits);
+                Course course =
+                    Course(selectedGrade, selectedCredits, courseName);
                 Navigator.pop(context, course);
               },
               style: ElevatedButton.styleFrom(
