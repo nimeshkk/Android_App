@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'gpapage1.dart';
 import 'grade_calculator.dart';
+import 'edit_course_page.dart';
 
 class GpaPage extends StatefulWidget {
   @override
@@ -9,6 +10,21 @@ class GpaPage extends StatefulWidget {
 
 class _GpaPageState extends State<GpaPage> {
   List<Course> courses = [];
+
+  // Add editCourse function
+  Future<void> editCourse(Course course, int index) async {
+    final editedCourse = await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => EditCoursePage(course: course),
+      ),
+    );
+    if (editedCourse != null) {
+      setState(() {
+        courses[index] = editedCourse;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +66,23 @@ class _GpaPageState extends State<GpaPage> {
                           color: Color.fromARGB(255, 4, 38, 116),
                           fontSize: 20,
                           fontWeight: FontWeight.w500),
+                    ),
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        IconButton(
+                          icon: Icon(Icons.edit),
+                          onPressed: () => editCourse(courses[index], index),
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.delete),
+                          onPressed: () {
+                            setState(() {
+                              courses.removeAt(index);
+                            });
+                          },
+                        ),
+                      ],
                     ),
                   );
                 },
