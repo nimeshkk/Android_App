@@ -14,7 +14,7 @@ class ProductDetaildPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
           horizontal: kPadding8
         ),
-        height: 43,
+        height: 43.0,
         width: double.infinity,
         margin: const EdgeInsets.symmetric(
           horizontal: kPadding20,
