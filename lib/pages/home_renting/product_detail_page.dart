@@ -1,6 +1,7 @@
 import 'package:campus_connect_app/pages/home_renting/app_styles.dart';
 import 'package:campus_connect_app/pages/home_renting/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ProductDetaildPage extends StatelessWidget {
   const ProductDetaildPage({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class ProductDetaildPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
           horizontal: kPadding8
         ),
-        height: 43.0,
+        height: 43,
         width: double.infinity,
         margin: const EdgeInsets.symmetric(
           horizontal: kPadding20,
@@ -104,6 +105,146 @@ class ProductDetaildPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  borderRadius: const BorderRadius.only(
+                                    bottomLeft: Radius.circular(kBorderRadius20),
+                                    bottomRight: Radius.circular(kBorderRadius20),
+                                  ),
+                                  gradient: kLinearGradientBlack,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(kPadding20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 17,
+                                        backgroundColor: kBlack.withOpacity(0.24),
+                                        child: SvgPicture.asset(
+                                          'assets/icons/icon_arrow_back.svg',
+                                          // color: kWhite,
+                                        ),
+                                      ),
+                                      CircleAvatar(
+                                        radius: 17,
+                                        backgroundColor: kBlack.withOpacity(0.24),
+                                        child: SvgPicture.asset(
+                                          'assets/icons/icon_bookmark.svg',
+                                          // color: kWhite,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Doctor Bodim House',
+                                        style: kRalewayBold.copyWith(
+                                          color: kWhite,
+                                          fontSize: SizeConfig.blockSizeHorizontal! * 4.5,
+                                        ),
+                                        
+                                      ),
+                                      SizedBox(
+                                        height: SizeConfig.blockSizeVertical! * 0.5,
+                                      ),
+                                      Text(
+                                        '250m Dampe Rd, Meegoda, Godagama.',
+                                        style: kRalewayRegular.copyWith(
+                                          color: kWhite,
+                                          fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: SizeConfig.blockSizeVertical! * 1.5,
+                                      ),
+                                      Row(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Container(
+                                              height: SizeConfig.blockSizeHorizontal! * 7,
+                                              width: SizeConfig.blockSizeHorizontal! * 7,
+                                              decoration: BoxDecoration(
+                                                color: kWhite.withOpacity(0.2),
+                                                borderRadius: BorderRadius.circular(
+                                                  kBorderRadius5
+                                                ),
+                                              ),
+                                              padding: const EdgeInsets.all(
+                                                kPadding4
+                                              ),
+                                              child: SvgPicture.asset(
+                                                'assets/icon_bedroom_white.svg',
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: SizeConfig.blockSizeHorizontal! * 2.5,
+                                            ),
+                                            Text(
+                                              '6 Beadrooms',
+                                              style: kRalewayRegular.copyWith(
+                                                color: kWhite,
+                                                fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          width: SizeConfig.blockSizeHorizontal! * 7.5,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              height: SizeConfig.blockSizeHorizontal! * 7,
+                                              width: SizeConfig.blockSizeHorizontal! * 7,
+                                              decoration: BoxDecoration(
+                                                color: kWhite.withOpacity(0.2),
+                                                borderRadius: BorderRadius.circular(
+                                                  kBorderRadius5
+                                                ),
+                                              ),
+                                              padding: const EdgeInsets.all(
+                                                kPadding4
+                                              ),
+                                              child: SvgPicture.asset(
+                                                'assets/icon_bathroom_white.svg',
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: SizeConfig.blockSizeHorizontal! * 2.5,
+                                            ),
+                                            Text(
+                                              '2 Bathrooms',
+                                              style: kRalewayRegular.copyWith(
+                                                color: kWhite,
+                                                fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                              )
+                          ],
+                        ),
               ),   
             ],
           ),
