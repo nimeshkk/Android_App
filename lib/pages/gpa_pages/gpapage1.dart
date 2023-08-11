@@ -9,6 +9,7 @@ class GpaPage1 extends StatefulWidget {
 class _GpaPage1State extends State<GpaPage1> {
   String selectedGrade = 'A+';
   int selectedCredits = 1;
+  String courseName = ''; // Added course name variable
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +51,41 @@ class _GpaPage1State extends State<GpaPage1> {
               ),
             ),
             const SizedBox(
-              height: 100,
+              height: 10,
+            ),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Text(
+                "Enter course name",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 64, 2, 114),
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+
+            // coures name
+            Container(
+              width: 300, // Set the desired width
+              height: 50, // Set the desired height
+              child: TextField(
+                onChanged: (value) {
+                  setState(() {
+                    courseName = value;
+                  });
+                },
+                decoration: const InputDecoration(
+                  labelText: "Course Name",
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+
+            const SizedBox(
+              height: 20,
             ),
             const Padding(
               padding: EdgeInsets.all(16.0),
@@ -59,15 +94,13 @@ class _GpaPage1State extends State<GpaPage1> {
                 style: TextStyle(
                   color: Color.fromARGB(255, 64, 2, 114),
                   fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                   fontSize: 20,
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(
-              height: 1,
-            ),
+
             DropdownButton<String>(
               value: selectedGrade,
               onChanged: (newValue) {
@@ -84,9 +117,7 @@ class _GpaPage1State extends State<GpaPage1> {
                 },
               ).toList(),
             ),
-            const SizedBox(
-              height: 0,
-            ),
+
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
@@ -94,13 +125,13 @@ class _GpaPage1State extends State<GpaPage1> {
                 style: TextStyle(
                   color: Color.fromARGB(255, 64, 2, 114),
                   fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                   fontSize: 20,
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(height: 16),
+            // const SizedBox(height: 16),
             Slider(
               value: selectedCredits.toDouble(),
               onChanged: (newValue) {
@@ -118,12 +149,13 @@ class _GpaPage1State extends State<GpaPage1> {
             ),
             ElevatedButton(
               onPressed: () {
-                Course course = Course(selectedGrade, selectedCredits);
+                Course course =
+                    Course(selectedGrade, selectedCredits, courseName);
                 Navigator.pop(context, course);
               },
               style: ElevatedButton.styleFrom(
-                primary: const Color.fromARGB(
-                    255, 247, 249, 249), // Set your desired button color
+                primary: Color.fromARGB(
+                    255, 201, 42, 6), // Set your desired button color
                 minimumSize: const Size(120, 48),
 
                 // Set the width and height of the button
@@ -131,7 +163,7 @@ class _GpaPage1State extends State<GpaPage1> {
               child: const Text(
                 'Add',
                 style: TextStyle(
-                  color: Color.fromARGB(255, 93, 7, 223),
+                  color: Color.fromARGB(255, 244, 243, 247),
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w500,
                   fontSize: 20,

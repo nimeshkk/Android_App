@@ -1,8 +1,9 @@
 class Course {
   final String grade;
   final int credits;
+  final String courseName;
 
-  Course(this.grade, this.credits);
+  Course(this.grade, this.credits, this.courseName);
 }
 
 final gradePointMap = {
