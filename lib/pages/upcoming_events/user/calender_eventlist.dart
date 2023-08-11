@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-
-import 'addevent.dart'; // Import the AddEventScreen class
+import 'addevent.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,8 +28,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _selectedDay = DateTime.now();
   DateTime _focusedDay = DateTime.now();
-  List<Map<String, dynamic>> _onThisDayEvents =
-      []; // Update event list to hold maps
+  List<Map<String, dynamic>> _onThisDayEvents = [];
   Map<DateTime, List<Map<String, dynamic>>> _upcomingEvents = {
     DateTime.now().add(Duration(days: 1)): [],
     DateTime.now().add(Duration(days: 2)): [],
@@ -38,12 +36,23 @@ class _CalendarScreenState extends State<CalendarScreen> {
   };
   List<Map<String, dynamic>> _selectedEvents = [];
 
+  void _deleteEventFromSelectedDate(Event event) {
+    setState(() {
+      _upcomingEvents[_selectedDay]?.removeWhere((e) =>
+          e['name'] == event.eventName && e['location'] == event.location);
+      _onThisDayEvents.removeWhere((e) =>
+          e['name'] == event.eventName && e['location'] == event.location);
+      _updateSelectedEvents();
+    });
+  }
+
   void _addEvent(DateTime date, String name, DateTime eventDate,
       String description, String organization, String location) {
     setState(() {
       if (_upcomingEvents.containsKey(date)) {
         _upcomingEvents[date]!.add({
           'name': name,
+          'date': eventDate,
           'description': description,
           'organization': organization,
           'location': location,
@@ -52,6 +61,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
         _upcomingEvents[date] = [
           {
             'name': name,
+            'date': eventDate,
             'description': description,
             'organization': organization,
             'location': location,
@@ -62,6 +72,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
       if (isSameDay(date, DateTime.now())) {
         _onThisDayEvents.add({
           'name': name,
+          'date': eventDate,
           'description': description,
           'organization': organization,
           'location': location,
@@ -84,13 +95,49 @@ class _CalendarScreenState extends State<CalendarScreen> {
     }
   }
 
+  void _updateEvent(Event updatedEvent) {
+    setState(() {
+      // Remove the old event and add the updated event
+      _upcomingEvents[_selectedDay]?.removeWhere((e) =>
+          e['name'] == updatedEvent.eventName &&
+          e['location'] == updatedEvent.location);
+      _onThisDayEvents.removeWhere((e) =>
+          e['name'] == updatedEvent.eventName &&
+          e['location'] == updatedEvent.location);
+      _addEvent(
+        _selectedDay,
+        updatedEvent.eventName,
+        updatedEvent.date,
+        updatedEvent.description,
+        updatedEvent.organization,
+        updatedEvent.location,
+      );
+      _updateSelectedEvents();
+    });
+  }
+
   void _showAddEventScreen() async {
     final result = await Navigator.push(
       context,
       MaterialPageRoute(
         builder: (BuildContext context) => AddEventScreen(
           addEventCallback: _addEvent,
+          updateEventCallback: _updateEvent,
+          events: [],
+
+          deleteEventCallback:
+              _deleteEventFromSelectedDate, // Pass the callback
           selectedDate: _selectedDay,
+          events01: _upcomingEvents[_selectedDay]?.map((eventData) {
+                return Event(
+                  eventName: eventData['name'],
+                  date: eventData['date'],
+                  description: eventData['description'],
+                  organization: eventData['organization'],
+                  location: eventData['location'],
+                );
+              }).toList() ??
+              [], // Pass the events
         ),
       ),
     );
@@ -220,40 +267,53 @@ class _CalendarScreenState extends State<CalendarScreen> {
             child: ListView.builder(
               itemCount: _selectedEvents.length,
               itemBuilder: (context, index) {
-                return Container(
-                  margin: EdgeInsets.symmetric(vertical: 10),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(
-                        107, 78, 182, 230), // Set the background color
-                    border: Border.all(
-                      color: Color.fromARGB(255, 15, 90, 7),
-                      width: 1.0,
+                return Dismissible(
+                  key: Key(
+                      _selectedEvents[index]['name']), // Provide a unique key
+
+                  background: Container(
+                    alignment: Alignment.centerRight,
+                    color: Colors.red,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.delete, color: Colors.white),
                     ),
-                    borderRadius: BorderRadius.circular(10),
                   ),
-                  child: ListTile(
-                    title: Text(_selectedEvents[index]['name']),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(_selectedEvents[index]['description']),
-                        Text(_selectedEvents[index]['organization']),
-                        Text(_selectedEvents[index]['location']),
-                        // You can display more details here as needed
-                      ],
+
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      margin: EdgeInsets.symmetric(vertical: 10),
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(107, 78, 182, 230),
+                        border: Border.all(
+                          color: Color.fromARGB(255, 15, 90, 7),
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: ListTile(
+                        title: Text(_selectedEvents[index]['name']),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(_selectedEvents[index]['description']),
+                            Text(_selectedEvents[index]['organization']),
+                            Text(_selectedEvents[index]['location']),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 );
               },
             ),
-          )
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _showAddEventScreen();
-        },
+        onPressed: _showAddEventScreen,
         child: Icon(Icons.add),
       ),
     );
