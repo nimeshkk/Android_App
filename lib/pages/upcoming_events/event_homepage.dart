@@ -1,8 +1,7 @@
 import 'dart:async';
-
-import 'package:campus_connect_app/pages/upcoming_events/user/addevent.dart';
+import 'package:campus_connect_app/pages/home2.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/calender_eventlist.dart';
-import 'package:campus_connect_app/pages/upcoming_events/user/eventdetails.dart';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../welcome_page.dart';
@@ -57,21 +56,21 @@ class _EventState extends State<Event> {
   }
 
   void _navigateToPage() {
-    if (isAdmin) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+          builder: (_) =>
+              CalendarScreen()), // Use the correct class name (capitalize the first letter)
+    );
+    /*else {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (_) =>
-                CalendarScreen()), // Use the correct class name (capitalize the first letter)
+            builder: (_) => EventsPage(
+                  events: [],
+                )), // Use the correct class name (capitalize the first letter)
       );
-    } else {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-            builder: (_) =>
-                eventdetails()), // Use the correct class name (capitalize the first letter)
-      );
-    }
+    }*/
   }
 
   @override
@@ -83,32 +82,31 @@ class _EventState extends State<Event> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+        appBar: AppBar(
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
             ),
           ),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) =>
+                        Home2()), // Use the correct class name (capitalize the first letter)
+              );
+            },
+          ),
+          title: Text('Events'),
         ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) =>
-                      WelcomPage()), // Use the correct class name (capitalize the first letter)
-            );
-          },
-        ),
-        title: Text('Events'),
-      ),
-      backgroundColor: Colors.white,
-      body: ListView(
-        children: <Widget>[
+        backgroundColor: Colors.white,
+        body: ListView(children: <Widget>[
           Container(
             height: 200,
             child: CarouselSlider.builder(
@@ -135,26 +133,38 @@ class _EventState extends State<Event> {
 
           //this is the second part
           Container(
-            // height: MediaQuery.of(context).size.height * 0.55,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                    'assets/back.jpg'), // Replace with your image path
-                fit: BoxFit.cover,
+              height: MediaQuery.of(context).size.height * 0.7,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                      'assets/back.jpg'), // Replace with your image path
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            alignment: Alignment.center,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  padding: EdgeInsets.only(
-                      top: 40), // Adjust the top padding as needed
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(
+                        top: 40), // Adjust the top padding as needed
 
-                  // Wrap the Text widget with Center widget
-                  child: Text(
-                    'Discover upcoming events, effortlessly.',
+                    // Wrap the Text widget with Center widget
+                    child: Text(
+                      'Discover upcoming events, effortlessly.',
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                        fontFamily: 'Roboto',
+                      ),
+                    ),
+                  ),
+                  Text(
+                    'Stay updated with exciting upcoming events in our university!',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 17,
                       color: Colors.black,
@@ -163,108 +173,69 @@ class _EventState extends State<Event> {
                       fontFamily: 'Roboto',
                     ),
                   ),
-                ),
-                Text(
-                  'Stay updated with exciting upcoming events in our university!',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 17,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    fontFamily: 'Roboto',
-                  ),
-                ),
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      //no logic more for the go away
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 130, vertical: 10),
-                    ),
-                    child: Text(
-                      'Go Away',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: const Color.fromRGBO(3, 169, 244, 1),
-                        fontFamily: 'Roboto',
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //no logic more for the go away
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 130, vertical: 10),
+                      ),
+                      child: Text(
+                        'Go Away',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: const Color.fromRGBO(3, 169, 244, 1),
+                          fontFamily: 'Roboto',
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(height: 20),
+                  SizedBox(height: 20),
 
-                // Replace the ElevatedButton section in the _EventState build method
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.35,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => eventdetails()),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 20),
-                        ),
-                        icon: Icon(
-                          Icons.person,
-                          color: Color.fromARGB(204, 0, 0, 0),
-                          size: 25,
-                        ),
-                        label: Text(
-                          'USER',
-                          style: TextStyle(
-                            fontSize: 17,
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
+                  // Replace the ElevatedButton section in the _EventState build method
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.35,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(width: 20), // Add some spacing between buttons
+                        ElevatedButton.icon(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => CalendarScreen()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 20),
+                          ),
+                          icon: Icon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 0, 28, 75),
+                            size: 30,
+                          ),
+                          label: Text(
+                            'Proceed',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.black,
+                              fontFamily: 'Roboto',
+                            ),
                           ),
                         ),
-                      ),
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => CalendarScreen()),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 20),
-                        ),
-                        icon: Icon(
-                          Icons.admin_panel_settings,
-                          color: Color.fromARGB(255, 0, 28, 75),
-                          size: 25,
-                        ),
-                        label: Text(
-                          'ADMIN',
-                          style: TextStyle(
-                            fontSize: 17,
-                            color: Colors.black,
-                            fontFamily: 'Roboto',
-                          ),
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
+                ],
+              )),
+        ]));
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:async';
-
+import 'package:campus_connect_app/pages/gpa_pages/gpahome.dart';
 import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
+import 'package:campus_connect_app/pages/home_renting/home_page.dart';
 import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -136,13 +137,20 @@ class _Home2State extends State<Home2> {
                       'assets/timetable.png',
                       'assets/GPA.png',
                       'assets/about.png'
-
                     ];
 
                     String imagePath = imagePaths[index % imagePaths.length];
 
                     return GestureDetector(
                       onTap: () {
+                        if (imagePath == 'assets/GPA.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Gpahome(),
+                            ),
+                          );
+                        }
                         if (imagePath == 'assets/bus.png') {
                           Navigator.push(
                             context,
@@ -164,6 +172,15 @@ class _Home2State extends State<Home2> {
                             context,
                             MaterialPageRoute(
                               builder: (_) => ClubsAndCommunity(),
+                            ),
+                          );
+                        }
+
+                        if (imagePath == 'assets/accommodation.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => HomePage(),
                             ),
                           );
                         }
