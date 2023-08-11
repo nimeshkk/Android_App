@@ -1,9 +1,9 @@
 
 // import 'package:campus_connect_app/pages/home_renting/home_page.dart';
 // import 'package:campus_connect_app/pages/home_renting/product_detail_page.dart';
-import 'package:campus_connect_app/pages/welcome_page.dart';
+// import 'package:campus_connect_app/pages/welcome_page.dart';
 
-import 'package:campus_connect_app/pages/home_renting/home_page.dart';
+// import 'package:campus_connect_app/pages/home_renting/home_page.dart';
 import 'package:campus_connect_app/pages/welcome_page.dart';
 // import 'package:campus_connect_app/pages/welcome_page.dart';
 
