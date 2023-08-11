@@ -13,6 +13,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+
 class _HomePageState extends State<HomePage> {
   List<String> categories = [
     'House', 
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                 horizontal: kPadding20,
                 ),
                 child: Row(
@@ -82,7 +83,7 @@ class _HomePageState extends State<HomePage> {
 
               /////////////////////////////////
               Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                 horizontal: kPadding20,
                 ),
                 child: Row(
@@ -95,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         controller: TextEditingController(),
                         decoration: InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(
+                          contentPadding: const EdgeInsets.symmetric(
                             horizontal: kPadding16,
                           ),
                           prefixIcon: Padding(
@@ -273,7 +274,7 @@ class _HomePageState extends State<HomePage> {
                             Align(
                               alignment: Alignment.center,
                               child: Padding(
-                                padding: EdgeInsets.symmetric(
+                                padding: const EdgeInsets.symmetric(
                                   horizontal: kPadding16,
                                   vertical: kPadding20,
                                 ),
