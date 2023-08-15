@@ -233,7 +233,6 @@ class ProductDetaildPage extends StatelessWidget {
                                               style: kRalewayRegular.copyWith(
                                                 color: kWhite,
                                                 fontSize: SizeConfig.blockSizeHorizontal! * 3,
-                                                
                                               ),
                                             ),
                                           ],
