@@ -199,7 +199,7 @@ class ProductDetaildPage extends StatelessWidget {
                                               '6 Beadrooms',
                                               style: kRalewayRegular.copyWith(
                                                 color: kWhite,
-                                                fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                                                fontSize: SizeConfig.blockSizeHorizontal! * 3,
                                               ),
                                             ),
                                           ],
@@ -232,7 +232,8 @@ class ProductDetaildPage extends StatelessWidget {
                                               '2 Bathrooms',
                                               style: kRalewayRegular.copyWith(
                                                 color: kWhite,
-                                                fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                                                fontSize: SizeConfig.blockSizeHorizontal! * 3,
+                                                
                                               ),
                                             ),
                                           ],
