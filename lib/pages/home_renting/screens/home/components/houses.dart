@@ -32,7 +32,7 @@ class _HousesState extends State<Houses> {
         Navigator.push(
           context, 
           MaterialPageRoute(
-            builder: (_) => DetailsScreen(house: house),
+            builder: (_) => DetailsScreen(key: UniqueKey(), house: house),
           ),
         );
       },

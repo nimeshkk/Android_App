@@ -8,12 +8,15 @@ import 'components/house_details.dart';
 class DetailsScreen extends StatefulWidget {
   // const DetailsScreen({super.key});
 
+  final Key? key;
   final House house;
 
-  const DetailsScreen({required Key key, required this.house}) : super(key: key);
+  // const DetailsScreen({required Key key, required this.house}) : super(key: key);
 
-  //if we will get some errros, remove the requierd keyword from the constructor
+  DetailsScreen({required this.key, required this.house});
 
+  //if we will get some errros, remove the new constructor
+  
   @override
 
     //State<DetailsScreen> change to _DetailsScreenState
