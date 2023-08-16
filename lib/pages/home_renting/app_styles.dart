@@ -53,6 +53,22 @@ Gradient kLinearGradientWhite = LinearGradient(
   tileMode: TileMode.clamp,
 );
 
+
+
+// design by me
+
+// Gradient kLinearGradientWhite = LinearGradient(
+//   begin: Alignment.bottomCenter,
+//   end: Alignment.topCenter,
+//   colors: <Color>[
+//     kWhite.withOpacity(0.8),
+//   ],
+//   tileMode: TileMode.clamp,
+// );
+
+
+
+
 // End of Gradient Styles
 
 //==================================================================
