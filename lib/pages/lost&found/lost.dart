@@ -14,7 +14,7 @@ class _LostAndFoundState extends State<LostAndFound> {
       appBar: AppBar(
         title: const Text('Lost & Found'),
         centerTitle: true,
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor: const Color.fromARGB(255, 0, 219, 132),
       ),
       body: const Center(
         child: Text(
