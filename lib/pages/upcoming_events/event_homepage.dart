@@ -108,8 +108,17 @@ class _EventState extends State<Event> {
         backgroundColor: Colors.white,
         body: ListView(children: <Widget>[
           Container(
-            height: 200,
-            child: CarouselSlider.builder(
+            height: 250,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                    'assets/fiesta01.png'), // Replace with your image path
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+
+          /*child: CarouselSlider.builder(
               itemCount: imagePaths.length,
               options: CarouselOptions(
                 autoPlay: true,
@@ -128,8 +137,7 @@ class _EventState extends State<Event> {
                   width: 1500,
                 );
               },
-            ),
-          ),
+            ),*/
 
           //this is the second part
           Container(
