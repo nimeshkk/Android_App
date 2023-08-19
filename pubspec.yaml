@@ -54,7 +54,6 @@ dependencies:
 
   another_carousel_pro: ^1.0.0
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -98,13 +97,14 @@ flutter:
     - assets/NSBM2.png
     - assets/NSBM3.png
 
-
     - assets/fiesta01.png
     - assets/fiesta02.png
     - assets/praana.png
     - assets/back.jpg
     - assets/praana02.png
-    
+
+    - assets/timee.png
+
     - assets/ctb.jpg
     - assets/private.png
     - assets/shuttle-bus-main-image1.jpg
