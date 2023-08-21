@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "912533364042",
+    "project_id": "uniconnectandroidapp",
+    "storage_bucket": "uniconnectandroidapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912533364042:android:568491961e9e69f077b5b3",
+        "android_client_info": {
+          "package_name": "com.example.campus_connect_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912533364042-5ishjilurrgafhnn32jnhjjgiedvkfjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCucGLsmfVi8IQriWBIvHXf_n56ijynk5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912533364042-5ishjilurrgafhnn32jnhjjgiedvkfjj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
