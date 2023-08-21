@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "912533364042",
-    "project_id": "uniconnectandroidapp",
-    "storage_bucket": "uniconnectandroidapp.appspot.com"
+    "project_number": "277703009425",
+    "project_id": "nsbmuniapp",
+    "storage_bucket": "nsbmuniapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:912533364042:android:568491961e9e69f077b5b3",
+        "mobilesdk_app_id": "1:277703009425:android:b4098087432431659c4b30",
         "android_client_info": {
           "package_name": "com.example.campus_connect_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "912533364042-5ishjilurrgafhnn32jnhjjgiedvkfjj.apps.googleusercontent.com",
+          "client_id": "277703009425-0ltl4jrk249p13fhjncngfcjg4a7l1jl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCucGLsmfVi8IQriWBIvHXf_n56ijynk5c"
+          "current_key": "AIzaSyC3N0FYif_M4jq69yjqsV34NUUaN50tVuk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "912533364042-5ishjilurrgafhnn32jnhjjgiedvkfjj.apps.googleusercontent.com",
+              "client_id": "277703009425-0ltl4jrk249p13fhjncngfcjg4a7l1jl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
