@@ -48,7 +48,7 @@ class Timetable extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/timee.png'),
+            image: AssetImage('assets/back01.png'),
 
             // Replace with your image path
             fit: BoxFit.fill,
@@ -63,7 +63,7 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 96, 251, 53).withOpacity(0.7),
+                      Color.fromARGB(255, 1, 32, 136).withOpacity(0.9),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -77,14 +77,20 @@ class Timetable extends StatelessWidget {
                     MaterialPageRoute(builder: (_) => FacultyPage('Faculty 1')),
                   );
                 },
-                child: Text('Faculty 1'),
+                child: Text(
+                  'COMPUTING',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold), // Set text color
+                ),
               ),
               SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 1, 154, 255).withOpacity(0.7),
+                      Color.fromARGB(255, 69, 1, 57).withOpacity(0.9),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -98,14 +104,19 @@ class Timetable extends StatelessWidget {
                     MaterialPageRoute(builder: (_) => FacultyPage('Faculty 2')),
                   );
                 },
-                child: Text('Faculty 2'),
+                child: Text(
+                  'BUSINESS',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold), // Set text color
+                ),
               ),
               SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
-                  backgroundColor:
-                      Color.fromRGBO(255, 22, 205, 1).withOpacity(0.7),
+                  backgroundColor: Color.fromRGBO(1, 48, 4, 1).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -119,7 +130,13 @@ class Timetable extends StatelessWidget {
                     MaterialPageRoute(builder: (_) => FacultyPage('Faculty 3')),
                   );
                 },
-                child: Text('Faculty 3'),
+                child: Text(
+                  'ENGINEERING',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold), // Set text color
+                ),
               ),
             ],
           ),
