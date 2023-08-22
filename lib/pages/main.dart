@@ -1,19 +1,11 @@
-
 import 'package:campus_connect_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:campus_connect_app/pages/login/login_screen.dart';
 // import 'package:flutter/foundation.dart';
 // import 'package:campus_connect_app/pages/home_renting/constants/constants.dart';
 // import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
 // import 'package:campus_connect_app/pages/home_renting/screens/details/details_screen.dart';
-
-
-
-
-
-
-
-
 
 void main() => runApp(
       DevicePreview(
@@ -38,6 +30,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: const WelcomPage());
+        home: const LoginScreen());
   }
 }

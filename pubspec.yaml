@@ -55,6 +55,7 @@ dependencies:
   another_carousel_pro: ^1.0.0
   firebase_core: ^2.15.1
   firebase_auth: ^4.7.3
+  url_launcher: ^6.1.12
 
 
 dev_dependencies:
@@ -130,3 +131,6 @@ flutter:
     - assets/gpa9.png
     - assets/gpa10.png
     - assets/gpa11png.png
+    - assets/fb.png
+    - assets/twitter.png
+    - assets/insta.jpeg

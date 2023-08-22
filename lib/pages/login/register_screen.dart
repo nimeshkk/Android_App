@@ -1,11 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:campus_connect_app/pages/login/login_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    void launchFacebookPage() async {
+      const facebookPageUrl =
+          'https://www.facebook.com/nsbm.lk/'; //  Facebook page URL
+      if (await canLaunch(facebookPageUrl)) {
+        await launch(facebookPageUrl);
+      } else {
+        throw 'Could not launch $facebookPageUrl';
+      }
+    }
+
+    void launchInstaPage() async {
+      const facebookPageUrl =
+          'https://www.instagram.com/nsbmgreenuniversity/?hl=en'; //  insta page URL
+      if (await canLaunch(facebookPageUrl)) {
+        await launch(facebookPageUrl);
+      } else {
+        throw 'Could not launch $facebookPageUrl';
+      }
+    }
+
+    void launchTwitterPage() async {
+      const facebookPageUrl =
+          'https://twitter.com/i/flow/login?redirect_after_login=%2Fnsbm_srilanka'; //  twitter page URL
+      if (await canLaunch(facebookPageUrl)) {
+        await launch(facebookPageUrl);
+      } else {
+        throw 'Could not launch $facebookPageUrl';
+      }
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -227,54 +258,72 @@ class RegisterScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: const Color(0xFFE8ECF4),
+                    child: GestureDetector(
+                      onTap: () {
+                        // This function will be triggered when the Facebook icon is tapped
+                        launchFacebookPage(); // You need to implement this function
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: const Color(0xFFE8ECF4),
+                          ),
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Image.asset(
-                          "assets/fb.png",
-                          height: 32,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: const Color(0xFFE8ECF4),
-                        ),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Image.asset(
-                          "assets/google.png",
-                          height: 32,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Image.asset(
+                            "assets/fb.png",
+                            height: 32,
+                          ),
                         ),
                       ),
                     ),
                   ),
                   const SizedBox(width: 10),
                   Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: const Color(0xFFE8ECF4),
+                    child: GestureDetector(
+                      onTap: () {
+                        // This function will be triggered when the Facebook icon is tapped
+                        launchInstaPage(); // You need to implement this function
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: const Color(0xFFE8ECF4),
+                          ),
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                        borderRadius: BorderRadius.circular(8),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Image.asset(
+                            "assets/insta.jpeg",
+                            height: 32,
+                          ),
+                        ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Image.asset(
-                          "assets/apple.png",
-                          height: 32,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        // This function will be triggered when the Facebook icon is tapped
+                        launchTwitterPage(); // You need to implement this function
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: const Color(0xFFE8ECF4),
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Image.asset(
+                            "assets/twitter.png",
+                            height: 32,
+                          ),
                         ),
                       ),
                     ),
