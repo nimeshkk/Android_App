@@ -7,9 +7,49 @@ class PLYMOUTH extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Plymouth Category'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+        ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => Timetable()),
+            );
+          },
+        ),
       ),
-      body: Center(
-        child: Text('Plymouth Category Screen Content'),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/back01.png'),
+            fit: BoxFit.fill,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Plymouth Category Screen Content',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              // Add any additional widgets or buttons here
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -21,13 +61,54 @@ class UGC extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('UGC Category'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+        ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => Timetable()),
+            );
+          },
+        ),
       ),
-      body: Center(
-        child: Text('UGC Category Screen Content'),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/back01.png'),
+            fit: BoxFit.fill,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'UGC Category Screen Content',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              // Add any additional widgets or buttons here
+            ],
+          ),
+        ),
       ),
     );
   }
 }
+
 // Import your pages
 
 class BUSINESS extends StatelessWidget {
