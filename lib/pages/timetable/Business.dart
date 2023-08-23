@@ -21,7 +21,7 @@ class PLYMOUTH extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (_) => Timetable()),
+              MaterialPageRoute(builder: (_) => BUSINESS()),
             );
           },
         ),
@@ -175,7 +175,7 @@ class UGC extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (_) => Timetable()),
+              MaterialPageRoute(builder: (_) => BUSINESS()),
             );
           },
         ),
