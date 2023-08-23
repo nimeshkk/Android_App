@@ -1,6 +1,10 @@
 import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 
+import 'Business.dart';
+import 'Computing.dart';
+import 'Engineering.dart';
+
 class FacultyPage extends StatelessWidget {
   final String facultyName;
 
@@ -59,6 +63,15 @@ class Timetable extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Text(
+                'Select a Faculty:',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
@@ -74,7 +87,7 @@ class Timetable extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => FacultyPage('Faculty 1')),
+                    MaterialPageRoute(builder: (_) => COMPUTING()),
                   );
                 },
                 child: Text(
@@ -101,7 +114,7 @@ class Timetable extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => FacultyPage('Faculty 2')),
+                    MaterialPageRoute(builder: (_) => BUSINESS()),
                   );
                 },
                 child: Text(
@@ -127,7 +140,7 @@ class Timetable extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => FacultyPage('Faculty 3')),
+                    MaterialPageRoute(builder: (_) => ENGINEERING()),
                   );
                 },
                 child: Text(
