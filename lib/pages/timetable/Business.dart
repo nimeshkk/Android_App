@@ -6,7 +6,7 @@ class PLYMOUTH extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Plymouth Category'),
+        title: Text('Plymouth-Batch'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -39,11 +39,111 @@ class PLYMOUTH extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Plymouth Category Screen Content',
+                'Select your Batch',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20), // Add space between text and buttons
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 4,
+                  backgroundColor:
+                      Color.fromARGB(255, 79, 112, 222).withOpacity(0.9),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                  textStyle: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  // Add onPressed action
+                },
+                child: Text(
+                  '20.2',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 4,
+                  backgroundColor:
+                      Color.fromARGB(255, 54, 94, 224).withOpacity(0.9),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                  textStyle: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  // Add onPressed action
+                },
+                child: Text(
+                  '21.1',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 4,
+                  backgroundColor:
+                      Color.fromARGB(255, 27, 64, 188).withOpacity(0.9),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                  textStyle: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  // Add onPressed action
+                },
+                child: Text(
+                  '21.2',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 4,
+                  backgroundColor:
+                      Color.fromARGB(255, 6, 41, 153).withOpacity(0.9),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                  textStyle: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  // Add onPressed action
+                },
+                child: Text(
+                  '22.1',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               // Add any additional widgets or buttons here
@@ -60,7 +160,7 @@ class UGC extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('UGC Category'),
+        title: Text('UGC-Batch'),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -93,11 +193,111 @@ class UGC extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'UGC Category Screen Content',
+                'Select your Batch',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20), // Add space between text and buttons
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 4,
+                  backgroundColor:
+                      Color.fromARGB(255, 79, 112, 222).withOpacity(0.9),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                  textStyle: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  // Add onPressed action
+                },
+                child: Text(
+                  '20.2',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 4,
+                  backgroundColor:
+                      Color.fromARGB(255, 54, 94, 224).withOpacity(0.9),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                  textStyle: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  // Add onPressed action
+                },
+                child: Text(
+                  '21.1',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 4,
+                  backgroundColor:
+                      Color.fromARGB(255, 27, 64, 188).withOpacity(0.9),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                  textStyle: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  // Add onPressed action
+                },
+                child: Text(
+                  '21.2',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 4,
+                  backgroundColor:
+                      Color.fromARGB(255, 6, 41, 153).withOpacity(0.9),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    side: BorderSide(color: Colors.black),
+                  ),
+                  textStyle: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  // Add onPressed action
+                },
+                child: Text(
+                  '22.1',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               // Add any additional widgets or buttons here
