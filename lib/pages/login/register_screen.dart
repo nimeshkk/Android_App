@@ -239,7 +239,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),
                         child: Text(
-                          "SIGN UO",
+                          "SIGN UP",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,

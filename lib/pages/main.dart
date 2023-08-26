@@ -10,7 +10,13 @@ import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+        apiKey: "AIzaSyC3N0FYif_M4jq69yjqsV34NUUaN50tVuk",
+        appId: "1:277703009425:android:b4098087432431659c4b30",
+        messagingSenderId: "277703009425",
+        projectId: "nsbmuniapp"),
+  );
 
   runApp(
     DevicePreview(
