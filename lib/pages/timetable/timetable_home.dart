@@ -76,7 +76,7 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 1, 32, 136).withOpacity(0.9),
+                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -103,7 +103,7 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 69, 1, 57).withOpacity(0.9),
+                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -129,7 +129,8 @@ class Timetable extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
-                  backgroundColor: Color.fromRGBO(1, 48, 4, 1).withOpacity(0.8),
+                  backgroundColor:
+                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
