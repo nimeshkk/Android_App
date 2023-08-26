@@ -109,6 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     right: 10,
                   ),
                   child: TextFormField(
+                    controller: email,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Enter your email',
@@ -140,6 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     right: 10,
                   ),
                   child: TextFormField(
+                    controller: password,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Enter your password',

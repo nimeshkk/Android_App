@@ -3,6 +3,7 @@ import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:campus_connect_app/pages/home2.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -15,16 +16,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
+  CollectionReference userRef = FirebaseFirestore.instance.collection("users");
 
-  login(context) async {
-    var result = await auth.createUserWithEmailAndPassword(
+  register(context) async {
+    var userCredential = await auth.createUserWithEmailAndPassword(
         email: email.text, password: password.text);
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const Home2(),
-      ),
-    );
+    userRef.add({"email": email.text, "password": password.text}).then(
+        (value) => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Home2(),
+              ),
+            ));
   }
 
   @override
@@ -108,6 +111,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     right: 10,
                   ),
                   child: TextFormField(
+                    controller: email,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Username',
@@ -120,7 +124,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
             ),
             const SizedBox(height: 15),
-            //email
+            /*email
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
@@ -139,6 +143,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     right: 10,
                   ),
                   child: TextFormField(
+                    controller: email,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Email',
@@ -149,8 +154,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 15),
+            ),  */
+            // const SizedBox(height: 15),
             //password
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -170,6 +175,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     right: 10,
                   ),
                   child: TextFormField(
+                    controller: password,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Password',
@@ -227,11 +233,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        register(context);
+                      },
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),
                         child: Text(
-                          "Register",
+                          "SIGN UO",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
