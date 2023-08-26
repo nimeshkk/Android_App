@@ -1,7 +1,9 @@
+import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 import 'package:campus_connect_app/pages/login/forgot_password_screen.dart';
 import 'package:campus_connect_app/pages/login/register_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -11,6 +13,21 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  FirebaseAuth auth = FirebaseAuth.instance;
+
+  login(context) async {
+    var result = await auth.signInWithEmailAndPassword(
+        email: email.text, password: password.text);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Home2(),
+      ),
+    );
+  }
+
   @override
   void launchFacebookPage() async {
     const facebookPageUrl =
@@ -179,10 +196,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const LoginScreen()));
+                        // call login function here
+                        //Navigator.push(
+                        //   context,
+                        //    MaterialPageRoute(
+                        //       builder: (context) => const LoginScreen()));
+                        login(context);
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),

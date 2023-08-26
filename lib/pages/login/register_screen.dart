@@ -1,9 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:campus_connect_app/pages/home2.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
+
+  @override
+  _RegisterScreenState createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  FirebaseAuth auth = FirebaseAuth.instance;
+
+  login(context) async {
+    var result = await auth.createUserWithEmailAndPassword(
+        email: email.text, password: password.text);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Home2(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
