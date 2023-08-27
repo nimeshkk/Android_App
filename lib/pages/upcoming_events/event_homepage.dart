@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:campus_connect_app/pages/home2.dart';
+import 'package:campus_connect_app/pages/home_renting/constants/constants.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/calender_eventlist.dart';
 
 import 'package:flutter/material.dart';
@@ -84,13 +85,13 @@ class _EventState extends State<Event> {
     return Scaffold(
         appBar: AppBar(
           flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-            ),
+            // decoration: BoxDecoration(
+            //   gradient: LinearGradient(
+            //     colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+            //     begin: Alignment.topCenter,
+            //     end: Alignment.bottomCenter,
+            //   ),
+            // ),
           ),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -107,6 +108,8 @@ class _EventState extends State<Event> {
         ),
         backgroundColor: Colors.white,
         body: ListView(children: <Widget>[
+        
+          
           Container(
             height: 250,
             decoration: BoxDecoration(
@@ -141,6 +144,7 @@ class _EventState extends State<Event> {
 
           //this is the second part
           Container(
+            
               height: MediaQuery.of(context).size.height * 0.7,
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -165,7 +169,7 @@ class _EventState extends State<Event> {
                         fontSize: 17,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
+                        
                         fontFamily: 'Roboto',
                       ),
                     ),
@@ -177,31 +181,31 @@ class _EventState extends State<Event> {
                       fontSize: 17,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
+        
                       fontFamily: 'Roboto',
                     ),
                   ),
                   SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        //no logic more for the go away
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 130, vertical: 10),
-                      ),
-                      child: Text(
-                        'Go Away',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: const Color.fromRGBO(3, 169, 244, 1),
-                          fontFamily: 'Roboto',
-                        ),
-                      ),
-                    ),
+                    // child: ElevatedButton(
+                    //   onPressed: () {
+                    //     //no logic more for the go away
+                    //   },
+                    //   style: ElevatedButton.styleFrom(
+                    //     backgroundColor: Colors.black,
+                    //     padding:
+                    //         EdgeInsets.symmetric(horizontal: 130, vertical: 10),
+                    //   ),
+                    //   child: Text(
+                    //     'Go Away',
+                    //     style: TextStyle(
+                    //       fontSize: 18,
+                    //       color: Color.fromARGB(255, 255, 255, 255),
+                    //       fontFamily: 'Roboto',
+                    //     ),
+                    //   ),
+                    // ),
                   ),
                   SizedBox(height: 20),
 
@@ -227,7 +231,7 @@ class _EventState extends State<Event> {
                           ),
                           icon: Icon(
                             Icons.person,
-                            color: Color.fromARGB(255, 0, 28, 75),
+                            color: Color.fromARGB(255, 254, 254, 254),
                             size: 30,
                           ),
                           label: Text(

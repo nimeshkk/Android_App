@@ -1,4 +1,5 @@
 import 'package:campus_connect_app/pages/splashscreen.dart';
+import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 //import 'package:campus_connect_app/pages/login/login_screen.dart';
@@ -42,6 +43,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home:SplashScreen());
+        home:Event());
   }
 }
