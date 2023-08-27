@@ -1,4 +1,5 @@
-import 'package:campus_connect_app/pages/home2.dart';
+//import 'package:campus_connect_app/pages/login/login_screen.dart';
+import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomPage extends StatefulWidget {
@@ -55,7 +56,7 @@ class _WelcomPageState extends State<WelcomPage> {
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (_) => Home2()),
+                        MaterialPageRoute(builder: (_) => LoginScreen()),
                       );
                     },
                     child: Container(
