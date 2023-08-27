@@ -30,15 +30,15 @@ class Timetable extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Time Table'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {

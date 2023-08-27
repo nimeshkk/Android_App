@@ -11,7 +11,12 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -84,15 +89,15 @@ class _EventState extends State<Event> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          flexibleSpace: Container(
-            // decoration: BoxDecoration(
-            //   gradient: LinearGradient(
-            //     colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-            //     begin: Alignment.topCenter,
-            //     end: Alignment.bottomCenter,
-            //   ),
-            // ),
-          ),
+          // flexibleSpace: Container(
+          //   // decoration: BoxDecoration(
+          //   //   gradient: LinearGradient(
+          //   //     colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+          //   //     begin: Alignment.topCenter,
+          //   //     end: Alignment.bottomCenter,
+          //   //   ),
+          //   // ),
+          // ),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -111,6 +116,7 @@ class _EventState extends State<Event> {
         
           
           Container(
+            
             height: 250,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -247,7 +253,10 @@ class _EventState extends State<Event> {
                     ),
                   ),
                 ],
-              )),
-        ]));
+              )
+              ),
+        ]
+        )
+        );
   }
 }
