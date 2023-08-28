@@ -116,12 +116,6 @@ class _AddEventScreenState extends State<AddEventScreen> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/back.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: Center(
           child: SingleChildScrollView(
             child: Container(
