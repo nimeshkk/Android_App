@@ -152,13 +152,6 @@ class _EventState extends State<Event> {
           Container(
             
               height: MediaQuery.of(context).size.height * 0.7,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                      'assets/back.jpg'), // Replace with your image path
-                  fit: BoxFit.cover,
-                ),
-              ),
               alignment: Alignment.center,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -62,12 +62,6 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
       ),
       body: Container(
         height: MediaQuery.of(context).size.height * 0.9,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/back.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: SingleChildScrollView(
           child: Center(
             child: Container(
