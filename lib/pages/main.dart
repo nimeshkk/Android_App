@@ -1,4 +1,5 @@
 //import 'package:campus_connect_app/pages/lost&found/lost.dart';
+import 'package:campus_connect_app/pages/lostfound_items/lostitem_display.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_input.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +17,7 @@ import 'package:firebase_core/firebase_core.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: FirebaseOptions(
+    options: const FirebaseOptions(
         apiKey: "AIzaSyC3N0FYif_M4jq69yjqsV34NUUaN50tVuk",
         appId: "1:277703009425:android:b4098087432431659c4b30",
         messagingSenderId: "277703009425",
@@ -50,6 +51,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: LostItemInputScreen());
+        home: LostItemDisplayScreen());
   }
 }

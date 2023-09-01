@@ -13,7 +13,7 @@ class lostandfound extends StatelessWidget {
       routes: {
         //  '/': (ctx) => LostItemInputScreen(),
         '/display': (ctx) =>
-            LostItemDisplayScreen([]), // Pass your lost items data here
+            LostItemDisplayScreen(), // Pass your lost items data here
       },
     );
   }
