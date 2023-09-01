@@ -20,15 +20,15 @@ class PLYMOUTH extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Plymouth-Batch'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -178,15 +178,15 @@ class UGC extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('UGC-Batch'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -337,15 +337,15 @@ class COMPUTING extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Computing Faculty'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {

@@ -50,24 +50,18 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
         title: Text(
           'Update Event',
         ),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
       ),
       body: Container(
         height: MediaQuery.of(context).size.height * 0.9,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/back.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
         child: SingleChildScrollView(
           child: Center(
             child: Container(

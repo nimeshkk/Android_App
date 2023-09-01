@@ -24,8 +24,8 @@ class CustomAppBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  height: 50,
-                  width: 50,
+                  height: 50.0,
+                  width: 50.0,
                   decoration: BoxDecoration(
                     border: Border.all(color: black.withOpacity(0.4)),
                     borderRadius: BorderRadius.circular(15),
