@@ -19,29 +19,39 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        Container(
-          height: double.infinity,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Color(0x8000FF00), Color(0xff281537)]
-                  )
-                  ),
-          child: const Padding(
-            padding: EdgeInsets.only(top: 60.0, left: 22),
-            child: Text(
-              'Clubs And Community',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+      appBar: AppBar(
+        title: Text('Clubs And Community'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); 
+          },
         ),
+      ),
+      body: Stack(children: [
+        // Container(
+          // height: double.infinity,
+          // width: double.infinity,
+          // decoration: const BoxDecoration(
+          //     gradient: LinearGradient(
+          //         colors: [Color(0x8000FF00), Color(0xff281537)]
+          //         )
+          //         ),
+        //   child: const Padding(
+        //     padding: EdgeInsets.only(top: 10.0, left: 22),
+        //     child: Text(
+        //       'Clubs And Community',
+        //       style: TextStyle(
+        //         fontSize: 20,
+        //         color: Colors.white,
+        //         fontWeight: FontWeight.bold,
+        //       ),
+        //     ),
+        //   ),
+        // ),
+      
         Padding(
-          padding: const EdgeInsets.only(top: 150.0),
+          padding: const EdgeInsets.only(top: 1.0),
           child: Container(
             decoration: const BoxDecoration(
                 color: Colors.white,
@@ -183,7 +193,9 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
             ),
           ),
         )
-      ]),
+      ]
+      ),
+      
     );
   }
 }
