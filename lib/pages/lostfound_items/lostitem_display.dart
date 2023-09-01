@@ -4,9 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart'; // Adjust the import path based on your project structure
 
 class LostItemDisplayScreen extends StatelessWidget {
-  final List<Map<String, String>> lostItems; // Replace with actual data model
+  //final List<Map<String, String>> lostItems; // Replace with actual data model
 
-  LostItemDisplayScreen(this.lostItems);
+  //LostItemDisplayScreen(this.lostItems);
 
   @override
   Widget build(BuildContext context) {
