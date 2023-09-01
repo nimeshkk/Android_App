@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 // Import the lostitem_input.dart file
 
 class LostItemInputScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
   TextEditingController contactNumberController = TextEditingController();
 
   // Function to handle saving the lost item to the database
-  void saveLostItem(BuildContext context) {
+  void saveLostItem(BuildContext context) async {
     final model = Provider.of<LostItemModel>(context, listen: false);
     final itemName = itemNameController.text;
     final description = descriptionController.text;
@@ -25,6 +26,13 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
       description: description,
       contactNumber: contactNumber,
     );
+
+    // Add the new lost item to Firestore
+    await FirebaseFirestore.instance.collection('lost_items').add({
+      'itemName': newItem.itemName,
+      'description': newItem.description,
+      'contactNumber': newItem.contactNumber,
+    });
 
     model.addLostItem(newItem);
 

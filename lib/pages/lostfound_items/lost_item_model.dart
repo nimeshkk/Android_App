@@ -9,6 +9,11 @@ class LostItemModel with ChangeNotifier {
     _lostItems.add(item);
     notifyListeners();
   }
+
+  void setLostItems(List<LostItem> items) {
+    _lostItems = items;
+    notifyListeners();
+  }
 }
 
 class LostItem {
