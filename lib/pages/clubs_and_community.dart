@@ -25,13 +25,15 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
           width: double.infinity,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Color(0x8000FF00), Color(0xff281537)])),
+                  colors: [Color(0x8000FF00), Color(0xff281537)]
+                  )
+                  ),
           child: const Padding(
             padding: EdgeInsets.only(top: 60.0, left: 22),
             child: Text(
               'Clubs And Community',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 20,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),

@@ -1,5 +1,18 @@
 import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart'; // Import the package
+
+Future<void> _launchURL(String url) async {
+  try {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  } catch (e) {
+    print('Error launching URL: $e');
+  }
+}
 
 class PLYMOUTH extends StatelessWidget {
   @override
@@ -7,15 +20,15 @@ class PLYMOUTH extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Plymouth-Batch'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -60,7 +73,8 @@ class PLYMOUTH extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/Ee4g1D81szFDmcXxEuzQU8sBBK8cp_k0fkcWmC8y92KUdQ?e=IxqyXB'); // Replace with your URL
                 },
                 child: Text(
                   '20.2',
@@ -85,7 +99,8 @@ class PLYMOUTH extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/Ee4g1D81szFDmcXxEuzQU8sBBK8cp_k0fkcWmC8y92KUdQ?e=IxqyXB'); // Replace with your URL
                 },
                 child: Text(
                   '21.1',
@@ -110,7 +125,8 @@ class PLYMOUTH extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/Ee4g1D81szFDmcXxEuzQU8sBBK8cp_k0fkcWmC8y92KUdQ?e=IxqyXB'); // Replace with your URL
                 },
                 child: Text(
                   '21.2',
@@ -135,7 +151,8 @@ class PLYMOUTH extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/Ee4g1D81szFDmcXxEuzQU8sBBK8cp_k0fkcWmC8y92KUdQ?e=IxqyXB'); // Replace with your URL
                 },
                 child: Text(
                   '22.1',
@@ -161,15 +178,15 @@ class UGC extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('UGC-Batch'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -214,7 +231,8 @@ class UGC extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/Ee4g1D81szFDmcXxEuzQU8sBBK8cp_k0fkcWmC8y92KUdQ?e=IxqyXB'); // Replace with your URL
                 },
                 child: Text(
                   '20.2',
@@ -239,7 +257,8 @@ class UGC extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/Ee4g1D81szFDmcXxEuzQU8sBBK8cp_k0fkcWmC8y92KUdQ?e=IxqyXB'); // Replace with your URL
                 },
                 child: Text(
                   '21.1',
@@ -264,7 +283,8 @@ class UGC extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/Ee4g1D81szFDmcXxEuzQU8sBBK8cp_k0fkcWmC8y92KUdQ?e=IxqyXB'); // Replace with your URL
                 },
                 child: Text(
                   '21.2',
@@ -289,7 +309,8 @@ class UGC extends StatelessWidget {
                   textStyle: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/Ee4g1D81szFDmcXxEuzQU8sBBK8cp_k0fkcWmC8y92KUdQ?e=IxqyXB'); // Replace with your URL
                 },
                 child: Text(
                   '22.1',
@@ -316,15 +337,15 @@ class COMPUTING extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Computing Faculty'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {

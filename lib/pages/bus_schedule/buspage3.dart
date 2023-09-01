@@ -7,12 +7,12 @@ class Page3 extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 253, 252, 255),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 4, 100, 160),
-        shadowColor: const Color.fromARGB(6, 36, 192, 240),
+        // backgroundColor: const Color.fromARGB(255, 4, 100, 160),
+        // shadowColor: const Color.fromARGB(6, 36, 192, 240),
         title: const Text(
           "Private Bus Information",
           style: TextStyle(
-              fontWeight: FontWeight.w900, fontSize: 24, color: Colors.white),
+              fontWeight: FontWeight.w900, fontSize: 24, color: Color.fromARGB(255, 0, 0, 0)),
         ),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),

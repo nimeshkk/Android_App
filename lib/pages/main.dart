@@ -1,3 +1,4 @@
+
 //import 'package:campus_connect_app/pages/lost&found/lost.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_display.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_input.dart';
@@ -5,6 +6,9 @@ import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:provider/provider.dart';
 
 //import 'package:campus_connect_app/pages/welcome_page.dart';
+import 'package:campus_connect_app/pages/splashscreen.dart';
+import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 //import 'package:campus_connect_app/pages/login/login_screen.dart';
@@ -51,6 +55,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: LostItemDisplayScreen());
+
+        home:SplashScreen());
+
   }
 }
