@@ -1,6 +1,9 @@
-import 'package:campus_connect_app/pages/lost&found/lost.dart';
+//import 'package:campus_connect_app/pages/lost&found/lost.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_input.dart';
-import 'package:campus_connect_app/pages/welcome_page.dart';
+import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
+import 'package:provider/provider.dart';
+
+//import 'package:campus_connect_app/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 //import 'package:campus_connect_app/pages/login/login_screen.dart';
@@ -22,7 +25,10 @@ void main() async {
 
   runApp(
     DevicePreview(
-      builder: (context) => MyApp(), // Wrap your app
+      builder: (context) => ChangeNotifierProvider(
+        create: (context) => LostItemModel(),
+        child: MyApp(),
+      ),
     ),
   );
 }

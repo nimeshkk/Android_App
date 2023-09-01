@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'lostitem_input.dart';
+//import 'lostitem_input.dart';
 import 'lostitem_display.dart';
 
 class lostandfound extends StatelessWidget {
@@ -11,7 +11,7 @@ class lostandfound extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        '/': (ctx) => LostItemInputScreen(),
+        //  '/': (ctx) => LostItemInputScreen(),
         '/display': (ctx) =>
             LostItemDisplayScreen([]), // Pass your lost items data here
       },
