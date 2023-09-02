@@ -5,6 +5,29 @@ import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_input.dart';
 
 class LostItemDisplayScreen extends StatelessWidget {
+  // Method to delete a lost item
+  void deleteLostItem(BuildContext context, String documentId) {
+    FirebaseFirestore.instance
+        .collection('lost_items')
+        .doc(documentId)
+        .delete()
+        .then((_) {
+      // Item deleted successfully from Firestore, now update the UI.
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Item deleted successfully'),
+        ),
+      );
+    }).catchError((error) {
+      // Handle any errors that occur during the delete process.
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Failed to delete item: $error'),
+        ),
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final model = Provider.of<LostItemModel>(context);
@@ -56,6 +79,8 @@ class LostItemDisplayScreen extends StatelessWidget {
                     icon: Icon(Icons.delete),
                     onPressed: () {
                       // Implement delete logic and update UI
+                      // Call the deleteLostItem method when the delete button is pressed
+                      deleteLostItem(context, snapshot.data!.docs[index].id);
                     },
                   ),
                 );

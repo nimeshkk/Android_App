@@ -51,7 +51,7 @@ dependencies:
 
   table_calendar: ^3.0.9
   image_picker: ^1.0.2
-  url_launcher: ^6.0.9 # Add this line
+ # url_launcher: ^6.0.9 # Add this line
 
   another_carousel_pro: ^1.0.0
   firebase_core: ^2.15.1
