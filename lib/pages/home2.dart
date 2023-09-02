@@ -9,6 +9,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'clubs_and_community.dart';
 import 'lost&found/lost.dart';
+import 'lostfound_items/lostitem_display.dart';
 import 'welcome_page.dart';
 
 class Home2 extends StatefulWidget {
@@ -191,7 +192,7 @@ class _Home2State extends State<Home2> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => LostAndFound(),
+                              builder: (_) => LostItemDisplayScreen(),
                             ),
                           );
                         }
