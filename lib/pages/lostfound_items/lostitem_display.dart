@@ -101,6 +101,7 @@ class LostItemDisplayScreen extends StatelessWidget {
                       margin: EdgeInsets.all(10.0), // Add margin for spacing
                       padding: EdgeInsets.all(10.0), // Add padding for spacing
                       decoration: BoxDecoration(
+                        color: Color.fromARGB(223, 231, 251, 248),
                         border: Border.all(
                           color: Color.fromARGB(223, 5, 119, 106),
                           width: 1.0, // Adjust border width as needed
