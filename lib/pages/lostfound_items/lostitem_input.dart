@@ -42,38 +42,54 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Lost Items'),
+    return Stack(children: [
+      // Background Image
+      Image.asset(
+        'assets/lost3.png', // Replace with your image asset path
+        fit: BoxFit.cover, // You can adjust the fit property as needed
+        width: double.infinity,
+        height: double.infinity,
       ),
-      //
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: itemNameController,
-              decoration: InputDecoration(labelText: 'Lost Item Name'),
-            ),
-            TextField(
-              controller: descriptionController,
-              decoration: InputDecoration(labelText: 'Description'),
-            ),
-            TextField(
-              controller: contactNumberController,
-              decoration: InputDecoration(labelText: 'Contact Number'),
-              keyboardType: TextInputType.phone,
-            ),
-            SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () {
-                saveLostItem(context);
-              },
-              child: Text('Save'),
-            ),
-          ],
+
+      Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Add Your Lost Item",
+            style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 30,
+                color: Color.fromARGB(255, 2, 76, 55)),
+          ),
+        ),
+        //
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              TextField(
+                controller: itemNameController,
+                decoration: InputDecoration(labelText: 'Lost Item Name'),
+              ),
+              TextField(
+                controller: descriptionController,
+                decoration: InputDecoration(labelText: 'Description'),
+              ),
+              TextField(
+                controller: contactNumberController,
+                decoration: InputDecoration(labelText: 'Contact Number'),
+                keyboardType: TextInputType.phone,
+              ),
+              SizedBox(height: 16.0),
+              ElevatedButton(
+                onPressed: () {
+                  saveLostItem(context);
+                },
+                child: Text('Save'),
+              ),
+            ],
+          ),
         ),
       ),
-    );
+    ]);
   }
 }

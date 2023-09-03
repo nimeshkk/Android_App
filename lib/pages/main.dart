@@ -1,4 +1,6 @@
 //import 'package:campus_connect_app/pages/lost&found/lost.dart';
+import 'package:campus_connect_app/pages/lost&found/lost.dart';
+import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_display.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_input.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
@@ -54,6 +56,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: LostItemDisplayScreen());
+        home: Lostfounditem());
   }
 }

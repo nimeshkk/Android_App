@@ -33,76 +33,98 @@ class LostItemDisplayScreen extends StatelessWidget {
     final model = Provider.of<LostItemModel>(context);
 
     // Fetch lost items data from Firestore
-    return StreamBuilder<QuerySnapshot>(
-      stream: FirebaseFirestore.instance.collection('lost_items').snapshots(),
-      builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return CircularProgressIndicator(); // Display loading indicator while fetching data
-        }
-        if (snapshot.hasError) {
-          return Text('Error: ${snapshot.error}');
-        }
+    return Stack(
+      // Use a Stack to place the background image and other widgets
+      children: [
+        // Background Image
+        Image.asset(
+          'assets/Lost2.png', // Replace with your image asset path
+          fit: BoxFit.cover, // You can adjust the fit property as needed
+          width: double.infinity,
+          height: double.infinity,
+        ),
+        StreamBuilder<QuerySnapshot>(
+          stream:
+              FirebaseFirestore.instance.collection('lost_items').snapshots(),
+          builder:
+              (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return CircularProgressIndicator(); // Display loading indicator while fetching data
+            }
+            if (snapshot.hasError) {
+              return Text('Error: ${snapshot.error}');
+            }
 
-        // Process the retrieved data
-        if (snapshot.hasData) {
-          final List<LostItem> lostItems = [];
-          for (final DocumentSnapshot doc in snapshot.data!.docs) {
-            final data = doc.data() as Map<String, dynamic>;
-            lostItems.add(LostItem(
-              itemName: data['itemName'],
-              description: data['description'],
-              contactNumber: data['contactNumber'],
-            ));
-          }
+            // Process the retrieved data
+            if (snapshot.hasData) {
+              final List<LostItem> lostItems = [];
+              for (final DocumentSnapshot doc in snapshot.data!.docs) {
+                final data = doc.data() as Map<String, dynamic>;
+                lostItems.add(LostItem(
+                  itemName: data['itemName'],
+                  description: data['description'],
+                  contactNumber: data['contactNumber'],
+                ));
+              }
 
-          model.setLostItems(lostItems); // Set the data in your Provider model
+              model.setLostItems(
+                  lostItems); // Set the data in your Provider model
 
-          // Display the lost items in a ListView
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('Lost Items'),
-            ),
-            body: ListView.builder(
-              itemCount: lostItems.length,
-              itemBuilder: (ctx, index) {
-                final item = lostItems[index];
-                return ListTile(
-                  title: Text(item.itemName),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(item.description),
-                      Text(item.contactNumber),
-                    ],
+              // Display the lost items in a ListView
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text(
+                    "Lost Items",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 30,
+                        color: Color.fromARGB(255, 2, 76, 55)),
                   ),
-                  trailing: IconButton(
-                    icon: Icon(Icons.delete),
-                    onPressed: () {
-                      // Implement delete logic and update UI
-                      // Call the deleteLostItem method when the delete button is pressed
-                      deleteLostItem(context, snapshot.data!.docs[index].id);
-                    },
-                  ),
-                );
-              },
-            ),
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                // Navigate to the LostItemInputScreen
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LostItemInputScreen(),
-                  ),
-                );
-              },
-              child: Icon(Icons.add),
-            ),
-          );
-        } else {
-          return CircularProgressIndicator(); // Display a loading indicator if there's no data
-        }
-      },
+                ),
+                body: ListView.builder(
+                  itemCount: lostItems.length,
+                  itemBuilder: (ctx, index) {
+                    final item = lostItems[index];
+                    return ListTile(
+                      title: Text(item.itemName),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(item.description),
+                          Text(item.contactNumber),
+                        ],
+                      ),
+                      trailing: IconButton(
+                        icon: Icon(Icons.delete),
+                        onPressed: () {
+                          // Implement delete logic and update UI
+                          // Call the deleteLostItem method when the delete button is pressed
+                          deleteLostItem(
+                              context, snapshot.data!.docs[index].id);
+                        },
+                      ),
+                    );
+                  },
+                ),
+                floatingActionButton: FloatingActionButton(
+                  onPressed: () {
+                    // Navigate to the LostItemInputScreen
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LostItemInputScreen(),
+                      ),
+                    );
+                  },
+                  child: Icon(Icons.add),
+                ),
+              );
+            } else {
+              return CircularProgressIndicator(); // Display a loading indicator if there's no data
+            }
+          },
+        ),
+      ],
     );
   }
 }
