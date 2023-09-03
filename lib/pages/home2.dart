@@ -9,8 +9,6 @@ import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'clubs_and_community.dart';
-import 'lost&found/lost.dart';
-import 'lostfound_items/lostitem_display.dart';
 import 'welcome_page.dart';
 
 class Home2 extends StatefulWidget {

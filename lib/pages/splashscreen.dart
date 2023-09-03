@@ -1,4 +1,3 @@
-import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:campus_connect_app/pages/sliders/sliders.dart';
 import 'package:flutter/material.dart';
 
