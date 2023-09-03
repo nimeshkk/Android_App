@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 //import 'lostitem_input.dart';
 import 'lostitem_display.dart';
 
+
 /*class lostandfound extends StatelessWidget {
+=======
+class Lostandfound extends StatefulWidget {
+  @override
+  State<Lostandfound> createState() => _LostandfoundState();
+}
+
+class _LostandfoundState extends State<Lostandfound> {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

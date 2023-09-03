@@ -1,19 +1,23 @@
 //import 'package:campus_connect_app/pages/lost&found/lost.dart';
+
 import 'package:campus_connect_app/pages/lost&found/lost.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_display.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lostitem_input.dart';
+
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
+import 'package:campus_connect_app/pages/sliders/sliders.dart';
 import 'package:provider/provider.dart';
 
 //import 'package:campus_connect_app/pages/welcome_page.dart';
 import 'package:campus_connect_app/pages/splashscreen.dart';
-import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
 
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 //import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+
+import 'clubs_and_community.dart';
 // import 'package:flutter/foundation.dart';
 // import 'package:campus_connect_app/pages/home_renting/constants/constants.dart';
 // import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
@@ -56,6 +60,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
+
         home: SplashScreen());
+
   }
 }
