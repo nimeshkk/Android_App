@@ -39,7 +39,7 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         backgroundColor:
-            Color.fromARGB(223, 5, 119, 106), // Set the background color
+            const Color.fromARGB(223, 5, 119, 106), // Set the background color
         content: Text(
           'Lost item saved successfully',
           style: TextStyle(
@@ -74,11 +74,20 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
                 color: Color.fromARGB(255, 2, 76, 55)),
           ),
         ),
-        //
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
+              SizedBox(height: 25.0),
+              Text(
+                'Add your lost item details clearly and if you find that delete your notice in the display item screen', //  description text
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 2, 76, 55),
+                ),
+                textAlign: TextAlign.center,
+              ),
               TextField(
                 controller: itemNameController,
                 decoration: InputDecoration(labelText: 'Lost Item Name'),
@@ -118,6 +127,15 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                  height:
+                      8.0), // Add some space between the button and the image
+              Image.asset(
+                'assets/lost5.png', // Replace with your image asset path
+                width: 350, // Set the width as per your requirement
+                height: 330, // Set the height as per your requirement
+                fit: BoxFit.cover, // You can adjust the fit property as needed
               ),
             ],
           ),
