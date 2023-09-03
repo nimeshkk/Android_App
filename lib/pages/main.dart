@@ -1,5 +1,10 @@
-
 //import 'package:campus_connect_app/pages/lost&found/lost.dart';
+
+import 'package:campus_connect_app/pages/lost&found/lost.dart';
+import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
+import 'package:campus_connect_app/pages/lostfound_items/lostitem_display.dart';
+import 'package:campus_connect_app/pages/lostfound_items/lostitem_input.dart';
+
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:campus_connect_app/pages/sliders/sliders.dart';
 import 'package:provider/provider.dart';
@@ -56,8 +61,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
 
-        home: SplashScreen()
-        );
+        home: SplashScreen());
 
   }
 }
