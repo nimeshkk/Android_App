@@ -35,6 +35,19 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
     });
 
     model.addLostItem(newItem);
+    // Display a SnackBar to indicate successful save
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor:
+            Color.fromARGB(223, 5, 119, 106), // Set the background color
+        content: Text(
+          'Lost item saved successfully',
+          style: TextStyle(
+            color: Colors.white, // Set the text color
+          ),
+        ),
+      ),
+    );
 
     // Navigate to the display screen after saving
     Navigator.pushNamed(context, '/display');
@@ -80,11 +93,31 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
                 keyboardType: TextInputType.phone,
               ),
               SizedBox(height: 16.0),
-              ElevatedButton(
+              /* ElevatedButton(
+               
                 onPressed: () {
                   saveLostItem(context);
                 },
                 child: Text('Save'),
+              ), */
+              MaterialButton(
+                color: const Color.fromARGB(223, 5, 119, 106),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                onPressed: () {
+                  saveLostItem(context);
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Text(
+                    "save",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

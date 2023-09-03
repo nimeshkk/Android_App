@@ -13,9 +13,21 @@ class LostItemDisplayScreen extends StatelessWidget {
         .delete()
         .then((_) {
       // Item deleted successfully from Firestore, now update the UI.
-      ScaffoldMessenger.of(context).showSnackBar(
+      /*ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Item deleted successfully'),
+        ),
+      );*/
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor:
+              Color.fromARGB(223, 5, 119, 106), // Set the background color
+          content: Text(
+            'Item deleted successfully',
+            style: TextStyle(
+              color: Colors.white, // Set the text color
+            ),
+          ),
         ),
       );
     }).catchError((error) {
@@ -38,7 +50,7 @@ class LostItemDisplayScreen extends StatelessWidget {
       children: [
         // Background Image
         Image.asset(
-          'assets/Lost2.png', // Replace with your image asset path
+          'assets/lost4.png', // Replace with your image asset path
           fit: BoxFit.cover, // You can adjust the fit property as needed
           width: double.infinity,
           height: double.infinity,
@@ -85,23 +97,50 @@ class LostItemDisplayScreen extends StatelessWidget {
                   itemCount: lostItems.length,
                   itemBuilder: (ctx, index) {
                     final item = lostItems[index];
-                    return ListTile(
-                      title: Text(item.itemName),
-                      subtitle: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(item.description),
-                          Text(item.contactNumber),
-                        ],
+                    return Container(
+                      margin: EdgeInsets.all(10.0), // Add margin for spacing
+                      padding: EdgeInsets.all(10.0), // Add padding for spacing
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Color.fromARGB(223, 5, 119, 106),
+                          width: 1.0, // Adjust border width as needed
+                        ),
+                        borderRadius:
+                            BorderRadius.circular(10.0), // Add border radius
                       ),
-                      trailing: IconButton(
-                        icon: Icon(Icons.delete),
-                        onPressed: () {
-                          // Implement delete logic and update UI
-                          // Call the deleteLostItem method when the delete button is pressed
-                          deleteLostItem(
-                              context, snapshot.data!.docs[index].id);
-                        },
+                      child: ListTile(
+                        title: Text(
+                          item.itemName,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              item.description,
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            Text(
+                              item.contactNumber,
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        trailing: IconButton(
+                          icon: Icon(
+                            Icons.delete,
+                            color: Color.fromARGB(223, 5, 119, 106),
+                          ),
+                          onPressed: () {
+                            // Implement delete logic and update UI
+                            // Call the deleteLostItem method when the delete button is pressed
+                            deleteLostItem(
+                                context, snapshot.data!.docs[index].id);
+                          },
+                        ),
                       ),
                     );
                   },
@@ -116,7 +155,11 @@ class LostItemDisplayScreen extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Icon(Icons.add),
+                  backgroundColor: Color.fromARGB(223, 5, 119, 106),
+                  child: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
                 ),
               );
             } else {
