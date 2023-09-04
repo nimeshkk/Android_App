@@ -1,11 +1,15 @@
 import 'dart:async';
-
+import 'package:campus_connect_app/pages/gpa_pages/gpahome.dart';
 import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
+// import 'package:campus_connect_app/pages/home_renting/home_page.dart';
+import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
+import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
 import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
+import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'clubs_and_community.dart';
-import 'welcome_page.dart';
+import 'login/login_screen.dart';
 
 class Home2 extends StatefulWidget {
   const Home2({Key? key});
@@ -18,9 +22,9 @@ class _Home2State extends State<Home2> {
   bool isAdmin = true; // Set this to false if the user is not an admin
 
   final List<String> imagePaths = [
-    'assets/NSBM.jpg',
-    'assets/NSBM.jpg',
-    'assets/NSBM.jpg',
+    'assets/NSBM1.png',
+    'assets/NSBM2.png',
+    'assets/NSBM3.png',
   ];
 
   Timer? _timer;
@@ -66,7 +70,7 @@ class _Home2State extends State<Home2> {
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (_) => WelcomPage()),
+                        MaterialPageRoute(builder: (_) => LoginScreen()),
                       );
                     },
                   ),
@@ -99,7 +103,7 @@ class _Home2State extends State<Home2> {
                 options: CarouselOptions(
                   autoPlay: true,
                   enlargeCenterPage: true,
-                  aspectRatio: 16 / 9,
+                  aspectRatio: 22 / 10,
                   onPageChanged: (index, reason) {
                     setState(() {
                       _currentPage = index;
@@ -125,7 +129,7 @@ class _Home2State extends State<Home2> {
                     crossAxisSpacing: 6.0,
                     mainAxisSpacing: 6.0,
                   ),
-                  itemCount: 6,
+                  itemCount: 8,
                   itemBuilder: (BuildContext context, int index) {
                     List<String> imagePaths = [
                       'assets/bus.png',
@@ -133,13 +137,23 @@ class _Home2State extends State<Home2> {
                       'assets/Lost2.png',
                       'assets/accommodation.png',
                       'assets/community2.png',
-                      'assets/timetable.png'
+                      'assets/timetable.png',
+                      'assets/GPA.png',
+                      'assets/about.png'
                     ];
 
                     String imagePath = imagePaths[index % imagePaths.length];
 
                     return GestureDetector(
                       onTap: () {
+                        if (imagePath == 'assets/GPA.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Gpahome(),
+                            ),
+                          );
+                        }
                         if (imagePath == 'assets/bus.png') {
                           Navigator.push(
                             context,
@@ -156,11 +170,39 @@ class _Home2State extends State<Home2> {
                             ),
                           );
                         }
+                        if (imagePath == 'assets/timetable.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Timetable(),
+                            ),
+                          );
+                        }
                         if (imagePath == 'assets/community2.png') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (_) => ClubsAndCommunity(),
+                            ),
+                          );
+                        }
+
+                        if (imagePath == 'assets/Lost2.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+
+                              builder: (_) => Lostfounditem(),
+
+                            ),
+                          );
+                        }
+
+                        if (imagePath == 'assets/accommodation.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => HomeScreen(),
                             ),
                           );
                         }

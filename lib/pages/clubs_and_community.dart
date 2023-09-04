@@ -1,3 +1,11 @@
+import 'package:campus_connect_app/pages/Clubs/aiesec.dart';
+import 'package:campus_connect_app/pages/Clubs/csse.dart';
+import 'package:campus_connect_app/pages/Clubs/drama.dart';
+import 'package:campus_connect_app/pages/Clubs/football.dart';
+import 'package:campus_connect_app/pages/Clubs/foss.dart';
+import 'package:campus_connect_app/pages/Clubs/ieee.dart';
+import 'package:campus_connect_app/pages/Clubs/music.dart';
+import 'package:campus_connect_app/pages/Clubs/stemup.dart';
 import 'package:flutter/material.dart';
 
 class ClubsAndCommunity extends StatefulWidget {
@@ -11,27 +19,39 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        Container(
-          height: double.infinity,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Color(0x8000FF00), Color(0xff281537)])),
-          child: const Padding(
-            padding: EdgeInsets.only(top: 60.0, left: 22),
-            child: Text(
-              'Clubs And Community',
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+      appBar: AppBar(
+        title: Text('Clubs And Community'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); 
+          },
         ),
+      ),
+      body: Stack(children: [
+        // Container(
+          // height: double.infinity,
+          // width: double.infinity,
+          // decoration: const BoxDecoration(
+          //     gradient: LinearGradient(
+          //         colors: [Color(0x8000FF00), Color(0xff281537)]
+          //         )
+          //         ),
+        //   child: const Padding(
+        //     padding: EdgeInsets.only(top: 10.0, left: 22),
+        //     child: Text(
+        //       'Clubs And Community',
+        //       style: TextStyle(
+        //         fontSize: 20,
+        //         color: Colors.white,
+        //         fontWeight: FontWeight.bold,
+        //       ),
+        //     ),
+        //   ),
+        // ),
+      
         Padding(
-          padding: const EdgeInsets.only(top: 200.0),
+          padding: const EdgeInsets.only(top: 1.0),
           child: Container(
             decoration: const BoxDecoration(
                 color: Colors.white,
@@ -41,7 +61,10 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
             height: double.infinity,
             width: double.infinity,
             child: Padding(
-              padding: const EdgeInsets.only(left: 18.0, right: 18.0),
+              padding: const EdgeInsets.only(
+                left: 18.0,
+                right: 18.0,
+              ),
               child: Column(
                 children: [
                   // Container(
@@ -64,18 +87,17 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
                           crossAxisSpacing: 6.0,
                           mainAxisSpacing: 6.0,
                         ),
-                        itemCount: 9,
+                        itemCount: 5,
                         itemBuilder: (BuildContext context, int index) {
                           List<String> imagePaths = [
-                            'assets/IEEE.png',
-                            'assets/events.jpg',
                             'assets/sup.jpeg',
-                            'assets/accomadation.jpg',
-                            'assets/community.png',
-                            'assets/Time-Table.png',
-                            'assets/bus.jpg',
-                            'assets/events.jpg',
-                            'assets/Lost.jpg',
+                            'assets/IEEE.jpeg',
+                            'assets/aiesec.png',
+                            'assets/csse.jpg',
+                            // 'assets/music.png',
+                            // 'assets/drama.png',
+                            'assets/foss.png',
+                            // 'assets/football.jpeg',
                           ];
 
                           String imagePath =
@@ -83,30 +105,70 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
 
                           return GestureDetector(
                             onTap: () {
-                              // if (imagePath == 'assets/bus.jpg') {
-                              //   Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //       builder: (_) => Bus(),
-                              //     ),
-                              //   );
-                              // }
-                              // if (imagePath == 'assets/events.jpg') {
-                              //   Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //       builder: (_) => Event(),
-                              //     ),
-                              //   );
-                              // }
-                              // if (imagePath == 'assets/community.png') {
-                              //   Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //       builder: (_) => ClubsAndCommunity(),
-                              //     ),
-                              //   );
-                              // }
+                              if (imagePath == 'assets/sup.jpeg') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => StemUp(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/IEEE.jpeg') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => IEEE(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/music.png') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => Music(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/drama.png') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => Drama(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/foss.png') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => FOSS(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/football.jpeg') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => FootBall(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/aiesec.png') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => Aiesec(),
+                                  ),
+                                );
+                              }
+                              if (imagePath == 'assets/csse.jpg') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => CSSE(),
+                                  ),
+                                );
+                              }
                             },
                             child: Container(
                               margin: const EdgeInsets.only(right: 10, top: 10),
@@ -131,7 +193,9 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
             ),
           ),
         )
-      ]),
+      ]
+      ),
+      
     );
   }
 }

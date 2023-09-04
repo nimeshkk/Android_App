@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "277703009425",
+    "project_id": "nsbmuniapp",
+    "storage_bucket": "nsbmuniapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277703009425:android:b4098087432431659c4b30",
+        "android_client_info": {
+          "package_name": "com.example.campus_connect_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277703009425-0ltl4jrk249p13fhjncngfcjg4a7l1jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3N0FYif_M4jq69yjqsV34NUUaN50tVuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277703009425-0ltl4jrk249p13fhjncngfcjg4a7l1jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
