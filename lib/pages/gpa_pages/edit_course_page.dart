@@ -27,12 +27,14 @@ class _EditCoursePageState extends State<EditCoursePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 70, 71, 183),
-        shadowColor: const Color.fromARGB(255, 70, 71, 183),
+        backgroundColor: Colors.white,
+        shadowColor: Colors.white,
         title: const Text(
           "Edit course",
           style: TextStyle(
-              fontWeight: FontWeight.w900, fontSize: 30, color: Colors.white),
+              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Color.fromARGB(255, 2, 76, 55)),
         ),
       ),
       body: Padding(
@@ -48,8 +50,8 @@ class _EditCoursePageState extends State<EditCoursePage> {
               decoration: const InputDecoration(
                 labelText: 'Course Name',
                 labelStyle: TextStyle(
-                  color: Color.fromARGB(255, 90, 9,
-                      240), // Change the color to your desired color
+                  color: Color.fromARGB(
+                      255, 2, 76, 55), // Change the color to your desired color
                   fontSize: 24,
                   fontWeight: FontWeight
                       .w900, // Change the font size to your desired size
@@ -86,8 +88,8 @@ class _EditCoursePageState extends State<EditCoursePage> {
               decoration: const InputDecoration(
                 labelText: 'Credit Hours',
                 labelStyle: TextStyle(
-                  color: Color.fromARGB(255, 90, 9,
-                      240), // Change the color to your desired color
+                  color: Color.fromARGB(
+                      255, 2, 76, 55), // Change the color to your desired color
                   fontSize: 24,
                   fontWeight: FontWeight
                       .w900, // Change the font size to your desired size
@@ -110,7 +112,7 @@ class _EditCoursePageState extends State<EditCoursePage> {
               },
               style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(
-                    255, 201, 42, 6), // Set your desired button color
+                    223, 5, 119, 106), // Set your desired button color
                 minimumSize: const Size(120, 48),
 
                 // Set the width and height of the button

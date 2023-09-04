@@ -27,7 +27,7 @@ class Gpahome extends StatelessWidget {
               child: const Text(
                 "Welcome to GPA Calculator",
                 style: TextStyle(
-                    color: Color.fromARGB(255, 70, 71, 183),
+                    color: Color.fromARGB(255, 2, 76, 55),
                     fontSize: 30,
                     fontWeight: FontWeight.w900),
                 textAlign: TextAlign.center,
@@ -40,7 +40,7 @@ class Gpahome extends StatelessWidget {
               child: const Text(
                 "Empower yourself with instant insights into your academic achievements. Get started today and unlock the power of GPA Calculator!",
                 style: TextStyle(
-                    color: Color.fromARGB(255, 70, 71, 183),
+                    color: Color.fromARGB(255, 12, 12, 12),
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
                 textAlign: TextAlign.center,
@@ -57,7 +57,7 @@ class Gpahome extends StatelessWidget {
                 children: [
                   Expanded(
                     child: MaterialButton(
-                      color: const Color.fromARGB(255, 70, 71, 183),
+                      color: const Color.fromARGB(223, 5, 119, 106),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -92,7 +92,7 @@ class Gpahome extends StatelessWidget {
                     child: MaterialButton(
                       shape: RoundedRectangleBorder(
                         side: const BorderSide(
-                          color: Color.fromARGB(255, 70, 71, 183),
+                          color: Color.fromARGB(223, 5, 119, 106),
                         ),
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -105,7 +105,7 @@ class Gpahome extends StatelessWidget {
                         child: Text(
                           "Home",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 70, 71, 183),
+                            color: Color.fromARGB(255, 2, 76, 55),
                             fontSize: 16,
                           ),
                         ),

@@ -15,12 +15,14 @@ class _GpaPage1State extends State<GpaPage1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 70, 71, 183),
-        shadowColor: const Color.fromARGB(255, 70, 71, 183),
+        backgroundColor: Colors.white,
+        shadowColor: Colors.white,
         title: const Text(
           "Add Courses",
           style: TextStyle(
-              fontWeight: FontWeight.w900, fontSize: 30, color: Colors.white),
+              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Color.fromARGB(255, 2, 76, 55)),
         ),
       ),
       body: Container(
@@ -42,7 +44,7 @@ class _GpaPage1State extends State<GpaPage1> {
               child: Text(
                 "Add the course grade using the following button and select the corresponding GPA credit for each course",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 97, 68, 184),
+                  color: Color.fromARGB(255, 2, 76, 55),
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w700,
                   fontSize: 20,
@@ -58,7 +60,7 @@ class _GpaPage1State extends State<GpaPage1> {
               child: Text(
                 "Enter course name",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 64, 2, 114),
+                  color: Color.fromARGB(255, 2, 76, 55),
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w700,
                   fontSize: 20,
@@ -92,7 +94,7 @@ class _GpaPage1State extends State<GpaPage1> {
               child: Text(
                 "select the grade",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 64, 2, 114),
+                  color: Color.fromARGB(255, 2, 76, 55),
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w700,
                   fontSize: 20,
@@ -123,7 +125,7 @@ class _GpaPage1State extends State<GpaPage1> {
               child: Text(
                 "select the corresponding GPA credit for above course",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 64, 2, 114),
+                  color: Color.fromARGB(255, 2, 76, 55),
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w700,
                   fontSize: 20,
@@ -147,7 +149,7 @@ class _GpaPage1State extends State<GpaPage1> {
             const SizedBox(
               height: 30,
             ),
-            ElevatedButton(
+            /*ElevatedButton(
               onPressed: () {
                 Course course =
                     Course(selectedGrade, selectedCredits, courseName);
@@ -155,7 +157,7 @@ class _GpaPage1State extends State<GpaPage1> {
               },
               style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(
-                    255, 201, 42, 6), // Set your desired button color
+                    223, 5, 119, 106), // Set your desired button color
                 minimumSize: const Size(120, 48),
 
                 // Set the width and height of the button
@@ -163,13 +165,34 @@ class _GpaPage1State extends State<GpaPage1> {
               child: const Text(
                 'Add',
                 style: TextStyle(
-                  color: Color.fromARGB(255, 244, 243, 247),
+                  color: Colors.white,
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w500,
                   fontSize: 20,
                 ),
               ),
-            ),
+            ),*/
+            ElevatedButton(
+              onPressed: () {
+                Course course =
+                    Course(selectedGrade, selectedCredits, courseName);
+                Navigator.pop(context, course);
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color.fromARGB(223, 5, 119, 106),
+                minimumSize: const Size(120, 48),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  'ADD',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 251, 248, 248),
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
