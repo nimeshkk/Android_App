@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         iconTheme: const IconThemeData(
-          color: Colors.black,
+          color: Color.fromARGB(255, 2, 76, 55),
         ),
       ),
       body: SafeArea(
@@ -85,6 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w700,
+                    color: Color.fromARGB(255, 2, 76, 55),
                   ),
                 ),
               ),
@@ -193,7 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Expanded(
                     child: MaterialButton(
-                      color: const Color(0xFF1E232C),
+                      color: Color.fromARGB(223, 5, 119, 106),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -351,7 +352,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: const Text(
                     "Register",
                     style: TextStyle(
-                      color: Color(0xFF35C2C1),
+                      color: Color.fromARGB(223, 5, 119, 106),
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),

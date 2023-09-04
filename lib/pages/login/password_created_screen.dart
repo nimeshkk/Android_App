@@ -24,9 +24,9 @@ class PasswordCreatedScreen extends StatelessWidget {
               child: Text(
                 "Password Changed!",
                 style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700,
-                ),
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700,
+                    color: Color.fromARGB(255, 2, 76, 55)),
               ),
             ),
             const Padding(
