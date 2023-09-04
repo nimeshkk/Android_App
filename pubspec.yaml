@@ -113,10 +113,15 @@ flutter:
     - assets/back.jpg
     - assets/praana02.png
 
+    
+    
+
+
     - assets/timee.png
     - assets/back01.png
 
     - assets/ctb.jpg
+
     - assets/private.png
     - assets/shuttle-bus-main-image1.jpg
     - assets/weekend.png
@@ -136,6 +141,10 @@ flutter:
     - assets/van1.jpg
     - assets/van2.png
 
+    - assets/bus2.jpg
+    - assets/ctb.png
+
+
     - assets/gpa9.png
     - assets/gpa10.png
     - assets/gpa11png.png
@@ -153,4 +162,5 @@ flutter:
     - assets/stemup2.png
     - assets/stemup3.jpg
     - assets/stemup4.jpg
+
 
