@@ -54,6 +54,10 @@ dependencies:
 
 
   another_carousel_pro: ^1.0.0
+  liquid_progress_indicator: ^0.4.0
+
+
+  another_carousel_pro: ^1.0.0
   firebase_core: ^2.15.1
   firebase_auth: ^4.7.3
   url_launcher: ^6.1.12
@@ -143,4 +147,10 @@ flutter:
     - assets/lost3.png
     - assets/lost4.png
     - assets/lost5.png
+
     - assets/slider01.png
+
+    - assets/stemup2.png
+    - assets/stemup3.jpg
+    - assets/stemup4.jpg
+
