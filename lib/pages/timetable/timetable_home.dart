@@ -76,13 +76,14 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
-                  minimumSize: Size(300, 50),
-                  shape: RoundedRectangleBorder(
+                     Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+                    minimumSize: Size(300, 50),
+                    shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
-                    side: BorderSide(color: Colors.black),
+                    side: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -93,7 +94,7 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'COMPUTING',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),
@@ -103,13 +104,13 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -120,7 +121,7 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'BUSINESS',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),
@@ -129,14 +130,15 @@ class Timetable extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
-                  backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
-                  minimumSize: Size(300, 50),
-                  shape: RoundedRectangleBorder(
+                   backgroundColor:
+                     Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+                    minimumSize: Size(300, 50),
+                    shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
-                    side: BorderSide(color: Colors.black),
+                    side: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -147,7 +149,7 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'ENGINEERING',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 255, 255, 255),
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),

@@ -9,7 +9,7 @@ import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'clubs_and_community.dart';
-import 'welcome_page.dart';
+import 'login/login_screen.dart';
 
 class Home2 extends StatefulWidget {
   const Home2({Key? key});
@@ -70,7 +70,7 @@ class _Home2State extends State<Home2> {
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (_) => WelcomPage()),
+                        MaterialPageRoute(builder: (_) => LoginScreen()),
                       );
                     },
                   ),
