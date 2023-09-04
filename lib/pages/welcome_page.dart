@@ -1,10 +1,12 @@
-import 'package:campus_connect_app/pages/home2.dart';
+//import 'package:campus_connect_app/pages/login/login_screen.dart';
+import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomPage extends StatefulWidget {
   const WelcomPage({key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _WelcomPageState createState() => _WelcomPageState();
 }
 
@@ -55,7 +57,7 @@ class _WelcomPageState extends State<WelcomPage> {
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (_) => Home2()),
+                        MaterialPageRoute(builder: (_) => const LoginScreen()),
                       );
                     },
                     child: Container(
@@ -64,14 +66,14 @@ class _WelcomPageState extends State<WelcomPage> {
                       decoration: const BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           gradient: LinearGradient(colors: [
-                            Color.fromARGB(255, 55, 184, 23),
-                            Color.fromARGB(255, 236, 199, 10)
+                            Color.fromARGB(255, 255, 255, 255),
+                            Color.fromARGB(255, 215, 215, 214)
                           ])),
                       child: Center(
                         child: Text(
                           'Get Started',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
