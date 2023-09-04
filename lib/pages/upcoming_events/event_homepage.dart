@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:campus_connect_app/pages/home2.dart';
+import 'package:campus_connect_app/pages/home_renting/constants/constants.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/calender_eventlist.dart';
 
 import 'package:flutter/material.dart';
@@ -10,7 +11,12 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -83,15 +89,15 @@ class _EventState extends State<Event> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-            ),
-          ),
+          // flexibleSpace: Container(
+          //   // decoration: BoxDecoration(
+          //   //   gradient: LinearGradient(
+          //   //     colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+          //   //     begin: Alignment.topCenter,
+          //   //     end: Alignment.bottomCenter,
+          //   //   ),
+          //   // ),
+          // ),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -107,9 +113,21 @@ class _EventState extends State<Event> {
         ),
         backgroundColor: Colors.white,
         body: ListView(children: <Widget>[
+        
+          
           Container(
-            height: 200,
-            child: CarouselSlider.builder(
+            
+            height: 250,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                    'assets/fiesta01.png'), // Replace with your image path
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+
+          /*child: CarouselSlider.builder(
               itemCount: imagePaths.length,
               options: CarouselOptions(
                 autoPlay: true,
@@ -128,19 +146,12 @@ class _EventState extends State<Event> {
                   width: 1500,
                 );
               },
-            ),
-          ),
+            ),*/
 
           //this is the second part
           Container(
+            
               height: MediaQuery.of(context).size.height * 0.7,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                      'assets/back.jpg'), // Replace with your image path
-                  fit: BoxFit.cover,
-                ),
-              ),
               alignment: Alignment.center,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -157,7 +168,7 @@ class _EventState extends State<Event> {
                         fontSize: 17,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
+                        
                         fontFamily: 'Roboto',
                       ),
                     ),
@@ -169,31 +180,31 @@ class _EventState extends State<Event> {
                       fontSize: 17,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
+        
                       fontFamily: 'Roboto',
                     ),
                   ),
                   SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        //no logic more for the go away
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 130, vertical: 10),
-                      ),
-                      child: Text(
-                        'Go Away',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: const Color.fromRGBO(3, 169, 244, 1),
-                          fontFamily: 'Roboto',
-                        ),
-                      ),
-                    ),
+                    // child: ElevatedButton(
+                    //   onPressed: () {
+                    //     //no logic more for the go away
+                    //   },
+                    //   style: ElevatedButton.styleFrom(
+                    //     backgroundColor: Colors.black,
+                    //     padding:
+                    //         EdgeInsets.symmetric(horizontal: 130, vertical: 10),
+                    //   ),
+                    //   child: Text(
+                    //     'Go Away',
+                    //     style: TextStyle(
+                    //       fontSize: 18,
+                    //       color: Color.fromARGB(255, 255, 255, 255),
+                    //       fontFamily: 'Roboto',
+                    //     ),
+                    //   ),
+                    // ),
                   ),
                   SizedBox(height: 20),
 
@@ -219,7 +230,7 @@ class _EventState extends State<Event> {
                           ),
                           icon: Icon(
                             Icons.person,
-                            color: Color.fromARGB(255, 0, 28, 75),
+                            color: Color.fromARGB(255, 254, 254, 254),
                             size: 30,
                           ),
                           label: Text(
@@ -235,7 +246,10 @@ class _EventState extends State<Event> {
                     ),
                   ),
                 ],
-              )),
-        ]));
+              )
+              ),
+        ]
+        )
+        );
   }
 }

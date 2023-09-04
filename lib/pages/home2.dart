@@ -3,11 +3,12 @@ import 'package:campus_connect_app/pages/gpa_pages/gpahome.dart';
 import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
 // import 'package:campus_connect_app/pages/home_renting/home_page.dart';
 import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
+import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
 import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
+import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'clubs_and_community.dart';
-import 'lost&found/lost.dart';
 import 'welcome_page.dart';
 
 class Home2 extends StatefulWidget {
@@ -169,6 +170,14 @@ class _Home2State extends State<Home2> {
                             ),
                           );
                         }
+                        if (imagePath == 'assets/timetable.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Timetable(),
+                            ),
+                          );
+                        }
                         if (imagePath == 'assets/community2.png') {
                           Navigator.push(
                             context,
@@ -182,11 +191,13 @@ class _Home2State extends State<Home2> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => LostAndFound(),
+
+                              builder: (_) => Lostfounditem(),
+
                             ),
                           );
                         }
-                        
+
                         if (imagePath == 'assets/accommodation.png') {
                           Navigator.push(
                             context,

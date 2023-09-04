@@ -6,6 +6,7 @@ class WelcomPage extends StatefulWidget {
   const WelcomPage({key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _WelcomPageState createState() => _WelcomPageState();
 }
 
@@ -56,7 +57,7 @@ class _WelcomPageState extends State<WelcomPage> {
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (_) => LoginScreen()),
+                        MaterialPageRoute(builder: (_) => const LoginScreen()),
                       );
                     },
                     child: Container(

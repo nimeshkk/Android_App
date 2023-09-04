@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Event Calendar',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue,
+      // ),
       home: CalendarScreen(),
     );
   }
@@ -152,20 +152,20 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Event Calendar'),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // flexibleSpace: Container(
+        //   decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+        //       begin: Alignment.topCenter,
+        //       end: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
       ),
       body: Column(
         children: [
           Container(
-            color: Color.fromARGB(255, 0, 15, 94),
+            // color: Color.fromARGB(255, 0, 15, 94),
             padding: const EdgeInsets.all(16.0),
             child: Text(
               'Important Notice: only admin can do modifications for events',
@@ -176,7 +176,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
             ),
           ),
           Container(
-            color: Color.fromARGB(255, 234, 235, 241),
+            color: Color.fromARGB(255, 127, 212, 255),
             child: TableCalendar(
               firstDay: DateTime(2000),
               lastDay: DateTime(2050),
