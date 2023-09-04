@@ -69,7 +69,8 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
         //   ),
         // ),
 
-      ),
+      
+
       body: Container(
         height: MediaQuery.of(context).size.height * 0.9,
         child: SingleChildScrollView(

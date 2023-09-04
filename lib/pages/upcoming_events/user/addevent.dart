@@ -1,8 +1,7 @@
-import 'dart:html';
 
 import 'package:campus_connect_app/pages/upcoming_events/user/updateevent.dart';
 import 'package:flutter/material.dart';
-import 'delete_event.dart'; // Import the DeleteEventScreen class
+// Import the DeleteEventScreen class
 
 class Event {
   final String eventName;

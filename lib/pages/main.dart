@@ -1,9 +1,5 @@
 
-import 'package:campus_connect_app/pages/bus_schedule/buspagewelcome.dart';
-import 'package:campus_connect_app/pages/welcome_page.dart';
-
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
-import 'package:campus_connect_app/pages/walkthrough_screen/slider1.dart';
 import 'package:provider/provider.dart';
 import 'package:campus_connect_app/pages/splashscreen.dart';
 

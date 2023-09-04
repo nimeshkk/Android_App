@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:campus_connect_app/pages/home2.dart';
-import 'package:campus_connect_app/pages/home_renting/constants/constants.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/calender_eventlist.dart';
 import 'package:flutter/material.dart';
 
