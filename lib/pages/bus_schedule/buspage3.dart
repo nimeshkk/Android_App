@@ -5,16 +5,18 @@ class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 253, 252, 255),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 4, 100, 160),
-        shadowColor: const Color.fromARGB(6, 36, 192, 240),
+        backgroundColor: Colors.white,
+        shadowColor: Colors.white,
         title: const Text(
           "Private Bus Information",
           style: TextStyle(
-              fontWeight: FontWeight.w900, fontSize: 24, color: Colors.white),
+              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Color.fromARGB(255, 2, 76, 55)),
         ),
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
+        //actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -289,8 +291,8 @@ class Page3 extends StatelessWidget {
               "Phone: +94-54 456-7890 / Email: info@busscheduling.com ,For any inquiries, feedback, or support related to our bus scheduling service, feel free to reach out to us using the provided contact information. Our team is ready to assist you and address any questions or concerns you may have.Please note that our support hours are Monday to Friday, 9:00 AM to 5:00 PM (local time). If you contact us outside these hours, we will get back to you as soon as possible on the next business day.We value your feedback and suggestions as they help us improve our service and provide you with a better user experience. Thank you for choosing our bus scheduling service.",
               style: TextStyle(
                   color: Color.fromARGB(255, 7, 7, 7),
-                  fontSize: 10,
-                  fontWeight: FontWeight.w300),
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600),
             ),
             Padding(
               padding: const EdgeInsets.all(30.0),
@@ -303,35 +305,35 @@ class Page3 extends StatelessWidget {
                       width: 30,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: const Color.fromARGB(255, 140, 189, 229)),
+                          color: Color.fromARGB(255, 166, 242, 220)),
                     ),
                     Container(
                       height: 30,
                       width: 30,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: const Color.fromARGB(255, 80, 164, 233)),
+                          color: Color.fromARGB(255, 22, 251, 186)),
                     ),
                     Container(
                       height: 30,
                       width: 30,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: const Color.fromARGB(255, 4, 134, 239)),
+                          color: Color.fromARGB(255, 8, 179, 130)),
                     ),
                     Container(
                       height: 30,
                       width: 30,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: const Color.fromARGB(255, 4, 88, 156)),
+                          color: Color.fromARGB(255, 4, 124, 90)),
                     ),
                     Container(
                       height: 30,
                       width: 30,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
-                          color: const Color.fromARGB(255, 2, 53, 94)),
+                          color: Color.fromARGB(255, 2, 76, 55)),
                     ),
                   ]),
             ),

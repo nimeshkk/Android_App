@@ -5,16 +5,18 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 246, 246, 248),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 4, 100, 160),
-        shadowColor: const Color.fromARGB(191, 4, 52, 142),
+        backgroundColor: Colors.white,
+        shadowColor: Colors.white,
         title: const Text(
           "CTB Bus Scheudle",
           style: TextStyle(
-              fontWeight: FontWeight.w900, fontSize: 24, color: Colors.white),
+              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Color.fromARGB(255, 2, 76, 55)),
         ),
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
+        //actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -43,26 +45,13 @@ class Page2 extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Container(
-                padding: const EdgeInsets.all(8),
-                color: const Color.fromARGB(255, 7, 7, 7),
-                child: Row(
-                  children: [
-                    //row 1
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: const Image(
-                        image: AssetImage("assets/weekdays.png"),
-                        width: 300,
-                        height: 100,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            const Text(
+              "Week Days Time Schedule",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 24,
+                  color: Color.fromARGB(255, 2, 76, 55)),
             ),
 
             // row 2
@@ -71,7 +60,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -89,7 +78,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -116,7 +105,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -134,7 +123,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -161,7 +150,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -179,7 +168,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -205,7 +194,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -223,7 +212,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -249,7 +238,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -267,7 +256,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -294,7 +283,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -312,7 +301,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -338,7 +327,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -356,7 +345,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -382,7 +371,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -400,7 +389,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -426,7 +415,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -444,7 +433,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -470,7 +459,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -488,7 +477,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -514,7 +503,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -532,7 +521,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -558,7 +547,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -576,7 +565,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -602,7 +591,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -620,7 +609,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -647,7 +636,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -665,7 +654,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -692,7 +681,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -710,7 +699,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -736,7 +725,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -754,7 +743,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -779,33 +768,20 @@ class Page2 extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Container(
-                padding: const EdgeInsets.all(8),
-                color: const Color.fromARGB(255, 19, 19, 19),
-                child: Row(
-                  children: [
-                    //row 1
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: const Image(
-                        image: AssetImage("assets/weekend.png"),
-                        width: 300,
-                        height: 100,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            const Text(
+              "Weekend Days Time Schedule",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 24,
+                  color: Color.fromARGB(255, 2, 76, 55)),
             ),
 
             const SizedBox(
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -823,7 +799,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -850,7 +826,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -868,7 +844,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -896,7 +872,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -914,7 +890,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -942,7 +918,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -960,7 +936,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -987,7 +963,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -1005,7 +981,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -1031,7 +1007,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -1049,7 +1025,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -1075,7 +1051,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -1093,7 +1069,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -1119,7 +1095,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -1137,7 +1113,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -1163,7 +1139,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -1181,7 +1157,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -1208,7 +1184,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -1226,7 +1202,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -1253,7 +1229,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -1271,7 +1247,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -1297,7 +1273,7 @@ class Page2 extends StatelessWidget {
               height: 10,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: Container(
                 padding: const EdgeInsets.all(8),
                 color: const Color.fromARGB(255, 202, 209, 209),
@@ -1315,7 +1291,7 @@ class Page2 extends StatelessWidget {
                       ),
                     ),
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Container(
                         color: Colors.white30,
                         width: 80,
@@ -1368,8 +1344,8 @@ class Page2 extends StatelessWidget {
               "Phone: +94-54 456-7890 / Email: info@busscheduling.com ,For any inquiries, feedback, or support related to our bus scheduling service, feel free to reach out to us using the provided contact information. Our team is ready to assist you and address any questions or concerns you may have.Please note that our support hours are Monday to Friday, 9:00 AM to 5:00 PM (local time). If you contact us outside these hours, we will get back to you as soon as possible on the next business day.We value your feedback and suggestions as they help us improve our service and provide you with a better user experience. Thank you for choosing our bus scheduling service.",
               style: TextStyle(
                   color: Color.fromARGB(255, 7, 7, 7),
-                  fontSize: 10,
-                  fontWeight: FontWeight.w300),
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600),
             ),
             Padding(
               padding: const EdgeInsets.all(30.0),
@@ -1382,35 +1358,35 @@ class Page2 extends StatelessWidget {
                     width: 30,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: const Color.fromARGB(255, 140, 189, 229)),
+                        color: Color.fromARGB(255, 155, 236, 213)),
                   ),
                   Container(
                     height: 30,
                     width: 30,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: const Color.fromARGB(255, 80, 164, 233)),
+                        color: Color.fromARGB(255, 12, 231, 169)),
                   ),
                   Container(
                     height: 30,
                     width: 30,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: const Color.fromARGB(255, 4, 134, 239)),
+                        color: Color.fromARGB(255, 6, 162, 118)),
                   ),
                   Container(
                     height: 30,
                     width: 30,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: const Color.fromARGB(255, 4, 88, 156)),
+                        color: Color.fromARGB(255, 4, 125, 90)),
                   ),
                   Container(
                     height: 30,
                     width: 30,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: const Color.fromARGB(255, 2, 53, 94)),
+                        color: Color.fromARGB(255, 2, 76, 55)),
                   ),
                 ],
               ),
