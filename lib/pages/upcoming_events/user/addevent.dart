@@ -104,29 +104,27 @@ class _AddEventScreenState extends State<AddEventScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
-        title: Text(
-          'Add Event',
-          style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 30,
-            color: Color.fromARGB(255, 2, 76, 55),
-          ),
+          title: Text(
+        'ADD EVENT',
+        style: TextStyle(
+          fontWeight: FontWeight.w900,
+          fontSize: 30,
+          color: Color.fromARGB(255, 2, 76, 55),
         ),
-        flexibleSpace: Container(),
+      )
 
 //         title: Text('Add Event'),
-        // flexibleSpace: Container(
-        //   decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-        //       begin: Alignment.topCenter,
-        //       end: Alignment.bottomCenter,
-        //     ),
-        //   ),
-        // ),
+          // flexibleSpace: Container(
+          //   decoration: BoxDecoration(
+          //     gradient: LinearGradient(
+          //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+          //       begin: Alignment.topCenter,
+          //       end: Alignment.bottomCenter,
+          //     ),
+          //   ),
+          // ),
 
-      ),
+          ),
       body: Container(
         child: Center(
           child: SingleChildScrollView(
