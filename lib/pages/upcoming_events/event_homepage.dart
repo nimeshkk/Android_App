@@ -98,7 +98,7 @@ class _EventState extends State<Event> {
           // Static image instead of the image slider
           Padding(
             padding:
-                EdgeInsets.only(top: 80), // Adjust the top padding as needed
+                EdgeInsets.only(top: 70), // Adjust the top padding as needed
             child: Container(
               height: 220,
               child: Image.asset(
@@ -110,7 +110,7 @@ class _EventState extends State<Event> {
           // This is the second part
           Container(
             height:
-                MediaQuery.of(context).size.height * 0.6, // Reduce the height
+                MediaQuery.of(context).size.height * 0.4, // Reduce the height
             alignment: Alignment.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
