@@ -6,7 +6,14 @@ class PLYMOUTH extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Plymouth-Batch'),
+        title: Text(
+          'Plymouth-Batch',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+          ),
+        ),
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
         //     gradient: LinearGradient(
@@ -51,7 +58,7 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -76,7 +83,7 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -101,7 +108,7 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -126,7 +133,7 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -160,7 +167,14 @@ class UGC extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('UGC-Batch'),
+        title: Text(
+          'UGC-Batch',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+          ),
+        ),
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
         //     gradient: LinearGradient(
@@ -205,7 +219,7 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -230,7 +244,7 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -255,7 +269,7 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -280,7 +294,7 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -367,7 +381,7 @@ class ENGINEERING extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -394,7 +408,7 @@ class ENGINEERING extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromRGBO(86, 244, 7, 1).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
