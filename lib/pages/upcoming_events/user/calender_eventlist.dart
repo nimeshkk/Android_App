@@ -151,7 +151,15 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Event Calendar'),
+        title: Text(
+          'Event Calendar',
+          style: TextStyle(
+            color: Color.fromARGB(255, 2, 76, 55),
+            // Change this to the color you desire
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+          ),
+        ),
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
         //     gradient: LinearGradient(
