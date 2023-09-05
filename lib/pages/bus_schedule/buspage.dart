@@ -13,12 +13,12 @@ class Buspage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 244, 243, 246),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 4, 100, 160),
-        shadowColor: const Color.fromARGB(255, 14, 8, 172),
+        // backgroundColor: const Color.fromARGB(255, 4, 100, 160),
+        // shadowColor: const Color.fromARGB(255, 14, 8, 172),
         title: const Text(
           "Bus Schedule",
           style: TextStyle(
-              fontWeight: FontWeight.w900, fontSize: 30, color: Colors.white),
+              fontWeight: FontWeight.w900, fontSize: 30, color: Color.fromARGB(255, 0, 0, 0)),
         ),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),
