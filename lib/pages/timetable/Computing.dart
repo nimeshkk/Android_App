@@ -70,7 +70,7 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -85,7 +85,7 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '20.2',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -96,7 +96,7 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -111,7 +111,7 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '21.1',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -122,7 +122,7 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -137,7 +137,7 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '21.2',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -148,7 +148,7 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -163,7 +163,7 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '22.1',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -234,7 +234,7 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -249,7 +249,7 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '20.2',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -260,7 +260,7 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -275,7 +275,7 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '21.1',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -286,7 +286,7 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -301,7 +301,7 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '21.2',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -312,7 +312,7 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -327,7 +327,7 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '22.1',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -401,7 +401,7 @@ class COMPUTING extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -418,7 +418,7 @@ class COMPUTING extends StatelessWidget {
                 child: Text(
                   'Plymouth',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
@@ -428,7 +428,7 @@ class COMPUTING extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.6),
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -445,7 +445,7 @@ class COMPUTING extends StatelessWidget {
                 child: Text(
                   'UGC',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
