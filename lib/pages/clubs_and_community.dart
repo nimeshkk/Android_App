@@ -157,7 +157,7 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) => Aiesec(),
+                                    builder: (_) => Aisec(),
                                   ),
                                 );
                               }

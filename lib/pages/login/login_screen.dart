@@ -58,6 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
       throw 'Could not launch $facebookPageUrl';
     }
   }
+  bool _isPasswordVisible = false;
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -142,19 +143,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     right: 10,
                   ),
                   child: TextFormField(
-                    controller: password,
-                    decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Enter your password',
-                      hintStyle: TextStyle(
-                        color: Color(0xFF8391A1),
-                      ),
-                      suffixIcon: Icon(
-                        Icons.remove_red_eye,
-                        color: Color(0xFF8391A1),
-                      ),
-                    ),
-                  ),
+  controller: password,
+  obscureText: !_isPasswordVisible, // Toggle text visibility
+  decoration: InputDecoration(
+    border: InputBorder.none,
+    hintText: 'Enter your password',
+    hintStyle: TextStyle(
+      color: Color(0xFF8391A1),
+    ),
+    suffixIcon: IconButton(
+      icon: Icon(
+        _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+        color: Color(0xFF8391A1),
+      ),
+      onPressed: () {
+        setState(() {
+          _isPasswordVisible = !_isPasswordVisible;
+        });
+      },
+    ),
+  ),
+)
                 ),
               ),
             ),

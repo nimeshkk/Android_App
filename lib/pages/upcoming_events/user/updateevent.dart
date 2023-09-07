@@ -55,17 +55,33 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
             color: Color.fromARGB(255, 2, 76, 55),
           ),
         ),
-        flexibleSpace: Container(),
-      ),
-      // flexibleSpace: Container(
-      //   decoration: BoxDecoration(
-      //     gradient: LinearGradient(
-      //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-      //       begin: Alignment.topCenter,
-      //       end: Alignment.bottomCenter,
-      //     ),
-      //   ),
-      // ),
+        flexibleSpace: Container(), ),
+// <<<<<<< upcoming__events
+     
+//       // flexibleSpace: Container(
+//       //   decoration: BoxDecoration(
+//       //     gradient: LinearGradient(
+//       //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+//       //       begin: Alignment.topCenter,
+//       //       end: Alignment.bottomCenter,
+//       //     ),
+//       //   ),
+//       // ),
+// =======
+
+//         ),
+//         // flexibleSpace: Container(
+//         //   decoration: BoxDecoration(
+//         //     gradient: LinearGradient(
+//         //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+//         //       begin: Alignment.topCenter,
+//         //       end: Alignment.bottomCenter,
+//         //     ),
+//         //   ),
+//         // ),
+
+      
+// >>>>>>> main
 
       body: Container(
         height: MediaQuery.of(context).size.height * 0.9,
