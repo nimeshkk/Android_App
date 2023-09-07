@@ -82,7 +82,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-
     - assets/campus.png
     - assets/IEEE.jpeg
     - assets/sup.jpeg
@@ -92,7 +91,6 @@ flutter:
     - assets/aiesec.png
     - assets/drama.png
     - assets/music.png
-
     - assets/bus.png
     - assets/Lost2.png
     - assets/events2.png
@@ -107,29 +105,18 @@ flutter:
     - assets/NSBM1.png
     - assets/NSBM2.png
     - assets/NSBM3.png
-
     - assets/fiesta01.png
     - assets/fiesta02.png
     - assets/praana.png
     - assets/back.jpg
     - assets/praana02.png
-
-  
     - assets/house02.jpg
     - assets/house03.jpg
     - assets/house04.jpg
     - assets/house05.jpg
-
-   
-    
-    
-
-
     - assets/timee.png
     - assets/back01.png
-
     - assets/ctb.jpg
-
     - assets/private.png
     - assets/shuttle-bus-main-image1.jpg
     - assets/weekend.png
@@ -148,11 +135,8 @@ flutter:
     - assets/private5.jpg
     - assets/van1.jpg
     - assets/van2.png
-
     - assets/bus2.jpg
     - assets/ctb.png
-
-
     - assets/gpa9.png
     - assets/gpa10.png
     - assets/gpa11png.png
@@ -164,15 +148,21 @@ flutter:
     - assets/lost3.png
     - assets/lost4.png
     - assets/lost5.png
-
     - assets/slider01.png
-
     - assets/stemup2.png
     - assets/stemup3.jpg
     - assets/stemup4.jpg
-
     - assets/ieeelogo.png
     - assets/ieeephoto01.jpg
     - assets/ieeephoto02.png
+    - assets/aieseclogo.jpg
+    - assets/aiesecphoto01.jpeg
+    - assets/aiesecphoto02.png
+    - assets/csselogo.jpg
+    - assets/cssephoto01.jpg
+    - assets/cssephoto02.jpg
+    - assets/fosslogo.png
+    - assets/fossphoto01.jpg
+    - assets/fossphoto02.jpg
 
 
