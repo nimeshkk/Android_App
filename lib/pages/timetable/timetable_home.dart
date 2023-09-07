@@ -29,16 +29,14 @@ class Timetable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Time Table'),
-        // flexibleSpace: Container(
-        //   decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-        //       begin: Alignment.topCenter,
-        //       end: Alignment.bottomCenter,
-        //     ),
-        //   ),
-        // ),
+        title: Text(
+          'Time Table',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+          ),
+        ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -76,9 +74,15 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                     Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
-                    minimumSize: Size(300, 50),
-                    shape: RoundedRectangleBorder(
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+// =======
+//                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+//                     minimumSize: Size(300, 50),
+//                     shape: RoundedRectangleBorder(
+// >>>>>>> main
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
 
@@ -94,7 +98,11 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'COMPUTING',
                   style: TextStyle(
-                      color: const Color.fromARGB(255, 255, 255, 255),
+
+                      color: Colors.white,
+// =======
+//                       color: const Color.fromARGB(255, 255, 255, 255),
+// >>>>>>> main
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),
@@ -104,7 +112,11 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+// =======
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+// >>>>>>> main
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -121,7 +133,11 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'BUSINESS',
                   style: TextStyle(
-                      color: const Color.fromARGB(255, 255, 255, 255),
+
+                      color: Colors.white,
+// =======
+//                       color: const Color.fromARGB(255, 255, 255, 255),
+// >>>>>>> main
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),
@@ -130,10 +146,17 @@ class Timetable extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
-                   backgroundColor:
-                     Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
-                    minimumSize: Size(300, 50),
-                    shape: RoundedRectangleBorder(
+
+                  backgroundColor:
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+                  minimumSize: Size(300, 50),
+                  shape: RoundedRectangleBorder(
+// =======
+//                    backgroundColor:
+//                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+//                     minimumSize: Size(300, 50),
+//                     shape: RoundedRectangleBorder(
+// >>>>>>> main
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
 
@@ -149,7 +172,11 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'ENGINEERING',
                   style: TextStyle(
-                      color: const Color.fromARGB(255, 255, 255, 255),
+
+                      color: Colors.white,
+// =======
+//                       color: const Color.fromARGB(255, 255, 255, 255),
+// >>>>>>> main
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),
