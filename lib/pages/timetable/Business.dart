@@ -288,7 +288,7 @@ class UGC extends StatelessWidget {
 
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
 
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+                      // Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
 
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
