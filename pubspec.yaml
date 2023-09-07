@@ -82,6 +82,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/images/
     - assets/campus.png
     - assets/IEEE.jpeg
     - assets/sup.jpeg
@@ -113,6 +114,13 @@ flutter:
     - assets/back.jpg
     - assets/praana02.png
 
+    # - assets/house01.jpg
+    - assets/house02.jpg
+    - assets/house03.jpg
+    - assets/house04.jpg
+    - assets/house05.jpg
+
+    - assets/house1.jpeg
     
     
 
