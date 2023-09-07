@@ -31,9 +31,9 @@ class ForgotPasswordScreen extends StatelessWidget {
                 child: const Text(
                   "Forgot Password?",
                   style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
-                  ),
+                      fontSize: 30,
+                      fontWeight: FontWeight.w700,
+                      color: Color.fromARGB(255, 2, 76, 55)),
                 ),
               ),
             ),
@@ -138,7 +138,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   child: const Text(
                     "Login",
                     style: TextStyle(
-                      color: Color(0xFF35C2C1),
+                      color: Color.fromARGB(223, 5, 119, 106),
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),

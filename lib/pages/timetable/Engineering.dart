@@ -58,13 +58,17 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   // Add onPressed action
@@ -72,7 +76,11 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '20.2',
                   style: TextStyle(
+
                     color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -83,13 +91,17 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   // Add onPressed action
@@ -97,7 +109,11 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '21.1',
                   style: TextStyle(
+
                     color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -108,13 +124,15 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   // Add onPressed action
@@ -122,7 +140,9 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '21.2',
                   style: TextStyle(
+
                     color: Colors.white,
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -133,13 +153,15 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   // Add onPressed action
@@ -147,7 +169,9 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '22.1',
                   style: TextStyle(
+
                     color: Colors.white,
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -219,13 +243,15 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   // Add onPressed action
@@ -233,7 +259,9 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '20.2',
                   style: TextStyle(
+
                     color: Colors.white,
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -244,13 +272,15 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   // Add onPressed action
@@ -258,7 +288,9 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '21.1',
                   style: TextStyle(
+
                     color: Colors.white,
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -269,13 +301,15 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   // Add onPressed action
@@ -283,7 +317,9 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '21.2',
                   style: TextStyle(
+
                     color: Colors.white,
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -294,13 +330,15 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   // Add onPressed action
@@ -308,7 +346,9 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '22.1',
                   style: TextStyle(
+
                     color: Colors.white,
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -381,13 +421,15 @@ class ENGINEERING extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -398,7 +440,9 @@ class ENGINEERING extends StatelessWidget {
                 child: Text(
                   'Plymouth',
                   style: TextStyle(
+
                       color: Colors.white,
+
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
@@ -408,13 +452,15 @@ class ENGINEERING extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -425,7 +471,9 @@ class ENGINEERING extends StatelessWidget {
                 child: Text(
                   'UGC',
                   style: TextStyle(
+
                       color: Colors.white,
+
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),

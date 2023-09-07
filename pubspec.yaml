@@ -51,9 +51,13 @@ dependencies:
 
   table_calendar: ^3.0.9
   image_picker: ^1.0.2
-  #url_launcher: ^6.0.9 # Add this line
+
 
   another_carousel_pro: ^1.0.0
+  liquid_progress_indicator: ^0.4.0
+
+
+  # another_carousel_pro: ^1.0.0
   firebase_core: ^2.15.1
   firebase_auth: ^4.7.3
   url_launcher: ^6.1.12
@@ -109,10 +113,15 @@ flutter:
     - assets/back.jpg
     - assets/praana02.png
 
+    
+    
+
+
     - assets/timee.png
     - assets/back01.png
 
     - assets/ctb.jpg
+
     - assets/private.png
     - assets/shuttle-bus-main-image1.jpg
     - assets/weekend.png
@@ -132,9 +141,28 @@ flutter:
     - assets/van1.jpg
     - assets/van2.png
 
+    - assets/bus2.jpg
+    - assets/ctb.png
+
+
     - assets/gpa9.png
     - assets/gpa10.png
     - assets/gpa11png.png
     - assets/fb.png
     - assets/twitter.png
     - assets/insta.jpeg
+    - assets/lost1.png
+    - assets/lost2.png
+    - assets/lost3.png
+    - assets/lost4.png
+    - assets/lost5.png
+
+    - assets/slider01.png
+    - assets/slider02.png
+    - assets/slider03.png
+
+    - assets/stemup2.png
+    - assets/stemup3.jpg
+    - assets/stemup4.jpg
+
+

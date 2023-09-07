@@ -1,8 +1,8 @@
+import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
 import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
-import 'gpapage.dart';
 
-class Gpahome extends StatelessWidget {
+class Buswelcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +11,7 @@ class Gpahome extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              "assets/gpa9.png",
+              "assets/bus2.jpg",
               height: MediaQuery.of(context).size.height * 0.55,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
@@ -25,7 +25,7 @@ class Gpahome extends StatelessWidget {
             GestureDetector(
               onTap: () {},
               child: const Text(
-                "Welcome to GPA Calculator",
+                "Welcome to Bus Schedule",
                 style: TextStyle(
                     color: Color.fromARGB(255, 2, 76, 55),
                     fontSize: 30,
@@ -63,12 +63,12 @@ class Gpahome extends StatelessWidget {
                       ),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => GpaPage()));
+                            MaterialPageRoute(builder: (context) => Buspage()));
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),
                         child: Text(
-                          "Calculate your GPA",
+                          "SEE BUS TIME",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
