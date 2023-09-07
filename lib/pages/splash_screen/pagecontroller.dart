@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:campus_connect_app/pages/home2.dart';
 
 class Controller extends StatelessWidget {
   @override
@@ -55,51 +56,81 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: PageView(
-              controller: _controller,
-              onPageChanged: (index) {
-                setState(() {
-                  currentPage = index;
-                });
-              },
+        body: Column(
+      children: [
+        Expanded(
+          child: PageView(
+            controller: _controller,
+            onPageChanged: (index) {
+              setState(() {
+                currentPage = index;
+              });
+            },
+            children: [
+              SliderOne(),
+              SliderTwo(),
+              SliderThree(),
+            ],
+          ),
+        ),
+        Container(
+          height: 20, // Set a fixed height for the container
+          color: Colors.white, // Make the container transparent
+          child: Align(
+            alignment: Alignment.centerLeft, // Align the content to the left
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SliderOne(),
-                SliderTwo(),
-                SliderThree(),
+                if (currentPage > 0)
+                  Opacity(
+                    opacity: 0.0, // Make the button transparent
+                    child: ElevatedButton(
+                      onPressed: () {
+                        _controller.previousPage(
+                          duration: Duration(milliseconds: 60),
+                          curve: Curves.easeInOut,
+                        );
+                      },
+                      child: Text(
+                        'Previous',
+                        style: TextStyle(
+                          color: Color.fromARGB(
+                              255, 4, 140, 101), // Set text color here
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                      ), // Change the color here
+                    ),
+                  ),
+                if (currentPage < 2)
+                  Opacity(
+                    opacity: 0.0, // Make the button transparent
+                    child: ElevatedButton(
+                      onPressed: () {
+                        _controller.nextPage(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      },
+                      child: Text(
+                        'Next',
+                        style: TextStyle(
+                          color: Color.fromARGB(
+                              255, 4, 140, 101), // Set text color here
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                      ), // Change the color here
+                    ),
+                  ),
               ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              if (currentPage > 0)
-                ElevatedButton(
-                  onPressed: () {
-                    _controller.previousPage(
-                      duration: Duration(milliseconds: 60),
-                      curve: Curves.easeInOut,
-                    );
-                  },
-                  child: Text('Previous'),
-                ),
-              if (currentPage < 2)
-                ElevatedButton(
-                  onPressed: () {
-                    _controller.nextPage(
-                      duration: Duration(milliseconds: 300),
-                      curve: Curves.easeInOut,
-                    );
-                  },
-                  child: Text('Next'),
-                ),
-            ],
-          ),
-        ],
-      ),
-    );
+        ),
+      ],
+    ));
   }
 }
 
@@ -131,12 +162,12 @@ class SliderOne extends StatelessWidget {
                   ),
                 ),
               ),
-              ElevatedButton(
+              /* ElevatedButton(
                 onPressed: () {
                   // Move to the next slide or navigate to the next screen
                 },
                 child: Text('Next'),
-              ),
+              ),*/
             ],
           ),
         ),
@@ -171,12 +202,12 @@ class SliderTwo extends StatelessWidget {
                 ),
               ),
             ),
-            ElevatedButton(
+            /* ElevatedButton(
               onPressed: () {
                 // Move to the next slide or navigate to the next screen
               },
               child: Text('Next'),
-            ),
+            ),*/
           ],
         ),
       ),
@@ -210,12 +241,32 @@ class SliderThree extends StatelessWidget {
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                //Move to the next slide or navigate to the next screen
-              },
-              child: Text('Next'),
+            SizedBox(
+              height: 10,
             ),
+            Row(
+              mainAxisAlignment:
+                  MainAxisAlignment.center, // Align the button to the left
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Home2()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 4, 113, 140),
+                  ),
+                  child: Text(
+                    'NEXT',
+                    style: TextStyle(
+                      color: Colors.white, // Set text color here
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
