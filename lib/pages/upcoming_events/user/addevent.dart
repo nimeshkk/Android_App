@@ -103,29 +103,27 @@ class _AddEventScreenState extends State<AddEventScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
-        title: Text(
-          'Add Event',
-          style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 30,
-            color: Color.fromARGB(255, 2, 76, 55),
-          ),
+          title: Text(
+        'ADD EVENT',
+        style: TextStyle(
+          fontWeight: FontWeight.w900,
+          fontSize: 30,
+          color: Color.fromARGB(255, 2, 76, 55),
         ),
-        flexibleSpace: Container(),
+      )
 
 //         title: Text('Add Event'),
-        // flexibleSpace: Container(
-        //   decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-        //       begin: Alignment.topCenter,
-        //       end: Alignment.bottomCenter,
-        //     ),
-        //   ),
-        // ),
+          // flexibleSpace: Container(
+          //   decoration: BoxDecoration(
+          //     gradient: LinearGradient(
+          //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+          //       begin: Alignment.topCenter,
+          //       end: Alignment.bottomCenter,
+          //     ),
+          //   ),
+          // ),
 
-      ),
+          ),
       body: Container(
         child: Center(
           child: SingleChildScrollView(
@@ -187,10 +185,13 @@ class _AddEventScreenState extends State<AddEventScreen> {
                     SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: _addEvent,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 2, 76, 55),
+                      ),
                       child: Text(
                         'Add Event',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -211,7 +212,7 @@ class _AddEventScreenState extends State<AddEventScreen> {
                           child: Text(
                             'Delete Event',
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -223,12 +224,12 @@ class _AddEventScreenState extends State<AddEventScreen> {
                             }
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 28, 255, 77),
+                            backgroundColor: Color.fromARGB(255, 2, 76, 55),
                           ),
                           child: Text(
                             'Update Event',
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -329,7 +330,9 @@ class _AddEventScreenState extends State<AddEventScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Update Event'),
+          title: Text(
+            'Update Event',
+          ),
           content: Text('Select the event to update:'),
           actions: [
             for (Event event in widget.events)
@@ -342,7 +345,8 @@ class _AddEventScreenState extends State<AddEventScreen> {
                         event); // Navigate to update screen
                   },
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.green, // Button background color
+                    backgroundColor: Color.fromARGB(
+                        255, 2, 76, 55), // Button background color
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
