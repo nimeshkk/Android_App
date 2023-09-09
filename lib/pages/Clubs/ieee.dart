@@ -18,7 +18,7 @@ class IEEE extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/stemup2.png'),
+                image: AssetImage('assets/ieeelogo.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -44,7 +44,7 @@ class IEEE extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'The STEMUP Foundation',
+                  'IEEE in NSBM',
                   style: TextStyle(
                     fontSize: 24, 
                     fontWeight: FontWeight.bold,
@@ -55,8 +55,8 @@ class IEEE extends StatelessWidget {
             SizedBox(height: 16),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
-              child: Text(
-                'The STEMUP Foundation is a not for profit organization whose mission is to inspire and engage students to become interested in pursuing STEM degrees and careers. Our mission is fulfilled through the programs and resources we offer to the South Asian Community.',
+              child: const Text(
+                'The IEEE Student Branch of NSBM Green University was established in 2015 and is composed of IEEE members from the Computing and Engineering faculty. In the Sri Lanka section, there is a very active Student Branch with several activities throughout the year. The greatest part is that some of these projects are conducted not just for NSBM undergraduates, but also for undergraduates from other State and non-State universities. Throughout the year, the IEEE Student Branch of NSBM constantly performs numerous valuable national and international projects.',
                 style: TextStyle(
                   fontSize: 18, 
                 ),
@@ -66,15 +66,15 @@ class IEEE extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 40), 
               child: Image.asset(
-                'assets/stemup3.jpg', 
+                'assets/ieeephoto01.jpg', 
                 fit: BoxFit.cover, 
               ),
             ),
             SizedBox(height: 12),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
-              child: Text(
-                'STEM builds critical thinking abilities, creativity and collaboration skills. Gaining STEM proficiency provides the basis for these skills and builds the flexibility to adapt quickly to frequent changes in the labour market. STEMUP Educational Foundation runs several initiatives to get students interested in STEM as early as possible.',
+              child: const Text(
+                'This is a very active Student Branch in the Sri Lanka section with many activities throughout the year. And the best thing is some of these projects are conducted for not only the Undergraduates of NSBM but also for all the other undergraduates from other State and non-State universities. Also, IEEE Student Branch of NSBM conducts many valuable national and international projects throughout the year.',
                 style: TextStyle(
                   fontSize: 18,
                 )
@@ -84,15 +84,15 @@ class IEEE extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 40), 
               child: Image.asset(
-                'assets/stemup4.jpg', 
+                'assets/ieeephoto02.png', 
                 fit: BoxFit.cover, 
               ),
             ),
             SizedBox(height: 16),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
-              child: Text(
-                'STEMUP Educational Foundation is a registered not for profit Association in Sri Lanka under the Companies Act No. 07 of 2007',
+              child: const Text(
+                'Volunteering is an act of an individual or group freely offering up their time and service to help. The role of volunteers is working for a specific task or Aim in the allocated team with the assistance of the team members.',
                 style: TextStyle(
                   fontSize: 18, 
                 ),

@@ -18,7 +18,7 @@ class CSSE extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/stemup2.png'),
+                image: AssetImage('assets/csselogo.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -44,7 +44,7 @@ class CSSE extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'The STEMUP Foundation',
+                  'CSSE Circle',
                   style: TextStyle(
                     fontSize: 24, 
                     fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class CSSE extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'The STEMUP Foundation is a not for profit organization whose mission is to inspire and engage students to become interested in pursuing STEM degrees and careers. Our mission is fulfilled through the programs and resources we offer to the South Asian Community.',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget fermentum ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget nisl. Donec euismod, nisl eget fermentum ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget nisl. Donec euismod, nisl eget fermentum ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget nisl. ',
                 style: TextStyle(
                   fontSize: 18, 
                 ),
@@ -66,7 +66,7 @@ class CSSE extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 40), 
               child: Image.asset(
-                'assets/stemup3.jpg', 
+                'assets/cssephoto01.jpg', 
                 fit: BoxFit.cover, 
               ),
             ),
@@ -74,7 +74,7 @@ class CSSE extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'STEM builds critical thinking abilities, creativity and collaboration skills. Gaining STEM proficiency provides the basis for these skills and builds the flexibility to adapt quickly to frequent changes in the labour market. STEMUP Educational Foundation runs several initiatives to get students interested in STEM as early as possible.',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget fermentum ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget nisl. Donec euismod, nisl eget fermentum ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget nisl. Donec euismod, nisl eget fermentum ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget nisl. ',
                 style: TextStyle(
                   fontSize: 18,
                 )
@@ -84,7 +84,7 @@ class CSSE extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 40), 
               child: Image.asset(
-                'assets/stemup4.jpg', 
+                'assets/cssephoto02.jpg', 
                 fit: BoxFit.cover, 
               ),
             ),
@@ -92,7 +92,7 @@ class CSSE extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'STEMUP Educational Foundation is a registered not for profit Association in Sri Lanka under the Companies Act No. 07 of 2007',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget fermentum ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget nisl.',
                 style: TextStyle(
                   fontSize: 18, 
                 ),
