@@ -18,7 +18,7 @@ class StemUp extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/aieseclogo.jpg'),
+                image: AssetImage('assets/stemup2.png'),
                 fit: BoxFit.cover,
               ),
             ),
