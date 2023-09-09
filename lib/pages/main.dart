@@ -1,3 +1,4 @@
+import 'package:campus_connect_app/pages/home2.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:provider/provider.dart';
 import 'package:campus_connect_app/pages/splashscreen.dart';
@@ -44,6 +45,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: Controller());
+        home:  Home2());
   }
 }
