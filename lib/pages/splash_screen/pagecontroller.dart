@@ -36,7 +36,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
     // Cancel the previous timer if it exists
     _timer?.cancel();
     // Create a new timer that advances the page every 1 second
-    _timer = Timer.periodic(Duration(seconds: 5), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 3), (timer) {
       if (currentPage < 2) {
         _controller.nextPage(
           duration: Duration(milliseconds: 300),
@@ -161,6 +161,8 @@ class SliderOne extends StatelessWidget {
                   'Explore clubs, housing options, and more to enhance your university journey',
                   style: TextStyle(
                     fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "Poppins",
                     color: Color.fromARGB(255, 2, 98, 95),
                   ),
                 ),
@@ -201,6 +203,8 @@ class SliderTwo extends StatelessWidget {
                 'Simplify your university experience with our app\'s helpful features',
                 style: TextStyle(
                   fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Poppins",
                   color: Color.fromARGB(255, 2, 98, 95),
                 ),
               ),
@@ -240,6 +244,8 @@ class SliderThree extends StatelessWidget {
                 'Keep track of bus schedules, classes, and events effortlessly',
                 style: TextStyle(
                   fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Poppins",
                   color: Color.fromARGB(255, 2, 98, 95),
                 ),
               ),
@@ -262,9 +268,12 @@ class SliderThree extends StatelessWidget {
                     primary: Color.fromARGB(255, 4, 113, 140),
                   ),
                   child: Text(
-                    'NEXT',
+                    'Welcome to home',
                     style: TextStyle(
                       color: Colors.white, // Set text color here
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: "Poppins",
                     ),
                   ),
                 ),
