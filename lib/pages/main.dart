@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:campus_connect_app/pages/splash_screen/pagecontroller.dart';
+import 'package:campus_connect_app/screens/onboding/onboding_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    /* return MaterialApp(
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
@@ -45,6 +46,34 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home:  Home2());
+
+        home: OnbodingScreen());*/
+    return MaterialApp(
+      title: 'The Flutter Way',
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color.fromARGB(255, 181, 244, 240),
+        primarySwatch: Colors.blue,
+        fontFamily: "Intel",
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.white,
+          errorStyle: TextStyle(height: 0),
+          border: defaultInputBorder,
+          enabledBorder: defaultInputBorder,
+          focusedBorder: defaultInputBorder,
+          errorBorder: defaultInputBorder,
+        ),
+      ),
+      home: OnbodingScreen(),
+    );
+
   }
 }
+
+const defaultInputBorder = OutlineInputBorder(
+  borderRadius: BorderRadius.all(Radius.circular(16)),
+  borderSide: BorderSide(
+    color: Color(0xFFDEE3F2),
+    width: 1,
+  ),
+);

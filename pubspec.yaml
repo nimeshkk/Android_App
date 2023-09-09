@@ -63,6 +63,7 @@ dependencies:
   url_launcher: ^6.1.12
   cloud_firestore: ^4.9.0
   animated_splash_screen: ^1.3.0
+  rive: ^0.11.16
 
 dev_dependencies:
   flutter_test:
@@ -164,4 +165,20 @@ flutter:
     - assets/stemup2.png
     - assets/stemup3.jpg
     - assets/stemup4.jpg
+
+    
+    - assets/Backgrounds/
+    - assets/RiveAssets/
+  
+  fonts:
+    - family: Intel
+      fonts:
+        - asset: assets/Fonts/Inter-Regular.ttf
+        - asset: assets/Fonts/Inter-SemiBold.ttf
+          weight: 600
+    - family: Poppins
+      fonts:
+        - asset: assets/Fonts/Poppins-Bold.ttf
+          weight: 700
+
 
