@@ -1,3 +1,4 @@
+import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:campus_connect_app/pages/home2.dart';
@@ -252,7 +253,7 @@ class SliderThree extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Home2()),
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
