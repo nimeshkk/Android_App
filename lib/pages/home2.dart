@@ -4,7 +4,9 @@ import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
 // import 'package:campus_connect_app/pages/home_renting/home_page.dart';
 import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
 import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
-import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
+import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
+import 'package:campus_connect_app/pages/upcoming_events/EVENT/events.dart';
+
 import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -166,7 +168,7 @@ class _Home2State extends State<Home2> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => Event(),
+                              builder: (_) => eventsitem(),
                             ),
                           );
                         }
@@ -191,9 +193,7 @@ class _Home2State extends State<Home2> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-
                               builder: (_) => Lostfounditem(),
-
                             ),
                           );
                         }
