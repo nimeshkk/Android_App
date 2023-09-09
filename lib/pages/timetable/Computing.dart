@@ -19,16 +19,22 @@ class PLYMOUTH extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Plymouth-Batch'),
-        // flexibleSpace: Container(
-        //   decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-        //       begin: Alignment.topCenter,
-        //       end: Alignment.bottomCenter,
-        //     ),
-        //   ),
-        // ),
+        title: Text(
+          'Plymouth-Batch',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+          ),
+          // flexibleSpace: Container(
+          //   decoration: BoxDecoration(
+          //     gradient: LinearGradient(
+          //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+          //       begin: Alignment.topCenter,
+          //       end: Alignment.bottomCenter,
+          //     ),
+          //   ),
+        ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -64,7 +70,11 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -79,7 +89,11 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '20.2',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+
+                    color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -90,7 +104,11 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -105,7 +123,11 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '21.1',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+
+                    color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -116,7 +138,11 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -131,7 +157,11 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '21.2',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+
+                    color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -142,7 +172,11 @@ class PLYMOUTH extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -157,7 +191,11 @@ class PLYMOUTH extends StatelessWidget {
                 child: Text(
                   '22.1',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+
+                    color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -177,16 +215,22 @@ class UGC extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('UGC-Batch'),
-        // flexibleSpace: Container(
-        //   decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-        //       begin: Alignment.topCenter,
-        //       end: Alignment.bottomCenter,
-        //     ),
-        //   ),
-        // ),
+        title: Text(
+          'UGC-Batch',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+          ),
+          // flexibleSpace: Container(
+          //   decoration: BoxDecoration(
+          //     gradient: LinearGradient(
+          //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+          //       begin: Alignment.topCenter,
+          //       end: Alignment.bottomCenter,
+          //     ),
+          //   ),
+        ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -222,7 +266,11 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -237,7 +285,11 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '20.2',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+
+                    color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -248,7 +300,11 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -263,7 +319,11 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '21.1',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+
+                    color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -274,7 +334,11 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                     Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -289,7 +353,11 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '21.2',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+
+                    color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -300,7 +368,11 @@ class UGC extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                     Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -315,7 +387,11 @@ class UGC extends StatelessWidget {
                 child: Text(
                   '22.1',
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+
+                    color: Colors.white,
+
+//                     color: const Color.fromARGB(255, 255, 255, 255),
+
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -336,7 +412,15 @@ class COMPUTING extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Computing Faculty'),
+        title: Text(
+          'Computing Faculty',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+          ),
+        ),
+
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
         //     gradient: LinearGradient(
@@ -381,7 +465,11 @@ class COMPUTING extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -398,7 +486,11 @@ class COMPUTING extends StatelessWidget {
                 child: Text(
                   'Plymouth',
                   style: TextStyle(
-                      color: const Color.fromARGB(255, 255, 255, 255),
+
+                      color: Colors.white,
+
+//                       color: const Color.fromARGB(255, 255, 255, 255),
+
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
@@ -408,7 +500,11 @@ class COMPUTING extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
+                      Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -425,7 +521,11 @@ class COMPUTING extends StatelessWidget {
                 child: Text(
                   'UGC',
                   style: TextStyle(
-                      color: const Color.fromARGB(255, 255, 255, 255),
+
+                      color: Colors.white,
+
+//                       color: const Color.fromARGB(255, 255, 255, 255),
+
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),

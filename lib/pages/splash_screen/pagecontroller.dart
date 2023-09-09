@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:campus_connect_app/pages/home2.dart';
 
+import '../sliders/sliders.dart';
+
 class Controller extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

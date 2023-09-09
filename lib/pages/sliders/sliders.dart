@@ -1,3 +1,4 @@
+import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -81,7 +82,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     onPressed: () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (BuildContext context) => LoginScreen(), 
+          builder: (BuildContext context) => Home2(), 
         ),
       );
     },
@@ -270,7 +271,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 onPressed: () {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (BuildContext context) => LoginScreen(),
+                      builder: (BuildContext context) => Home2(),
                     ),
                   );
                 },
