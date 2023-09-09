@@ -49,6 +49,15 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
       appBar: AppBar(
         title: Text(
           'Update Event',
+
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+          ),
+        ),
+        flexibleSpace: Container(),
+
         ),
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
@@ -59,7 +68,9 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
         //     ),
         //   ),
         // ),
-      ),
+
+      
+
       body: Container(
         height: MediaQuery.of(context).size.height * 0.9,
         child: SingleChildScrollView(

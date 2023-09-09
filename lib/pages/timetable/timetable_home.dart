@@ -75,13 +75,20 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
+// =======
+//                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+//                     minimumSize: Size(300, 50),
+//                     shape: RoundedRectangleBorder(
+// >>>>>>> main
                     borderRadius: BorderRadius.circular(15.0),
-                    side: BorderSide(color: Colors.black),
+                    side: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -92,7 +99,11 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'COMPUTING',
                   style: TextStyle(
+
                       color: Colors.white,
+// =======
+//                       color: const Color.fromARGB(255, 255, 255, 255),
+// >>>>>>> main
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),
@@ -102,13 +113,17 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
+
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+// =======
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+// >>>>>>> main
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -119,7 +134,11 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'BUSINESS',
                   style: TextStyle(
+
                       color: Colors.white,
+// =======
+//                       color: const Color.fromARGB(255, 255, 255, 255),
+// >>>>>>> main
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),
@@ -128,14 +147,22 @@ class Timetable extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
+
                   backgroundColor:
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
+// =======
+//                    backgroundColor:
+//                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+//                     minimumSize: Size(300, 50),
+//                     shape: RoundedRectangleBorder(
+// >>>>>>> main
                     borderRadius: BorderRadius.circular(15.0),
-                    side: BorderSide(color: Colors.black),
+                    side: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
+
                   ),
-                  textStyle: TextStyle(color: Colors.black),
+                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -146,7 +173,11 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'ENGINEERING',
                   style: TextStyle(
+
                       color: Colors.white,
+// =======
+//                       color: const Color.fromARGB(255, 255, 255, 255),
+// >>>>>>> main
                       fontSize: 18,
                       fontWeight: FontWeight.bold), // Set text color
                 ),

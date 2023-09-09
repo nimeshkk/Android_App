@@ -1,11 +1,7 @@
 import 'dart:async';
 import 'package:campus_connect_app/pages/home2.dart';
-import 'package:campus_connect_app/pages/home_renting/constants/constants.dart';
 import 'package:campus_connect_app/pages/upcoming_events/user/calender_eventlist.dart';
-
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import '../welcome_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -65,18 +61,9 @@ class _EventState extends State<Event> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-          builder: (_) =>
-              CalendarScreen()), // Use the correct class name (capitalize the first letter)
+        builder: (_) => CalendarScreen(),
+      ),
     );
-    /*else {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-            builder: (_) => EventsPage(
-                  events: [],
-                )), // Use the correct class name (capitalize the first letter)
-      );
-    }*/
   }
 
   @override
@@ -88,168 +75,295 @@ class _EventState extends State<Event> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          // flexibleSpace: Container(
-          //   // decoration: BoxDecoration(
-          //   //   gradient: LinearGradient(
-          //   //     colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-          //   //     begin: Alignment.topCenter,
-          //   //     end: Alignment.bottomCenter,
-          //   //   ),
-          //   // ),
-          // ),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (_) =>
-                        Home2()), // Use the correct class name (capitalize the first letter)
-              );
-            },
+
+      appBar: AppBar(
+        flexibleSpace: Container(),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => Home2(),
+              ),
+            );
+          },
+        ),
+        title: Text(
+          'Events',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+
+//         appBar: AppBar(
+//           // flexibleSpace: Container(
+//           //   // decoration: BoxDecoration(
+//           //   //   gradient: LinearGradient(
+//           //   //     colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+//           //   //     begin: Alignment.topCenter,
+//           //   //     end: Alignment.bottomCenter,
+//           //   //   ),
+//           //   // ),
+//           // ),
+//           leading: IconButton(
+//             icon: Icon(Icons.arrow_back),
+//             onPressed: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(
+//                     builder: (_) =>
+//                         Home2()), // Use the correct class name (capitalize the first letter)
+//               );
+//             },
+
           ),
-          title: Text('Events'),
         ),
         backgroundColor: Colors.white,
-        body: ListView(children: <Widget>[
-        
-          
-          Container(
-            
-            height: 250,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                    'assets/fiesta01.png'), // Replace with your image path
+
+      ),
+      body: ListView(
+        children: <Widget>[
+          // Static image instead of the image slider
+          Padding(
+            padding:
+                EdgeInsets.only(top: 80), // Adjust the top padding as needed
+            child: Container(
+              height: 220,
+              child: Image.asset(
+                'assets/praana.png',
                 fit: BoxFit.cover,
               ),
             ),
           ),
-
-          /*child: CarouselSlider.builder(
-              itemCount: imagePaths.length,
-              options: CarouselOptions(
-                autoPlay: true,
-                enlargeCenterPage: true,
-                aspectRatio: 16 / 9,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    _currentPage = index;
-                  });
-                },
-              ),
-              itemBuilder: (context, index, realIndex) {
-                return Image.asset(
-                  imagePaths[index],
-                  fit: BoxFit.cover,
-                  width: 1500,
-                );
-              },
-            ),*/
-
-          //this is the second part
+          // This is the second part
           Container(
-            
-              height: MediaQuery.of(context).size.height * 0.7,
-              alignment: Alignment.center,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(
-                        top: 40), // Adjust the top padding as needed
+            height:
+                MediaQuery.of(context).size.height * 0.6, // Reduce the height
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.only(
+                    top: 40,
+                  ), // Adjust the top padding as needed
 
-                    // Wrap the Text widget with Center widget
-                    child: Text(
-                      'Discover upcoming events, effortlessly.',
-                      style: TextStyle(
-                        fontSize: 17,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        
-                        fontFamily: 'Roboto',
-                      ),
-                    ),
-                  ),
-                  Text(
-                    'Stay updated with exciting upcoming events in our university!',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 17,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+                  // Wrap the Text widget with Center widget
+                  child: Text(
+                    'Discover upcoming events, effortlessly.',
+
+//         body: ListView(children: <Widget>[
         
+          
+//           Container(
+            
+//             height: 250,
+//             decoration: BoxDecoration(
+//               image: DecorationImage(
+//                 image: AssetImage(
+//                     'assets/fiesta01.png'), // Replace with your image path
+//                 fit: BoxFit.cover,
+//               ),
+//             ),
+//           ),
+
+//           /*child: CarouselSlider.builder(
+//               itemCount: imagePaths.length,
+//               options: CarouselOptions(
+//                 autoPlay: true,
+//                 enlargeCenterPage: true,
+//                 aspectRatio: 16 / 9,
+//                 onPageChanged: (index, reason) {
+//                   setState(() {
+//                     _currentPage = index;
+//                   });
+//                 },
+//               ),
+//               itemBuilder: (context, index, realIndex) {
+//                 return Image.asset(
+//                   imagePaths[index],
+//                   fit: BoxFit.cover,
+//                   width: 1500,
+//                 );
+//               },
+//             ),*/
+
+//           //this is the second part
+//           Container(
+            
+//               height: MediaQuery.of(context).size.height * 0.7,
+//               alignment: Alignment.center,
+//               child: Column(
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 crossAxisAlignment: CrossAxisAlignment.center,
+//                 children: [
+//                   Container(
+//                     padding: EdgeInsets.only(
+//                         top: 40), // Adjust the top padding as needed
+
+//                     // Wrap the Text widget with Center widget
+//                     child: Text(
+//                       'Discover upcoming events, effortlessly.',
+//                       style: TextStyle(
+//                         fontSize: 17,
+//                         color: Colors.black,
+//                         fontWeight: FontWeight.bold,
+                        
+//                         fontFamily: 'Roboto',
+//                       ),
+//                     ),
+//                   ),
+//                   Text(
+//                     'Stay updated with exciting upcoming events in our university!',
+//                     textAlign: TextAlign.center,
+
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+
                       fontFamily: 'Roboto',
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    // child: ElevatedButton(
-                    //   onPressed: () {
-                    //     //no logic more for the go away
-                    //   },
-                    //   style: ElevatedButton.styleFrom(
-                    //     backgroundColor: Colors.black,
-                    //     padding:
-                    //         EdgeInsets.symmetric(horizontal: 130, vertical: 10),
-                    //   ),
-                    //   child: Text(
-                    //     'Go Away',
-                    //     style: TextStyle(
-                    //       fontSize: 18,
-                    //       color: Color.fromARGB(255, 255, 255, 255),
-                    //       fontFamily: 'Roboto',
-                    //     ),
-                    //   ),
-                    // ),
-                  ),
-                  SizedBox(height: 20),
+                ),
+                Text(
+                  'Stay updated with exciting upcoming events in our university!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                    fontFamily: 'Roboto',
 
-                  // Replace the ElevatedButton section in the _EventState build method
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.35,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(width: 20), // Add some spacing between buttons
-                        ElevatedButton.icon(
+//                       fontWeight: FontWeight.bold,
+        
+//                       fontFamily: 'Roboto',
+//                     ),
+//                   ),
+//                   SizedBox(height: 10),
+//                   Padding(
+//                     padding: const EdgeInsets.all(8.0),
+//                     // child: ElevatedButton(
+//                     //   onPressed: () {
+//                     //     //no logic more for the go away
+//                     //   },
+//                     //   style: ElevatedButton.styleFrom(
+//                     //     backgroundColor: Colors.black,
+//                     //     padding:
+//                     //         EdgeInsets.symmetric(horizontal: 130, vertical: 10),
+//                     //   ),
+//                     //   child: Text(
+//                     //     'Go Away',
+//                     //     style: TextStyle(
+//                     //       fontSize: 18,
+//                     //       color: Color.fromARGB(255, 255, 255, 255),
+//                     //       fontFamily: 'Roboto',
+//                     //     ),
+//                     //   ),
+//                     // ),
+
+                  ),
+                ),
+                const SizedBox(height: 20), // Reduce the height
+                // Login button
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 40,
+                    vertical: 5, // Reduce the vertical padding
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: MaterialButton(
+                          color: Color.fromARGB(223, 5, 119, 106),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                           onPressed: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (_) => CalendarScreen()),
+                                builder: (context) => CalendarScreen(),
+                              ),
                             );
                           },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromRGBO(64, 223, 64, 0.665),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 30, vertical: 20),
+                          child: Padding(
+                            padding: EdgeInsets.all(15.0),
+                            child: Text(
+                              "Proceed",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                              ),
+                            ),
                           ),
-                          icon: Icon(
-                            Icons.person,
-                            color: Color.fromARGB(255, 254, 254, 254),
-                            size: 30,
+
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // Register button
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 40,
+                    vertical: 5, // Reduce the vertical padding
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: MaterialButton(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              color: Color.fromARGB(223, 5, 119, 106),
+                            ),
+                            borderRadius: BorderRadius.circular(8),
+
+//                           icon: Icon(
+//                             Icons.person,
+//                             color: Color.fromARGB(255, 254, 254, 254),
+//                             size: 30,
+
                           ),
-                          label: Text(
-                            'Proceed',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                              fontFamily: 'Roboto',
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Home2(),
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: EdgeInsets.all(15.0),
+                            child: Text(
+                              "Go back",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 2, 76, 55),
+                                fontSize: 16,
+                              ),
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              )
-              ),
-        ]
-        )
-        );
+
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+
+//                 ],
+//               )
+//               ),
+//         ]
+//         )
+//         );
+
   }
 }

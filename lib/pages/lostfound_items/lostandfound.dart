@@ -1,8 +1,35 @@
-import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
-import 'gpapage.dart';
+//import 'lostitem_input.dart';
+import 'lostitem_display.dart';
 
-class Gpahome extends StatelessWidget {
+
+/*class lostandfound extends StatelessWidget {
+=======
+class Lostandfound extends StatefulWidget {
+  @override
+  State<Lostandfound> createState() => _LostandfoundState();
+}
+
+class _LostandfoundState extends State<Lostandfound> {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Lost and Found App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      routes: {
+        //  '/': (ctx) => LostItemInputScreen(),
+        '/display': (ctx) =>
+            LostItemDisplayScreen(), // Pass your lost items data here
+      },
+    );
+  }
+}*/
+import 'package:campus_connect_app/pages/home2.dart';
+
+class Lostfounditem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +38,7 @@ class Gpahome extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              "assets/gpa9.png",
+              "assets/lost1.png",
               height: MediaQuery.of(context).size.height * 0.55,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
@@ -25,7 +52,7 @@ class Gpahome extends StatelessWidget {
             GestureDetector(
               onTap: () {},
               child: const Text(
-                "Welcome to GPA Calculator",
+                "Welcome to Lost & Found",
                 style: TextStyle(
                     color: Color.fromARGB(255, 2, 76, 55),
                     fontSize: 30,
@@ -38,9 +65,9 @@ class Gpahome extends StatelessWidget {
             GestureDetector(
               onTap: () {},
               child: const Text(
-                "Empower yourself with instant insights into your academic achievements. Get started today and unlock the power of GPA Calculator!",
+                "Report or Discover Lost Items on Campus. Help reunite lost possessions , Help to make your day easy.!",
                 style: TextStyle(
-                    color: Color.fromARGB(255, 12, 12, 12),
+                    color: Color.fromARGB(255, 2, 76, 55),
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
                 textAlign: TextAlign.center,
@@ -62,13 +89,15 @@ class Gpahome extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => GpaPage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LostItemDisplayScreen()));
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),
                         child: Text(
-                          "Calculate your GPA",
+                          "Find Your Lost Item",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,

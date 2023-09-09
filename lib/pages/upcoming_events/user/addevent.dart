@@ -1,8 +1,7 @@
-import 'dart:html';
 
 import 'package:campus_connect_app/pages/upcoming_events/user/updateevent.dart';
 import 'package:flutter/material.dart';
-import 'delete_event.dart'; // Import the DeleteEventScreen class
+// Import the DeleteEventScreen class
 
 class Event {
   final String eventName;
@@ -104,7 +103,18 @@ class _AddEventScreenState extends State<AddEventScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Event'),
+
+        title: Text(
+          'Add Event',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+            color: Color.fromARGB(255, 2, 76, 55),
+          ),
+        ),
+        flexibleSpace: Container(),
+
+//         title: Text('Add Event'),
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
         //     gradient: LinearGradient(
@@ -114,6 +124,7 @@ class _AddEventScreenState extends State<AddEventScreen> {
         //     ),
         //   ),
         // ),
+
       ),
       body: Container(
         child: Center(
