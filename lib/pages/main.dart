@@ -38,17 +38,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /* return MaterialApp(
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter ',
-        theme: ThemeData(
-          useMaterial3: true,
-        ),
-
-        home: OnbodingScreen());*/
+  
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'The Flutter Way',
       theme: ThemeData(
         scaffoldBackgroundColor: Color.fromARGB(255, 181, 244, 240),

@@ -224,7 +224,7 @@ class SliderThree extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/slider03.png'), // Replace with image path
+          image: AssetImage('assets/slider03.png'), 
           fit: BoxFit.cover,
         ),
       ),
@@ -249,25 +249,28 @@ class SliderThree extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment:
-                  MainAxisAlignment.center, // Align the button to the left
+                  MainAxisAlignment.end, 
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
+                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
+                      MaterialPageRoute(
+                     builder: (context) => LoginScreen()),
+                 );
+                },
+                    style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 4, 113, 140),
+                    minimumSize: Size(150, 50),
                   ),
-                  child: Text(
-                    'NEXT',
-                    style: TextStyle(
-                      color: Colors.white, // Set text color here
-                    ),
-                  ),
-                ),
+               child: Text(
+                     'NEXT',
+                     style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20, // Adjust the font size as needed
+    ),
+  ),
+),
               ],
             )
           ],
