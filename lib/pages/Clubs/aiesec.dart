@@ -18,7 +18,7 @@ class Aisec extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/stemup2.png'),
+                image: AssetImage('assets/aieseclogo.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -44,7 +44,7 @@ class Aisec extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'The STEMUP Foundation',
+                  'AIESEC in NSBM',
                   style: TextStyle(
                     fontSize: 24, 
                     fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class Aisec extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'The STEMUP Foundation is a not for profit organization whose mission is to inspire and engage students to become interested in pursuing STEM degrees and careers. Our mission is fulfilled through the programs and resources we offer to the South Asian Community.',
+                'AIESEC is the world’s largest youth led organization advocating for youth leadership through global affairs. As one of our organization’s functions, we facilitate global Internship opportunities in local organizations which are focusing on UN Sustainable Development Goals.',
                 style: TextStyle(
                   fontSize: 18, 
                 ),
@@ -66,7 +66,7 @@ class Aisec extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 40), 
               child: Image.asset(
-                'assets/stemup3.jpg', 
+                'assets/aiesecphoto01.jpeg', 
                 fit: BoxFit.cover, 
               ),
             ),
@@ -74,7 +74,7 @@ class Aisec extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'STEM builds critical thinking abilities, creativity and collaboration skills. Gaining STEM proficiency provides the basis for these skills and builds the flexibility to adapt quickly to frequent changes in the labour market. STEMUP Educational Foundation runs several initiatives to get students interested in STEM as early as possible.',
+                'In 2017 AIESEC was initiated in the National School of Business Management as “AIESEC in NSBM”. AIESEC in NSBM was able to host two global villages in the university premises in 2018 and 2019 with over 200 international students from over 25 different countries. ',
                 style: TextStyle(
                   fontSize: 18,
                 )
@@ -84,7 +84,7 @@ class Aisec extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 40), 
               child: Image.asset(
-                'assets/stemup4.jpg', 
+                'assets/aiesecphoto02.png', 
                 fit: BoxFit.cover, 
               ),
             ),
@@ -92,7 +92,7 @@ class Aisec extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'STEMUP Educational Foundation is a registered not for profit Association in Sri Lanka under the Companies Act No. 07 of 2007',
+                'Today, AIESEC in NSBM has over 90+ active global-minded and culturally sensitive members from across the island. As an Ofﬁcial Expansion, we have won the Most Outstanding Award and Most Progressive Expansion Award in 2018 & 2019, respectively.',
                 style: TextStyle(
                   fontSize: 18, 
                 ),

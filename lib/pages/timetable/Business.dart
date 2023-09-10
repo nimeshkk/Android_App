@@ -281,6 +281,7 @@ class UGC extends StatelessWidget {
                   elevation: 4,
                   backgroundColor:
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),

@@ -1,4 +1,5 @@
 import 'package:campus_connect_app/pages/home2.dart';
+import 'package:campus_connect_app/pages/sliders/sliders.dart';
 import 'package:flutter/material.dart';
 import 'package:campus_connect_app/pages/login/forgot_password_screen.dart';
 import 'package:campus_connect_app/pages/login/register_screen.dart';
@@ -23,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const Home2(),
+        builder: (context) => Home2(),
       ),
     );
   }

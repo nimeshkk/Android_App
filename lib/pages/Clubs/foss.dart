@@ -18,7 +18,7 @@ class FOSS extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/stemup2.png'),
+                image: AssetImage('assets/fosslogo.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -44,7 +44,7 @@ class FOSS extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'The STEMUP Foundation',
+                  'FOSS Community - NSBM',
                   style: TextStyle(
                     fontSize: 24, 
                     fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class FOSS extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'The STEMUP Foundation is a not for profit organization whose mission is to inspire and engage students to become interested in pursuing STEM degrees and careers. Our mission is fulfilled through the programs and resources we offer to the South Asian Community.',
+                'The term "FOSS community of NSBM" is somewhat ambiguous, as it combines two different and unrelated concepts: "FOSS" stands for Free and Open Source Software, while "NSBM" typically refers to National Socialist Black Metal, a subgenre of heavy metal music that often involves extreme and controversial themes.',
                 style: TextStyle(
                   fontSize: 18, 
                 ),
@@ -66,7 +66,7 @@ class FOSS extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 40), 
               child: Image.asset(
-                'assets/stemup3.jpg', 
+                'assets/fossphoto01.jpg', 
                 fit: BoxFit.cover, 
               ),
             ),
@@ -74,7 +74,7 @@ class FOSS extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'STEM builds critical thinking abilities, creativity and collaboration skills. Gaining STEM proficiency provides the basis for these skills and builds the flexibility to adapt quickly to frequent changes in the labour market. STEMUP Educational Foundation runs several initiatives to get students interested in STEM as early as possible.',
+                'FOSS is a collaborative community dedicated to creating and distributing software with open and accessible source code, fostering innovation and freedom. On the other hand, NSBM is a niche and controversial subgenre of heavy metal music known for its extreme themes.',
                 style: TextStyle(
                   fontSize: 18,
                 )
@@ -84,7 +84,7 @@ class FOSS extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 40), 
               child: Image.asset(
-                'assets/stemup4.jpg', 
+                'assets/fossphoto02.jpg', 
                 fit: BoxFit.cover, 
               ),
             ),
@@ -92,7 +92,7 @@ class FOSS extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'STEMUP Educational Foundation is a registered not for profit Association in Sri Lanka under the Companies Act No. 07 of 2007',
+                'It is unclear if "FOSS community of NSBM" represents a specific group or initiative that combines these two worlds or if it is a misunderstanding or misinterpretation of the acronyms.',
                 style: TextStyle(
                   fontSize: 18, 
                 ),

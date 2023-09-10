@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:campus_connect_app/pages/gpa_pages/gpahome.dart';
 import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
-// import 'package:campus_connect_app/pages/home_renting/home_page.dart';
 import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
 import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
@@ -21,7 +20,7 @@ class Home2 extends StatefulWidget {
 }
 
 class _Home2State extends State<Home2> {
-  bool isAdmin = true; // Set this to false if the user is not an admin
+  bool isAdmin = true;
 
   final List<String> imagePaths = [
     'assets/NSBM1.png',
@@ -113,10 +112,22 @@ class _Home2State extends State<Home2> {
                   },
                 ),
                 itemBuilder: (context, index, realIndex) {
-                  return Image.asset(
-                    imagePaths[index],
-                    fit: BoxFit.cover,
-                    width: 1000,
+                  return Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        color: Color.fromARGB(234, 216, 215, 215),
+                        width: 7.0,
+                      ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        imagePaths[index],
+                        fit: BoxFit.cover,
+                        width: 1000,
+                      ),
+                    ),
                   );
                 },
               ),
@@ -231,3 +242,5 @@ class _Home2State extends State<Home2> {
     );
   }
 }
+
+

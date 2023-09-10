@@ -1,6 +1,9 @@
+import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:campus_connect_app/pages/home2.dart';
+
+import '../sliders/sliders.dart';
 
 class Controller extends StatelessWidget {
   @override
@@ -33,7 +36,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
     // Cancel the previous timer if it exists
     _timer?.cancel();
     // Create a new timer that advances the page every 1 second
-    _timer = Timer.periodic(Duration(seconds: 5), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 3), (timer) {
       if (currentPage < 2) {
         _controller.nextPage(
           duration: Duration(milliseconds: 300),
@@ -158,6 +161,8 @@ class SliderOne extends StatelessWidget {
                   'Explore clubs, housing options, and more to enhance your university journey',
                   style: TextStyle(
                     fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "Poppins",
                     color: Color.fromARGB(255, 2, 98, 95),
                   ),
                 ),
@@ -198,6 +203,8 @@ class SliderTwo extends StatelessWidget {
                 'Simplify your university experience with our app\'s helpful features',
                 style: TextStyle(
                   fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Poppins",
                   color: Color.fromARGB(255, 2, 98, 95),
                 ),
               ),
@@ -221,7 +228,7 @@ class SliderThree extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/slider03.png'), // Replace with image path
+          image: AssetImage('assets/slider03.png'), 
           fit: BoxFit.cover,
         ),
       ),
@@ -237,6 +244,8 @@ class SliderThree extends StatelessWidget {
                 'Keep track of bus schedules, classes, and events effortlessly',
                 style: TextStyle(
                   fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Poppins",
                   color: Color.fromARGB(255, 2, 98, 95),
                 ),
               ),
@@ -246,22 +255,27 @@ class SliderThree extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment:
-                  MainAxisAlignment.center, // Align the button to the left
+                  MainAxisAlignment.end, 
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
+                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Home2()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
+                      MaterialPageRoute(
+                     builder: (context) => LoginScreen()),
+                 );
+                },
+                    style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 4, 113, 140),
+                    minimumSize: Size(150, 50),
                   ),
                   child: Text(
-                    'NEXT',
+                    'Welcome to home',
                     style: TextStyle(
                       color: Colors.white, // Set text color here
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: "Poppins",
                     ),
                   ),
                 ),
