@@ -49,12 +49,10 @@ dependencies:
   provider: ^6.0.5
   flutter_svg: ^2.0.7
 
-  table_calendar: ^3.0.9
   image_picker: ^1.0.2
 
   #another_carousel_pro: ^1.0.0
   liquid_progress_indicator: ^0.4.0
-
 
   another_carousel_pro: ^1.0.0
 
@@ -63,7 +61,11 @@ dependencies:
   url_launcher: ^6.1.12
   cloud_firestore: ^4.9.0
   animated_splash_screen: ^1.3.0
+
+  table_calendar: ^3.0.9
+
   rive: ^0.11.16
+
 
 dev_dependencies:
   flutter_test:
@@ -111,10 +113,16 @@ flutter:
     - assets/praana.png
     - assets/back.jpg
     - assets/praana02.png
+
+    - assets/eventnew.png
+    - assets/eventnew02.png
+
+
     - assets/house02.jpg
     - assets/house03.jpg
     - assets/house04.jpg
     - assets/house05.jpg
+
     - assets/timee.png
     - assets/back01.png
     - assets/ctb.jpg
@@ -138,6 +146,7 @@ flutter:
     - assets/van2.png
     - assets/bus2.jpg
     - assets/ctb.png
+
     - assets/gpa9.png
     - assets/gpa10.png
     - assets/gpa11png.png
@@ -155,6 +164,7 @@ flutter:
     - assets/stemup2.png
     - assets/stemup3.jpg
     - assets/stemup4.jpg
+
     - assets/ieeelogo.png
     - assets/ieeephoto01.jpg
     - assets/ieeephoto02.png
@@ -182,5 +192,6 @@ flutter:
       fonts:
         - asset: assets/Fonts/Poppins-Bold.ttf
           weight: 700
+
 
 
