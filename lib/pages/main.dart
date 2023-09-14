@@ -1,4 +1,3 @@
-
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
 import 'package:provider/provider.dart';
@@ -9,8 +8,6 @@ import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:campus_connect_app/screens/onboding/onboding_screen.dart';
 
-
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -20,24 +17,35 @@ void main() async {
         messagingSenderId: "277703009425",
         projectId: "nsbmuniapp"),
   );
-
   runApp(
+    DevicePreview(
+      builder: (context) => MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (context) => LostItemModel()),
+          ChangeNotifierProvider(create: (context) => eventItemModel()),
+        ],
+        child: MyApp(),
+      ),
+    ),
+  );
+
+  /*runApp(
     DevicePreview(
       builder: (context) => ChangeNotifierProvider(
         create: (context) => LostItemModel(),
         child: MyApp(),
       ),
     ),
-  );
+  // )*/
 
-  runApp(
+  /* runApp(
     DevicePreview(
       builder: (context) => ChangeNotifierProvider(
         create: (context) => eventItemModel(),
         child: MyApp(),
       ),
     ),
-  );
+  );*/
 }
 
 // void main() {
@@ -49,7 +57,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'The Flutter Way',
@@ -69,7 +76,6 @@ class MyApp extends StatelessWidget {
       ),
       home: OnbodingScreen(),
     );
-
   }
 }
 

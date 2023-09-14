@@ -49,6 +49,7 @@ class _eventItemDisplayScreenState extends State<eventItemDisplayScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Center(
           child: Text(
             "Event Items",

@@ -55,118 +55,123 @@ class LostItemDisplayScreen extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
         ),
-        StreamBuilder<QuerySnapshot>(
-          stream:
-              FirebaseFirestore.instance.collection('lost_items').snapshots(),
-          builder:
-              (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return CircularProgressIndicator(); // Display loading indicator while fetching data
-            }
-            if (snapshot.hasError) {
-              return Text('Error: ${snapshot.error}');
-            }
-
-            // Process the retrieved data
-            if (snapshot.hasData) {
-              final List<LostItem> lostItems = [];
-              for (final DocumentSnapshot doc in snapshot.data!.docs) {
-                final data = doc.data() as Map<String, dynamic>;
-                lostItems.add(LostItem(
-                  itemName: data['itemName'],
-                  description: data['description'],
-                  contactNumber: data['contactNumber'],
-                ));
+        Container(
+          color: Colors.white,
+          child: StreamBuilder<QuerySnapshot>(
+            stream:
+                FirebaseFirestore.instance.collection('lost_items').snapshots(),
+            builder:
+                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return CircularProgressIndicator(); // Display loading indicator while fetching data
+              }
+              if (snapshot.hasError) {
+                return Text('Error: ${snapshot.error}');
               }
 
-              model.setLostItems(
-                  lostItems); // Set the data in your Provider model
+              // Process the retrieved data
+              if (snapshot.hasData) {
+                final List<LostItem> lostItems = [];
+                for (final DocumentSnapshot doc in snapshot.data!.docs) {
+                  final data = doc.data() as Map<String, dynamic>;
+                  lostItems.add(LostItem(
+                    itemName: data['itemName'],
+                    description: data['description'],
+                    contactNumber: data['contactNumber'],
+                  ));
+                }
 
-              // Display the lost items in a ListView
-              return Scaffold(
-                appBar: AppBar(
-                  title: Text(
-                    "Lost Items",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 30,
-                        color: Color.fromARGB(255, 2, 76, 55)),
+                model.setLostItems(
+                    lostItems); // Set the data in your Provider model
+
+                // Display the lost items in a ListView
+                return Scaffold(
+                  appBar: AppBar(
+                    backgroundColor: Colors.white,
+                    title: Text(
+                      "Lost Items",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 30,
+                          color: Color.fromARGB(255, 2, 76, 55)),
+                    ),
                   ),
-                ),
-                body: ListView.builder(
-                  itemCount: lostItems.length,
-                  itemBuilder: (ctx, index) {
-                    final item = lostItems[index];
-                    return Container(
-                      margin: EdgeInsets.all(10.0), // Add margin for spacing
-                      padding: EdgeInsets.all(10.0), // Add padding for spacing
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(223, 231, 251, 248),
-                        border: Border.all(
-                          color: Color.fromARGB(223, 5, 119, 106),
-                          width: 1.0, // Adjust border width as needed
-                        ),
-                        borderRadius:
-                            BorderRadius.circular(10.0), // Add border radius
-                      ),
-                      child: ListTile(
-                        title: Text(
-                          item.itemName,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              item.description,
-                              style: TextStyle(fontSize: 16),
-                            ),
-                            Text(
-                              item.contactNumber,
-                              style: TextStyle(fontSize: 16),
-                            ),
-                          ],
-                        ),
-                        trailing: IconButton(
-                          icon: Icon(
-                            Icons.delete,
+                  body: ListView.builder(
+                    itemCount: lostItems.length,
+                    itemBuilder: (ctx, index) {
+                      final item = lostItems[index];
+                      return Container(
+                        margin: EdgeInsets.all(10.0), // Add margin for spacing
+                        padding:
+                            EdgeInsets.all(10.0), // Add padding for spacing
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(223, 231, 251, 248),
+                          border: Border.all(
                             color: Color.fromARGB(223, 5, 119, 106),
+                            width: 1.0, // Adjust border width as needed
                           ),
-                          onPressed: () {
-                            // Implement delete logic and update UI
-                            // Call the deleteLostItem method when the delete button is pressed
-                            deleteLostItem(
-                                context, snapshot.data!.docs[index].id);
-                          },
+                          borderRadius:
+                              BorderRadius.circular(10.0), // Add border radius
                         ),
-                      ),
-                    );
-                  },
-                ),
-                floatingActionButton: FloatingActionButton(
-                  onPressed: () {
-                    // Navigate to the LostItemInputScreen
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => LostItemInputScreen(),
-                      ),
-                    );
-                  },
-                  backgroundColor: Color.fromARGB(223, 5, 119, 106),
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
+                        child: ListTile(
+                          title: Text(
+                            item.itemName,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                item.description,
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              Text(
+                                item.contactNumber,
+                                style: TextStyle(fontSize: 16),
+                              ),
+                            ],
+                          ),
+                          trailing: IconButton(
+                            icon: Icon(
+                              Icons.delete,
+                              color: Color.fromARGB(223, 5, 119, 106),
+                            ),
+                            onPressed: () {
+                              // Implement delete logic and update UI
+                              // Call the deleteLostItem method when the delete button is pressed
+                              deleteLostItem(
+                                  context, snapshot.data!.docs[index].id);
+                            },
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                ),
-              );
-            } else {
-              return CircularProgressIndicator(); // Display a loading indicator if there's no data
-            }
-          },
+                  floatingActionButton: FloatingActionButton(
+                    onPressed: () {
+                      // Navigate to the LostItemInputScreen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LostItemInputScreen(),
+                        ),
+                      );
+                    },
+                    backgroundColor: Color.fromARGB(223, 5, 119, 106),
+                    child: Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
+                  ),
+                );
+              } else {
+                return CircularProgressIndicator(); // Display a loading indicator if there's no data
+              }
+            },
+          ),
         ),
       ],
     );

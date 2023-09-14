@@ -76,6 +76,7 @@ class _eventItemInputScreenState extends State<eventItemInputScreen> {
 
       Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
           title: Text(
             "Add Your event Item",
             style: TextStyle(
