@@ -177,6 +177,10 @@ flutter:
     - assets/fosslogo.png
     - assets/fossphoto01.jpg
     - assets/fossphoto02.jpg
+    - assets/aboutus01.png
+    - assets/aboutus02.png
+    - assets/aboutus03.png
+    - assets/aboutus04.png
 
     
     - assets/Backgrounds/
