@@ -1,4 +1,5 @@
 import 'package:campus_connect_app/pages/about_us/aboutcontroller.dart';
+import 'package:campus_connect_app/pages/about_us/aboutuswelcome.dart';
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
 import 'package:provider/provider.dart';
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home: aboutController(),
+      home: OnbodingScreen(),
     );
   }
 }

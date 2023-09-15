@@ -15,7 +15,7 @@ class AboutUsScreensix extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/aboutus01.png'), // Replace with your image asset path
+                    'assets/aboutus06.png'), // Replace with your image asset path
                 fit: BoxFit.cover, // Adjust the fit property as needed
               ),
             ),
@@ -42,7 +42,7 @@ class AboutUsScreensix extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi,    Im D.S.Sathsarani',
+                    'Hi,    Im J.I.S.Dulanjana',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,

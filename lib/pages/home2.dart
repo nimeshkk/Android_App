@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:campus_connect_app/pages/about_us/aboutuswelcome.dart';
 import 'package:campus_connect_app/pages/gpa_pages/gpahome.dart';
 import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
 import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
@@ -217,6 +218,14 @@ class _Home2State extends State<Home2> {
                             ),
                           );
                         }
+                        if (imagePath == 'assets/about.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => aboutwelcome(),
+                            ),
+                          );
+                        }
                       },
                       child: Container(
                         margin: const EdgeInsets.only(right: 10, top: 10),
@@ -242,5 +251,3 @@ class _Home2State extends State<Home2> {
     );
   }
 }
-
-
