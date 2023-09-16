@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AboutUsScreentwo extends StatelessWidget {
+class AboutUsScreenthree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,7 @@ class AboutUsScreentwo extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/aboutus02.png'), // Replace with your image asset path
+                    'assets/aboutus03.png'), // Replace with your image asset path
                 fit: BoxFit.cover, // Adjust the fit property as needed
               ),
             ),
@@ -42,7 +42,7 @@ class AboutUsScreentwo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi,    Im W.N.A.Chathuka Upamith',
+                    'Hi,    Im J.L.N.Kavinda',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class AboutUsScreentwo extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    'Welcome to my profile! Im a Computer Science enthusiast studying at NSBM Green University, with a strong passion for Software Development.Ever since I embarked on my journey as a Computer Science student, Ive been captivated by the art of coding. I believe that software has the power to transform the world, and Im excited to be a part of this dynamic field.',
+                    'Welcome to my profile! Im a Computer Science enthusiast studying at NSBM Green University, with a strong passion for Software Development.I chose to specialize in Software Development because it allows me to blend creativity and logic to craft digital solutions that solve real-world problems. From mobile apps to web platforms, Im dedicated to creating software that is user-friendly, efficient, and impactful.',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,

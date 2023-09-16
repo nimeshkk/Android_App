@@ -1,9 +1,9 @@
 import 'package:campus_connect_app/pages/about_us/about01.dart';
+import 'package:campus_connect_app/pages/about_us/about06.dart';
 import 'package:campus_connect_app/pages/about_us/about02.dart';
 import 'package:campus_connect_app/pages/about_us/about03.dart';
 import 'package:campus_connect_app/pages/about_us/about04.dart';
 import 'package:campus_connect_app/pages/about_us/about05.dart';
-import 'package:campus_connect_app/pages/about_us/about06.dart';
 import 'package:campus_connect_app/pages/home2.dart';
 
 import 'package:flutter/material.dart';
@@ -134,11 +134,11 @@ class _aboutthroughScreenState extends State<aboutthroughScreen> {
             },
             children: [
               AboutUsScreenone(),
-              AboutUsScreentwo(),
               AboutUsScreenthree(),
               AboutUsScreenfour(),
               AboutUsScreenfive(),
               AboutUsScreensix(),
+              AboutUsScreentwo(),
               const Home2(),
             ],
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AboutUsScreenfive extends StatelessWidget {
+class AboutUsScreentwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,7 @@ class AboutUsScreenfive extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/aboutus05.png'), // Replace with your image asset path
+                    'assets/aboutus02.png'), // Replace with your image asset path
                 fit: BoxFit.cover, // Adjust the fit property as needed
               ),
             ),
@@ -28,7 +28,7 @@ class AboutUsScreenfive extends StatelessWidget {
             child: Container(
               //  decoration:
               //  BoxDecoration(borderRadius: BorderRadius.circular(10)),
-              height: 250,
+              height: 300,
 
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
               decoration: BoxDecoration(
@@ -42,7 +42,7 @@ class AboutUsScreenfive extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi,    Im  W.N.Sewmini',
+                    'Hi,    Im W.N.A.Chathuka Upamith',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class AboutUsScreenfive extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    'Ever since I embarked on my journey as a Computer Science student, Ive been fueled by a passion for crafting innovative software solutions. The world of programming and development is my playground, and I thrive on turning complex ideas into user-friendly applications.',
+                    'Welcome to my profile! Im a Computer Science enthusiast studying at NSBM Green University, with a strong passion for Software Development.Ever since I embarked on my journey as a Computer Science student, Ive been captivated by the art of coding. I believe that software has the power to transform the world, and Im excited to be a part of this dynamic field.',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,
