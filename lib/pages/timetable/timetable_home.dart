@@ -61,6 +61,7 @@ class Timetable extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: 250),
               Text(
                 'Select a Faculty:',
                 style: TextStyle(

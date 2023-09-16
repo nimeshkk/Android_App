@@ -45,6 +45,7 @@ class PLYMOUTH extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: 250),
               Text(
                 'Select your Batch',
                 style: TextStyle(
@@ -230,6 +231,7 @@ class UGC extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: 250),
               Text(
                 'Select your Batch',
                 style: TextStyle(
@@ -408,6 +410,7 @@ class ENGINEERING extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: 250),
               Text(
                 'Select a Category:',
                 style: TextStyle(
