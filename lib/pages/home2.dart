@@ -3,7 +3,6 @@ import 'package:campus_connect_app/pages/gpa_pages/gpahome.dart';
 import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
 import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
 import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
-import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/events.dart';
 
 import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
