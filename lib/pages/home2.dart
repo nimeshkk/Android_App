@@ -1,9 +1,9 @@
 import 'dart:async';
+import 'package:campus_connect_app/pages/about_us/aboutuswelcome.dart';
 import 'package:campus_connect_app/pages/gpa_pages/gpahome.dart';
 import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
 import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
 import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
-import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/events.dart';
 
 import 'package:campus_connect_app/pages/lostfound_items/lostandfound.dart';
@@ -217,6 +217,14 @@ class _Home2State extends State<Home2> {
                             ),
                           );
                         }
+                        if (imagePath == 'assets/about.png') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => aboutwelcome(),
+                            ),
+                          );
+                        }
                       },
                       child: Container(
                         margin: const EdgeInsets.only(right: 10, top: 10),
@@ -242,5 +250,3 @@ class _Home2State extends State<Home2> {
     );
   }
 }
-
-

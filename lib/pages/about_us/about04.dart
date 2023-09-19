@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AboutUsScreenfour extends StatelessWidget {
+class AboutUsScreenfive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,7 @@ class AboutUsScreenfour extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/aboutus04.png'), // Replace with your image asset path
+                    'assets/aboutus05.png'), // Replace with your image asset path
                 fit: BoxFit.cover, // Adjust the fit property as needed
               ),
             ),
@@ -42,7 +42,7 @@ class AboutUsScreenfour extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi,    Im  DD Leewanage',
+                    'Hi,    Im  W.N.Sewmini',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,

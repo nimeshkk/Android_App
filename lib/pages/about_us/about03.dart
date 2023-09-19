@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AboutUsScreenthree extends StatelessWidget {
+class AboutUsScreenfour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,7 @@ class AboutUsScreenthree extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/aboutus03.png'), // Replace with your image asset path
+                    'assets/aboutus04.png'), // Replace with your image asset path
                 fit: BoxFit.cover, // Adjust the fit property as needed
               ),
             ),
@@ -28,7 +28,7 @@ class AboutUsScreenthree extends StatelessWidget {
             child: Container(
               //  decoration:
               //  BoxDecoration(borderRadius: BorderRadius.circular(10)),
-              height: 300,
+              height: 250,
 
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
               decoration: BoxDecoration(
@@ -42,7 +42,7 @@ class AboutUsScreenthree extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi,    Im J.L.N.Kavinda',
+                    'Hi,    Im  DD Leewanage',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class AboutUsScreenthree extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    'Welcome to my profile! Im a Computer Science enthusiast studying at NSBM Green University, with a strong passion for Software Development.I chose to specialize in Software Development because it allows me to blend creativity and logic to craft digital solutions that solve real-world problems. From mobile apps to web platforms, Im dedicated to creating software that is user-friendly, efficient, and impactful.',
+                    'Ever since I embarked on my journey as a Computer Science student, Ive been fueled by a passion for crafting innovative software solutions. The world of programming and development is my playground, and I thrive on turning complex ideas into user-friendly applications.',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,

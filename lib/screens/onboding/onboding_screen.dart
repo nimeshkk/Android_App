@@ -34,7 +34,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
       body: Stack(
         children: [
           Positioned(
-            width: MediaQuery.of(context).size.width * 1.7,
+            width: MediaQuery.of(context).size.width * 1.2,
             left: 100,
             bottom: 100,
             child: Image.asset(
@@ -64,7 +64,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
             duration: const Duration(milliseconds: 260),
             child: SafeArea(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -101,7 +101,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                       btnAnimationController: _btnAnimationController,
                       press: () {
                         _btnAnimationController.isActive = true;
-
+    
                         Future.delayed(
                           const Duration(milliseconds: 800),
                           () {
@@ -120,19 +120,19 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                         );
                       },
                     // ), */
-
+    
                     AnimatedBtn(
                       btnAnimationController: _btnAnimationController,
                       press: () {
                         _btnAnimationController.isActive = true;
-
+    
                         Future.delayed(
                           const Duration(milliseconds: 800),
                           () {
                             setState(() {
                               isShowSignInDialog = true;
                             });
-
+    
                             // Use Navigator to navigate to the Controller page
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) {

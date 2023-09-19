@@ -1,13 +1,14 @@
 import 'package:campus_connect_app/pages/about_us/about01.dart';
+import 'package:campus_connect_app/pages/about_us/about06.dart';
 import 'package:campus_connect_app/pages/about_us/about02.dart';
 import 'package:campus_connect_app/pages/about_us/about03.dart';
 import 'package:campus_connect_app/pages/about_us/about04.dart';
 import 'package:campus_connect_app/pages/about_us/about05.dart';
-import 'package:campus_connect_app/pages/about_us/about06.dart';
+import 'package:campus_connect_app/pages/home2.dart';
 
 import 'package:flutter/material.dart';
 import 'dart:async';
-//import 'package:campus_connect_app/pages/home2.dart';
+import 'package:campus_connect_app/pages/home2.dart';
 
 //import '../sliders/sliders.dart';
 
@@ -43,7 +44,7 @@ class _aboutthroughScreenState extends State<aboutthroughScreen> {
     _timer?.cancel();
     // Create a new timer that advances the page every 1 second
     _timer = Timer.periodic(Duration(seconds: 3), (timer) {
-      if (currentPage < 5) {
+      if (currentPage < 6) {
         _controller.nextPage(
           duration: Duration(milliseconds: 300),
           curve: Curves.easeInOut,
@@ -97,7 +98,7 @@ class _aboutthroughScreenState extends State<aboutthroughScreen> {
                       ), // Change the color here
                     ),
                   ),
-                if (currentPage < 5)
+                if (currentPage < 6)
                   Opacity(
                     opacity: 0.0, // Make the button transparent
                     child: ElevatedButton(
@@ -133,11 +134,12 @@ class _aboutthroughScreenState extends State<aboutthroughScreen> {
             },
             children: [
               AboutUsScreenone(),
-              AboutUsScreentwo(),
               AboutUsScreenthree(),
               AboutUsScreenfour(),
               AboutUsScreenfive(),
               AboutUsScreensix(),
+              AboutUsScreentwo(),
+              const Home2(),
             ],
           ),
         ),
