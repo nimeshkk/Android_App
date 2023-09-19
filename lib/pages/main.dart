@@ -1,6 +1,11 @@
 import 'package:campus_connect_app/pages/about_us/aboutcontroller.dart';
+
+import 'package:campus_connect_app/pages/boarding_house/boardinghouse.dart';
+
 import 'package:campus_connect_app/pages/about_us/aboutuswelcome.dart';
+
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
+import 'package:campus_connect_app/pages/boarding_house/boarding_house_model.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
 import 'package:provider/provider.dart';
 // import 'package:campus_connect_app/pages/splashscreen.dart';
@@ -25,13 +30,14 @@ void main() async {
         providers: [
           ChangeNotifierProvider(create: (context) => LostItemModel()),
           ChangeNotifierProvider(create: (context) => eventItemModel()),
+          ChangeNotifierProvider(create: (context) => BoardingHouseModel()),
         ],
         child: MyApp(),
       ),
     ),
   );
 
-  /*runApp(
+  /*runApp(child: BoardingHouseItem(),
     DevicePreview(
       builder: (context) => ChangeNotifierProvider(
         create: (context) => LostItemModel(),
@@ -76,7 +82,10 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
+
+
       home: OnbodingScreen(),
+
     );
   }
 }

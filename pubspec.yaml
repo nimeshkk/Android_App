@@ -181,9 +181,14 @@ flutter:
     - assets/aboutus02.png
     - assets/aboutus03.png
     - assets/aboutus04.png
+
+    - assets/bhouse.png
+    - assets/bhouse2.png
+
     - assets/aboutus05.png
     - assets/aboutus06.png
     - assets/aboutwelcome.jpg
+
 
     
     - assets/Backgrounds/
