@@ -86,7 +86,8 @@ class PLYMOUTH extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/EfOYMrRHksxHqqOrpe8Zk5sBjMmmJE_LSixaJlsGNVjbmQ?e=Cv83i0'); // Replace with your URL
                 },
                 child: Text(
                   '20.2',
@@ -118,7 +119,8 @@ class PLYMOUTH extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/EfOYMrRHksxHqqOrpe8Zk5sBjMmmJE_LSixaJlsGNVjbmQ?e=Cv83i0'); // Replace with your URL
                 },
                 child: Text(
                   '21.1',
@@ -150,7 +152,8 @@ class PLYMOUTH extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/EfOYMrRHksxHqqOrpe8Zk5sBjMmmJE_LSixaJlsGNVjbmQ?e=Cv83i0'); // Replace with your URL
                 },
                 child: Text(
                   '21.2',
@@ -182,7 +185,8 @@ class PLYMOUTH extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/EfOYMrRHksxHqqOrpe8Zk5sBjMmmJE_LSixaJlsGNVjbmQ?e=Cv83i0'); // Replace with your URL
                 },
                 child: Text(
                   '22.1',
@@ -276,7 +280,8 @@ class UGC extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/EfOYMrRHksxHqqOrpe8Zk5sBjMmmJE_LSixaJlsGNVjbmQ?e=Cv83i0'); // Replace with your URL
                 },
                 child: Text(
                   '20.2',
@@ -305,7 +310,8 @@ class UGC extends StatelessWidget {
                       color: const Color.fromARGB(255, 249, 249, 249)),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/EfOYMrRHksxHqqOrpe8Zk5sBjMmmJE_LSixaJlsGNVjbmQ?e=Cv83i0'); // Replace with your URL
                 },
                 child: Text(
                   '21.1',
@@ -337,7 +343,8 @@ class UGC extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/EfOYMrRHksxHqqOrpe8Zk5sBjMmmJE_LSixaJlsGNVjbmQ?e=Cv83i0'); // Replace with your URL
                 },
                 child: Text(
                   '21.2',
@@ -369,7 +376,8 @@ class UGC extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
-                  // Add onPressed action
+                  _launchURL(
+                      'https://nsbm365.sharepoint.com/:x:/g/SOC/EfOYMrRHksxHqqOrpe8Zk5sBjMmmJE_LSixaJlsGNVjbmQ?e=Cv83i0'); // Replace with your URL
                 },
                 child: Text(
                   '22.1',
