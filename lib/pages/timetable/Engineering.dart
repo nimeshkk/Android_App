@@ -1,3 +1,4 @@
+import 'package:campus_connect_app/pages/home_renting/constants/constants.dart';
 import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart'; // Import the package
@@ -19,14 +20,15 @@ class PLYMOUTH extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(
-          'Plymouth-Batch',
+          "plymouth-Batch",
           style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 30,
-            color: Color.fromARGB(255, 2, 76, 55),
-          ),
+              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Color.fromARGB(255, 2, 76, 55)),
         ),
+
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
         //     gradient: LinearGradient(
@@ -38,6 +40,7 @@ class PLYMOUTH extends StatelessWidget {
         // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
+          color: black,
           onPressed: () {
             Navigator.push(
               context,
@@ -201,14 +204,15 @@ class UGC extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(
-          'UGC-Batch',
+          "UGC-Batch",
           style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 30,
-            color: Color.fromARGB(255, 2, 76, 55),
-          ),
+              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Color.fromARGB(255, 2, 76, 55)),
         ),
+
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
         //     gradient: LinearGradient(
@@ -220,6 +224,7 @@ class UGC extends StatelessWidget {
         // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
+          color: black,
           onPressed: () {
             Navigator.push(
               context,
@@ -372,14 +377,15 @@ class ENGINEERING extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(
-          'Engineering Faculty',
+          "Engineering Faculty",
           style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 30,
-            color: Color.fromARGB(255, 2, 76, 55),
-          ),
+              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Color.fromARGB(255, 2, 76, 55)),
         ),
+
         // flexibleSpace: Container(
         //   decoration: BoxDecoration(
         //     gradient: LinearGradient(
@@ -391,6 +397,7 @@ class ENGINEERING extends StatelessWidget {
         // ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
+          color: black,
           onPressed: () {
             Navigator.push(
               context,
