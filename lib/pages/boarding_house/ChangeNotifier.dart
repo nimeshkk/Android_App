@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:campus_connect_app/pages/boarding_house/boarding_house_model.dart';
 
 class BoardingHouseModel extends ChangeNotifier {
   List<BoardingHouse> _boardingHouses = [];
@@ -9,16 +10,4 @@ class BoardingHouseModel extends ChangeNotifier {
     _boardingHouses.add(house);
     notifyListeners();
   }
-}
-
-class BoardingHouse {
-  final String location;
-  final String description;
-  final String contactNumber;
-
-  BoardingHouse({
-    required this.location,
-    required this.description,
-    required this.contactNumber,
-  });
 }
