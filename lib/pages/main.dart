@@ -2,6 +2,7 @@ import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:campus_connect_app/pages/boarding_house/boarding_house_model.dart';
 import 'package:campus_connect_app/pages/splash_screen/pagecontroller.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
+import 'package:campus_connect_app/screens/onboding/onboding_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
@@ -77,7 +78,7 @@ class MyApp extends StatelessWidget {
       ),
 
 
-      home: WalkthroughScreen(),
+      home: OnbodingScreen(),
 
     );
   }

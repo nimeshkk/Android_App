@@ -65,17 +65,20 @@ class _BoardingHouseInputScreenState extends State<BoardingHouseInputScreen> {
       ),*/
 
       Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          title: Text(
-            "Add Boarding House",
-            style: TextStyle(
-                fontWeight: FontWeight.w900,
-                fontSize: 30,
-                color: Color.fromARGB(255, 2, 76, 55)),
-          ),
-        ),
+                  backgroundColor: Colors.white,
+                  appBar: AppBar(
+                    backgroundColor: Colors.white,
+                    title: Text(
+                      "Boarding Houses", // Change the title
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 2, 76, 55),
+                      ),
+                    ),
+                    // Set the icon color to black
+                    iconTheme: IconThemeData(color: Colors.black),
+                  ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
