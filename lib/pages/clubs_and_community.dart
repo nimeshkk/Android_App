@@ -26,7 +26,7 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
             "Clubs And Community",
             style: TextStyle(
               fontWeight: FontWeight.w900,
-              fontSize: 20,
+              fontSize: 30,
               color: Color.fromARGB(255, 2, 76, 55),
             ),
           ),
@@ -157,8 +157,8 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
                                 width: 200,
                                 height: 100,
                                 decoration: BoxDecoration(
-                                  color: const Color.fromARGB(
-                                      255, 255, 255, 255),
+                                  color:
+                                      const Color.fromARGB(255, 255, 255, 255),
                                   image: DecorationImage(
                                     image: AssetImage(imagePath),
                                     fit: BoxFit.fill,
@@ -180,5 +180,3 @@ class _ClubsAndCommunityState extends State<ClubsAndCommunity> {
     );
   }
 }
-
-
