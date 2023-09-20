@@ -1,6 +1,7 @@
 import 'package:campus_connect_app/pages/home2.dart';
 import 'package:flutter/material.dart';
 import 'gpapage.dart';
+import 'package:campus_connect_app/pages/gpa_pages/gpapageforeign.dart';
 
 class Gpahome extends StatelessWidget {
   @override
@@ -49,37 +50,63 @@ class Gpahome extends StatelessWidget {
             const SizedBox(height: 30),
             //login button
             Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 40,
-                vertical: 5,
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: MaterialButton(
-                      color: const Color.fromARGB(223, 5, 119, 106),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => GpaPage()));
-                      },
-                      child: const Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: Text(
-                          "Calculate your GPA",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 5,
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: MaterialButton(
+                        color: const Color.fromARGB(223, 5, 119, 106),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => GpaPageforeign()));
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Text(
+                            "Foreign",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ),
+                    SizedBox(width: 16), // Add spacing between the buttons
+                    Expanded(
+                      child: MaterialButton(
+                        color: const Color.fromARGB(223, 5, 119, 106),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => GpaPage()));
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Text(
+                            "UGC",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )),
             //register button
             Padding(
               padding: const EdgeInsets.symmetric(

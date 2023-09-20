@@ -306,6 +306,7 @@ class UGC extends StatelessWidget {
                   elevation: 4,
                   backgroundColor:
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
@@ -412,7 +413,9 @@ class BUSINESS extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         backgroundColor: Colors.white,
+
         title: Text(
           "Business Faculty",
           style: TextStyle(

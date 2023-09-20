@@ -74,7 +74,7 @@ class StemUp extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 12), 
               child: Text(
-                'STEM builds critical thinking abilities, creativity and collaboration skills. Gaining STEM proficiency provides the basis for these skills and builds the flexibility to adapt quickly to frequent changes in the labour market. STEMUP Educational Foundation runs several initiatives to get students interested in STEM as early as possible.',
+                'STEMUP builds critical thinking abilities, creativity and collaboration skills. Gaining STEM proficiency provides the basis for these skills and builds the flexibility to adapt quickly to frequent changes in the labour market. STEMUP Educational Foundation runs several initiatives to get students interested in STEM as early as possible.',
                 style: TextStyle(
                   fontSize: 18,
                 )

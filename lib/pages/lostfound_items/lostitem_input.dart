@@ -66,6 +66,7 @@ class _LostItemInputScreenState extends State<LostItemInputScreen> {
 
       Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
           title: Text(
             "Add Your Lost Item",
             style: TextStyle(

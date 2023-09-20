@@ -49,27 +49,39 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
       appBar: AppBar(
         title: Text(
           'Update Event',
-
           style: TextStyle(
             fontWeight: FontWeight.w900,
             fontSize: 30,
             color: Color.fromARGB(255, 2, 76, 55),
           ),
         ),
-        flexibleSpace: Container(),
+        flexibleSpace: Container(), ),
+// <<<<<<< upcoming__events
+     
+//       // flexibleSpace: Container(
+//       //   decoration: BoxDecoration(
+//       //     gradient: LinearGradient(
+//       //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+//       //       begin: Alignment.topCenter,
+//       //       end: Alignment.bottomCenter,
+//       //     ),
+//       //   ),
+//       // ),
+// =======
 
-        ),
-        // flexibleSpace: Container(
-        //   decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
-        //       begin: Alignment.topCenter,
-        //       end: Alignment.bottomCenter,
-        //     ),
-        //   ),
-        // ),
+//         ),
+//         // flexibleSpace: Container(
+//         //   decoration: BoxDecoration(
+//         //     gradient: LinearGradient(
+//         //       colors: [Color(0xFF509CF4), Color(0xFF3256C7)],
+//         //       begin: Alignment.topCenter,
+//         //       end: Alignment.bottomCenter,
+//         //     ),
+//         //   ),
+//         // ),
 
       
+// >>>>>>> main
 
       body: Container(
         height: MediaQuery.of(context).size.height * 0.9,
@@ -119,12 +131,13 @@ class _UpdateEventScreenState extends State<UpdateEventScreen> {
                   ElevatedButton(
                     onPressed: _updateEvent,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green, // Set button color here
+                      backgroundColor: Color.fromARGB(
+                          255, 2, 76, 55), // Set button color here
                     ),
                     child: Text(
                       'Update Event',
                       style: TextStyle(
-                        color: Colors.black, // Set text color here
+                        color: Colors.white, // Set text color here
                       ),
                     ),
                   ),
