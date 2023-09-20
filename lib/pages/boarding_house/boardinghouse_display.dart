@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-// Import Boarding House model and input screen here
 import 'package:campus_connect_app/pages/boarding_house/boarding_house_model.dart';
 import 'package:campus_connect_app/pages/boarding_house/boarding_house_input.dart';
 
@@ -36,134 +34,123 @@ class BoardingHouseDisplayScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final model = Provider.of<BoardingHouseModel>(
-        context); // Change to BoardingHouseModel
+    final model = Provider.of<BoardingHouseModel>(context);
 
-    return Stack(
-      children: [
-        /* Image.asset(
-          'assets/boarding_house_image.png',
-          fit: BoxFit.cover,
-          width: double.infinity,
-          height: double.infinity,
-        ),*/
-        Container(
-          color: Colors.white,
-          child: StreamBuilder<QuerySnapshot>(
-            stream: FirebaseFirestore.instance
-                .collection('boarding_houses')
-                .snapshots(), // Change to 'boarding_houses'
-            builder:
-                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return CircularProgressIndicator();
-              }
-              if (snapshot.hasError) {
-                return Text('Error: ${snapshot.error}');
-              }
+    return Container(
+      color: Colors.white,
+      child: StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance
+            .collection('boarding_houses')
+            .snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return CircularProgressIndicator();
+          }
+          if (snapshot.hasError) {
+            return Text('Error: ${snapshot.error}');
+          }
 
-              if (snapshot.hasData) {
-                final List<BoardingHouse> boardingHouses = [];
-                for (final DocumentSnapshot doc in snapshot.data!.docs) {
-                  final data = doc.data() as Map<String, dynamic>;
-                  boardingHouses.add(BoardingHouse(
-                    location: data['location'], // Change the field names
-                    description: data['description'],
-                    contactNumber: data['contactNumber'],
-                    // Add a field for the image URL if needed
-                  ));
-                }
+          if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+            return Text('No data available'); // Handle the case of no data
+          }
 
-                model.setBoardingHouses(boardingHouses);
+          final List<BoardingHouse> boardingHouses = [];
+          for (final DocumentSnapshot doc in snapshot.data!.docs) {
+            final data = doc.data() as Map<String, dynamic>;
+            // Add null checks for data fields
+            final location = data['location'] as String? ?? '';
+            final description = data['description'] as String? ?? '';
+            final contactNumber = data['contactNumber'] as String? ?? '';
+            boardingHouses.add(BoardingHouse(
+              location: location,
+              description: description,
+              contactNumber: contactNumber,
+            ));
+          }
 
-                return Scaffold(
-                  backgroundColor: Colors.white,
-                  appBar: AppBar(
-                    backgroundColor: Colors.white,
+          model.setBoardingHouses(boardingHouses);
+
+          return Scaffold(
+            backgroundColor: Colors.white,
+            appBar: AppBar(
+              backgroundColor: Colors.white,
+              title: Text(
+                "Boarding Houses",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 30,
+                  color: Color.fromARGB(255, 2, 76, 55),
+                ),
+              ),
+            ),
+            body: ListView.builder(
+              itemCount: boardingHouses.length,
+              itemBuilder: (ctx, index) {
+                final house = boardingHouses[index];
+                return Container(
+                  margin: EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(223, 231, 251, 248),
+                    border: Border.all(
+                      color: Color.fromARGB(223, 5, 119, 106),
+                      width: 1.0,
+                    ),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: ListTile(
                     title: Text(
-                      "Boarding Houses", // Change the title
+                      house.location,
                       style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 20,
-                        color: Color.fromARGB(255, 2, 76, 55),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
                       ),
                     ),
-                    // Set the icon color to black
-                    iconTheme: IconThemeData(color: Colors.black),
-                  ),
-                  body: ListView.builder(
-                    itemCount: boardingHouses.length,
-                    itemBuilder: (ctx, index) {
-                      final house = boardingHouses[index];
-                      return Container(
-                        margin: EdgeInsets.all(10.0),
-                        padding: EdgeInsets.all(10.0),
-                        decoration: BoxDecoration(
-                          color: Color.fromARGB(223, 231, 251, 248),
-                          border: Border.all(
-                            color: Color.fromARGB(223, 5, 119, 106),
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(10.0),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          house.description,
+                          style: TextStyle(fontSize: 16),
                         ),
-                        child: ListTile(
-                          title: Text(
-                            house.location, // Change to the appropriate field
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                          ),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                house.description,
-                                style: TextStyle(fontSize: 16),
-                              ),
-                              Text(
-                                house.contactNumber,
-                                style: TextStyle(fontSize: 16),
-                              ),
-                            ],
-                          ),
-                          trailing: IconButton(
-                            icon: Icon(
-                              Icons.delete,
-                              color: Color.fromARGB(223, 5, 119, 106),
-                            ),
-                            onPressed: () {
-                              deleteBoardingHouse(
-                                  context, snapshot.data!.docs[index].id);
-                            },
-                          ),
+                        Text(
+                          house.contactNumber,
+                          style: TextStyle(fontSize: 16),
                         ),
-                      );
-                    },
-                  ),
-                  floatingActionButton: FloatingActionButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => BoardingHouseInputScreen(),
-                        ),
-                      );
-                    },
-                    backgroundColor: Color.fromARGB(223, 5, 119, 106),
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.white,
+                      ],
+                    ),
+                    trailing: IconButton(
+                      icon: Icon(
+                        Icons.delete,
+                        color: Color.fromARGB(223, 5, 119, 106),
+                      ),
+                      onPressed: () {
+                        deleteBoardingHouse(
+                            context, snapshot.data!.docs[index].id);
+                      },
                     ),
                   ),
                 );
-              } else {
-                return CircularProgressIndicator();
-              }
-            },
-          ),
-        ),
-      ],
+              },
+            ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BoardingHouseInputScreen(),
+                  ),
+                );
+              },
+              backgroundColor: Color.fromARGB(223, 5, 119, 106),
+              child: Icon(
+                Icons.add,
+                color: Colors.white,
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }

@@ -32,7 +32,6 @@ class _BoardingHouseInputScreenState extends State<BoardingHouseInputScreen> {
       'location': newHouse.location,
       'description': newHouse.description,
       'contactNumber': newHouse.contactNumber,
-      // Add a field for the image URL if needed
     });
 
     model.addBoardingHouse(newHouse);
@@ -57,12 +56,12 @@ class _BoardingHouseInputScreenState extends State<BoardingHouseInputScreen> {
   Widget build(BuildContext context) {
     return Stack(children: [
       // Background Image
-      /* Image.asset(
-        'assets/bhouse2.png',
+      Image.asset(
+        'assets/lost3.png',
         fit: BoxFit.cover, //  can adjust the fit property as needed
         width: double.infinity,
         height: double.infinity,
-      ),*/
+      ),
 
       Scaffold(
                   backgroundColor: Colors.white,
