@@ -34,7 +34,7 @@ class Gpahome extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 50),
 
             GestureDetector(
               onTap: () {},
@@ -47,7 +47,7 @@ class Gpahome extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 50),
             //login button
             Padding(
                 padding: const EdgeInsets.symmetric(
