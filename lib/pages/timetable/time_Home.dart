@@ -1,35 +1,9 @@
+import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
 import 'package:flutter/material.dart';
-//import 'lostitem_input.dart';
 
-/*class lostandfound extends StatelessWidget {
-=======
-class Lostandfound extends StatefulWidget {
-  @override
-  State<Lostandfound> createState() => _LostandfoundState();
-}
-
-class _LostandfoundState extends State<Lostandfound> {
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Lost and Found App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      routes: {
-        //  '/': (ctx) => LostItemInputScreen(),
-        '/display': (ctx) =>
-            LostItemDisplayScreen(), // Pass your lost items data here
-      },
-    );
-  }
-}*/
 import 'package:campus_connect_app/pages/home2.dart';
 
-import 'eventitem_display.dart';
-
-class eventsitem extends StatelessWidget {
+class timetable_home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,18 +12,16 @@ class eventsitem extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              "assets/eventnew.jpg",
-              height: MediaQuery.of(context).size.height * 0.53,
+              "assets/timehome.png",
+              height: MediaQuery.of(context).size.height * 0.55,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
             ),
-
             const SizedBox(height: 0),
-
             GestureDetector(
               onTap: () {},
               child: const Text(
-                "Welcome to eventHome",
+                "Welcome to TimeTable Platform",
                 style: TextStyle(
                     color: Color.fromARGB(255, 2, 76, 55),
                     fontSize: 30,
@@ -58,11 +30,10 @@ class eventsitem extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-
             GestureDetector(
               onTap: () {},
               child: const Text(
-                " Create memorable moments with the touch of your fingertips! Craft your perfect event experience effortlessly ",
+                "Presenting the TimeTable Platform in all its elegance and functionality.",
                 style: TextStyle(
                     color: Color.fromARGB(255, 2, 76, 55),
                     fontSize: 16,
@@ -71,7 +42,6 @@ class eventsitem extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            //login button
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 40,
@@ -87,15 +57,16 @@ class eventsitem extends StatelessWidget {
                       ),
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    eventItemDisplayScreen()));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Timetable(),
+                          ),
+                        );
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),
                         child: Text(
-                          "proceed",
+                          "Find your lecture times",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -107,7 +78,6 @@ class eventsitem extends StatelessWidget {
                 ],
               ),
             ),
-            //register button
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 40,
@@ -130,7 +100,7 @@ class eventsitem extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.all(15.0),
                         child: Text(
-                          "Go to Home",
+                          "Home",
                           style: TextStyle(
                             color: Color.fromARGB(255, 2, 76, 55),
                             fontSize: 16,

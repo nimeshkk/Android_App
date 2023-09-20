@@ -13,7 +13,7 @@ class Gpahome extends StatelessWidget {
           children: [
             Image.asset(
               "assets/gpa9.png",
-              height: MediaQuery.of(context).size.height * 0.55,
+              height: MediaQuery.of(context).size.height * 0.45,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
             ),

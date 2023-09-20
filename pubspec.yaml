@@ -51,10 +51,11 @@ dependencies:
 
   image_picker: ^1.0.2
 
-  #another_carousel_pro: ^1.0.0
-  liquid_progress_indicator: ^0.4.0
 
   another_carousel_pro: ^1.0.0
+  liquid_progress_indicator: ^0.4.0
+
+  # another_carousel_pro: ^1.0.0
 
   firebase_core: ^2.15.1
   firebase_auth: ^4.7.3
@@ -114,8 +115,14 @@ flutter:
     - assets/back.jpg
     - assets/praana02.png
 
-    - assets/eventnew.png
-    - assets/eventnew02.png
+
+    - assets/timee.png
+    - assets/back01.png
+    - assets/timehome.png
+
+
+    - assets/eventnew.jpg
+    - assets/eventnew02.jpg
 
 
     - assets/house02.jpg
@@ -125,6 +132,7 @@ flutter:
 
     - assets/timee.png
     - assets/back01.png
+
     - assets/ctb.jpg
     - assets/private.png
     - assets/shuttle-bus-main-image1.jpg
@@ -165,7 +173,8 @@ flutter:
     - assets/stemup3.jpg
     - assets/stemup4.jpg
 
-    - assets/ieeelogo.png
+
+    - assets/ieeelogo.jpg
     - assets/ieeephoto01.jpg
     - assets/ieeephoto02.png
     - assets/aieseclogo.jpg
@@ -188,6 +197,7 @@ flutter:
     - assets/aboutus05.png
     - assets/aboutus06.png
     - assets/aboutwelcome.jpg
+    - assets/google.jpg
 
 
     

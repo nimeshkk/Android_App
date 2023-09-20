@@ -1,9 +1,6 @@
 import 'package:campus_connect_app/pages/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:campus_connect_app/pages/home2.dart';
-
-import '../sliders/sliders.dart';
 
 class Controller extends StatelessWidget {
   @override
@@ -253,33 +250,36 @@ class SliderThree extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Row(
-              mainAxisAlignment:
-                  MainAxisAlignment.end, 
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                     builder: (context) => LoginScreen()),
-                 );
-                },
-                    style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 4, 113, 140),
-                    minimumSize: Size(150, 50),
-                  ),
-                  child: Text(
-                    'Welcome to home',
-                    style: TextStyle(
-                      color: Colors.white, // Set text color here
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                mainAxisAlignment:
+                    MainAxisAlignment.end, 
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                     Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                       builder: (context) => LoginScreen()),
+                   );
+                  },
+                      style: ElevatedButton.styleFrom(
+                      primary: Color.fromARGB(255, 4, 113, 140),
+                      minimumSize: Size(150, 50),
+                    ),
+                    child: Text(
+                      'Get Started',
+                      style: TextStyle(
+                        color: Colors.white, // Set text color here
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "Poppins",
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             )
           ],
         ),

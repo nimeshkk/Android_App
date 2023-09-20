@@ -30,17 +30,17 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   @override
-  void launchFacebookPage() async {
-    const facebookPageUrl =
-        'https://www.facebook.com/nsbm.lk/'; //  Facebook page URL
-    if (await canLaunch(facebookPageUrl)) {
-      await launch(facebookPageUrl);
-    } else {
-      throw 'Could not launch $facebookPageUrl';
-    }
-  }
+  // void launchFacebookPage() async {
+  //   const facebookPageUrl =
+  //       'https://www.facebook.com/nsbm.lk/'; //  Facebook page URL
+  //   if (await canLaunch(facebookPageUrl)) {
+  //     await launch(facebookPageUrl);
+  //   } else {
+  //     throw 'Could not launch $facebookPageUrl';
+  //   }
+  // }
 
-  void launchInstaPage() async {
+  void launchgooglePage() async {
     const facebookPageUrl =
         'https://www.instagram.com/nsbmgreenuniversity/?hl=en'; //  insta page URL
     if (await canLaunch(facebookPageUrl)) {
@@ -50,15 +50,15 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  void launchTwitterPage() async {
-    const facebookPageUrl =
-        'https://twitter.com/i/flow/login?redirect_after_login=%2Fnsbm_srilanka'; //  twitter page URL
-    if (await canLaunch(facebookPageUrl)) {
-      await launch(facebookPageUrl);
-    } else {
-      throw 'Could not launch $facebookPageUrl';
-    }
-  }
+  // void launchTwitterPage() async {
+  //   const facebookPageUrl =
+  //       'https://twitter.com/i/flow/login?redirect_after_login=%2Fnsbm_srilanka'; //  twitter page URL
+  //   if (await canLaunch(facebookPageUrl)) {
+  //     await launch(facebookPageUrl);
+  //   } else {
+  //     throw 'Could not launch $facebookPageUrl';
+  //   }
+  // }
   bool _isPasswordVisible = false;
 
   Widget build(BuildContext context) {
@@ -263,81 +263,81 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 20,
+                horizontal: 10,
               ),
               child: Row(
                 children: [
+                  // Expanded(
+                  //   child: GestureDetector(
+                  //     onTap: () {
+                  //       // This function will be triggered when the Facebook icon is tapped
+                  //       launchFacebookPage(); // You need to implement this function
+                  //     },
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //         border: Border.all(
+                  //           color: const Color(0xFFE8ECF4),
+                  //         ),
+                  //         borderRadius: BorderRadius.circular(8),
+                  //       ),
+                  //       child: Padding(
+                  //         padding: const EdgeInsets.all(12.0),
+                  //         child: Image.asset(
+                  //           "assets/fb.png",
+                  //           height: 32,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  // const SizedBox(width: 10),
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
                         // This function will be triggered when the Facebook icon is tapped
-                        launchFacebookPage(); // You need to implement this function
+                        launchgooglePage(); // You need to implement this function
                       },
                       child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: const Color(0xFFE8ECF4),
-                          ),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
+                        // decoration: BoxDecoration(
+                        //   border: Border.all(
+                        //     color: const Color(0xFFE8ECF4),
+                        //   ),
+                        //   borderRadius: BorderRadius.circular(8),
+                        // ),
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: Image.asset(
-                            "assets/fb.png",
-                            height: 32,
+                            "assets/google.jpg",
+                            height: 50,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        // This function will be triggered when the Facebook icon is tapped
-                        launchInstaPage(); // You need to implement this function
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: const Color(0xFFE8ECF4),
-                          ),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Image.asset(
-                            "assets/insta.jpeg",
-                            height: 32,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        // This function will be triggered when the Facebook icon is tapped
-                        launchTwitterPage(); // You need to implement this function
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: const Color(0xFFE8ECF4),
-                          ),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Image.asset(
-                            "assets/twitter.png",
-                            height: 32,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  // const SizedBox(width: 10),
+                  // Expanded(
+                  //   child: GestureDetector(
+                  //     onTap: () {
+                  //       // This function will be triggered when the Facebook icon is tapped
+                  //       launchTwitterPage(); // You need to implement this function
+                  //     },
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //         border: Border.all(
+                  //           color: const Color(0xFFE8ECF4),
+                  //         ),
+                  //         borderRadius: BorderRadius.circular(8),
+                  //       ),
+                  //       child: Padding(
+                  //         padding: const EdgeInsets.all(12.0),
+                  //         child: Image.asset(
+                  //           "assets/twitter.png",
+                  //           height: 32,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),

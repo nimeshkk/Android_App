@@ -8,9 +8,9 @@ class FOSS extends StatelessWidget {
     return AppBar(
       
       leading: IconButton(
-        icon: Icon(Icons.arrow_back),
+       icon: Icon(Icons.arrow_back, color: Colors.black), 
         onPressed: () {
-          Navigator.of(context).pop(); 
+          Navigator.of(context).pop();
         },
       ),
       flexibleSpace: Stack(
@@ -31,6 +31,7 @@ class FOSS extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: PreferredSize(
         child: getAppBar(context),
         preferredSize: Size.fromHeight(200), 

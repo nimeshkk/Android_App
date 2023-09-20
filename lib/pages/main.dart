@@ -1,19 +1,12 @@
-import 'package:campus_connect_app/pages/about_us/aboutcontroller.dart';
-
-import 'package:campus_connect_app/pages/boarding_house/boardinghouse.dart';
-
-import 'package:campus_connect_app/pages/about_us/aboutuswelcome.dart';
-
 import 'package:campus_connect_app/pages/lostfound_items/lost_item_model.dart';
 import 'package:campus_connect_app/pages/boarding_house/boarding_house_model.dart';
+import 'package:campus_connect_app/pages/splash_screen/pagecontroller.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/event_item_model.dart';
 import 'package:provider/provider.dart';
-// import 'package:campus_connect_app/pages/splashscreen.dart';
-import 'package:campus_connect_app/pages/about_us/about01.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:campus_connect_app/screens/onboding/onboding_screen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -84,7 +77,7 @@ class MyApp extends StatelessWidget {
       ),
 
 
-      home: OnbodingScreen(),
+      home: WalkthroughScreen(),
 
     );
   }

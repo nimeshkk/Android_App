@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:table_calendar/table_calendar.dart'; // Import the table_calendar package
-
 import 'event_item_model.dart';
 import 'eventitem_input.dart';
 
@@ -52,19 +51,20 @@ class _eventItemDisplayScreenState extends State<eventItemDisplayScreen> {
         backgroundColor: Colors.white,
         title: Center(
           child: Text(
-            "Event Items",
+            "Events",
             style: TextStyle(
               fontWeight: FontWeight.w900,
-              fontSize: 30,
+              fontSize: 20,
               color: Color.fromARGB(255, 2, 76, 55),
             ),
           ),
         ),
+        iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Stack(
         children: [
           Image.asset(
-            'assets/eventnew.png',
+            'assets/eventnew.jpg',
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -223,7 +223,7 @@ class _eventItemDisplayScreenState extends State<eventItemDisplayScreen> {
             ),
           );
         },
-        backgroundColor: Color.fromARGB(223, 5, 119, 106),
+        backgroundColor: Color.fromARGB(223, 2, 151, 151),
         child: Icon(
           Icons.add,
           color: Colors.white,
