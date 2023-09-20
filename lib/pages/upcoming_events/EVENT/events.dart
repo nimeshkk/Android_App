@@ -38,7 +38,7 @@ class eventsitem extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              "assets/eventnew.png",
+              "assets/eventnew.jpg",
               height: MediaQuery.of(context).size.height * 0.53,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
