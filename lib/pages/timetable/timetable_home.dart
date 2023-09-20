@@ -1,4 +1,5 @@
 import 'package:campus_connect_app/pages/home2.dart';
+import 'package:campus_connect_app/pages/home_renting/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'Business.dart';
@@ -29,16 +30,17 @@ class Timetable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(
-          'Time Table',
+          "Time table",
           style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 30,
-            color: Color.fromARGB(255, 2, 76, 55),
-          ),
+              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Color.fromARGB(255, 2, 76, 55)),
         ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
+          color: black,
           onPressed: () {
             Navigator.push(
               context,
@@ -75,20 +77,17 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+// =======
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+// >>>>>>> main
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
-// =======
-//                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
-//                     minimumSize: Size(300, 50),
-//                     shape: RoundedRectangleBorder(
-// >>>>>>> main
                     borderRadius: BorderRadius.circular(15.0),
-                    side: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
-
+                    side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+                  textStyle: TextStyle(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -99,7 +98,6 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'COMPUTING',
                   style: TextStyle(
-
                       color: Colors.white,
 // =======
 //                       color: const Color.fromARGB(255, 255, 255, 255),
@@ -113,7 +111,6 @@ class Timetable extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
                   backgroundColor:
-
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
 // =======
 //                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
@@ -123,7 +120,8 @@ class Timetable extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15.0),
                     side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+                  textStyle: TextStyle(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -134,7 +132,6 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'BUSINESS',
                   style: TextStyle(
-
                       color: Colors.white,
 // =======
 //                       color: const Color.fromARGB(255, 255, 255, 255),
@@ -147,22 +144,18 @@ class Timetable extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 4,
-
                   backgroundColor:
                       Color.fromARGB(255, 2, 76, 55).withOpacity(0.8),
+// =======
+//                       Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
+// >>>>>>> main
                   minimumSize: Size(300, 50),
                   shape: RoundedRectangleBorder(
-// =======
-//                    backgroundColor:
-//                      Color.fromARGB(255, 2, 76, 55).withOpacity(1.0),
-//                     minimumSize: Size(300, 50),
-//                     shape: RoundedRectangleBorder(
-// >>>>>>> main
                     borderRadius: BorderRadius.circular(15.0),
-                    side: BorderSide(color: const Color.fromARGB(255, 255, 255, 255)),
-
+                    side: BorderSide(color: Colors.black),
                   ),
-                  textStyle: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+                  textStyle: TextStyle(
+                      color: const Color.fromARGB(255, 255, 255, 255)),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -173,7 +166,6 @@ class Timetable extends StatelessWidget {
                 child: Text(
                   'ENGINEERING',
                   style: TextStyle(
-
                       color: Colors.white,
 // =======
 //                       color: const Color.fromARGB(255, 255, 255, 255),
@@ -182,6 +174,7 @@ class Timetable extends StatelessWidget {
                       fontWeight: FontWeight.bold), // Set text color
                 ),
               ),
+              SizedBox(height: 20),
             ],
           ),
         ),

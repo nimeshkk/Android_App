@@ -2,6 +2,13 @@ import 'dart:async';
 import 'package:campus_connect_app/pages/about_us/aboutuswelcome.dart';
 import 'package:campus_connect_app/pages/gpa_pages/gpahome.dart';
 import 'package:campus_connect_app/pages/bus_schedule/buspage.dart';
+
+// import 'package:campus_connect_app/pages/home_renting/home_page.dart';
+import 'package:campus_connect_app/pages/home_renting/screens/home/home_screen.dart';
+import 'package:campus_connect_app/pages/timetable/time_Home.dart';
+
+import 'package:campus_connect_app/pages/upcoming_events/event_homepage.dart';
+
 import 'package:campus_connect_app/pages/boarding_house/boardinghouse.dart';
 import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
 import 'package:campus_connect_app/pages/upcoming_events/EVENT/events.dart';
@@ -187,7 +194,7 @@ class _Home2State extends State<Home2> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => Timetable(),
+                              builder: (_) => timetable_home(),
                             ),
                           );
                         }
