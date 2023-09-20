@@ -7,14 +7,12 @@ import 'components/animated_btn.dart';
 
 import 'package:campus_connect_app/pages/splash_screen/pagecontroller.dart';
 
-class OnbodingScreen extends StatefulWidget {
-  //const OnbodingScreen({super.key});
-
+class OnboardingScreen extends StatefulWidget {
   @override
-  State<OnbodingScreen> createState() => _OnbodingScreenState();
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
-class _OnbodingScreenState extends State<OnbodingScreen> {
+class _OnboardingScreenState extends State<OnboardingScreen> {
   late RiveAnimationController _btnAnimationController;
 
   bool isShowSignInDialog = false;
@@ -44,7 +42,9 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
           Positioned.fill(
             child: BackdropFilter(
               filter: ImageFilter.blur(
-                  sigmaX: 20, sigmaY: 20), // shading background image
+                sigmaX: 20,
+                sigmaY: 20,
+              ), // shading background image
               child: const SizedBox(),
             ),
           ),
@@ -72,7 +72,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                     SizedBox(
                       width: 260,
                       child: Column(
-                        children: const [
+                        children: [
                           Text(
                             "Make Your Uni Life Easy",
                             style: TextStyle(
@@ -83,56 +83,37 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                               height: 1.2,
                             ),
                           ),
-                          SizedBox(height: 16),
+                          Image.asset(
+                            "assets/on01.png",
+                            width: 300,
+                            height: 200,
+                          ),
+                          //SizedBox(height: 16),
                           Text(
                             "Uni Connect is a cutting-edge mobile application designed to enhance the university experience",
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                               fontFamily: "Poppins",
-                              //  height: 1.2,
+                              color: Color.fromARGB(255, 2, 77, 76),
                             ),
                           ),
                         ],
                       ),
                     ),
                     const Spacer(flex: 2),
-                    /*AnimatedBtn(
-                      btnAnimationController: _btnAnimationController,
-                      press: () {
-                        _btnAnimationController.isActive = true;
-    
-                        Future.delayed(
-                          const Duration(milliseconds: 800),
-                          () {
-                            setState(() {
-                              isShowSignInDialog = true;
-                            });
-                            Controller( // this is next go to walkthrough screen
-                                /* context,
-                              onValue: (_) {
-                                setState(() {
-                                  isShowSignInDialog = false;
-                                });
-                              },*/
-                                );
-                          },
-                        );
-                      },
-                    // ), */
-    
                     AnimatedBtn(
                       btnAnimationController: _btnAnimationController,
                       press: () {
                         _btnAnimationController.isActive = true;
-    
+
                         Future.delayed(
                           const Duration(milliseconds: 800),
                           () {
                             setState(() {
                               isShowSignInDialog = true;
                             });
-    
+
                             // Use Navigator to navigate to the Controller page
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) {
@@ -142,18 +123,6 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                           },
                         );
                       },
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 24),
-                      child: Text(
-                        " serves as a one-stop platform for students, providing features such as club exploration, housing options, academic schedules, and event tracking",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: "Poppins",
-                        ),
-                      ),
                     ),
                   ],
                 ),
