@@ -3,6 +3,7 @@ import 'package:campus_connect_app/pages/timetable/timetable_home.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart'; // Import the package
 
+//launch the updated links
 Future<void> _launchURL(String url) async {
   try {
     if (await canLaunch(url)) {
