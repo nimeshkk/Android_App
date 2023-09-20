@@ -52,10 +52,8 @@ dependencies:
   table_calendar: ^3.0.9
   image_picker: ^1.0.2
 
-
   another_carousel_pro: ^1.0.0
   liquid_progress_indicator: ^0.4.0
-
 
   # another_carousel_pro: ^1.0.0
   firebase_core: ^2.15.1
@@ -113,12 +111,9 @@ flutter:
     - assets/back.jpg
     - assets/praana02.png
 
-    
-    
-
-
     - assets/timee.png
     - assets/back01.png
+    - assets/timehome.png
 
     - assets/ctb.jpg
 
@@ -144,7 +139,6 @@ flutter:
     - assets/bus2.jpg
     - assets/ctb.png
 
-
     - assets/gpa9.png
     - assets/gpa10.png
     - assets/gpa11png.png
@@ -164,5 +158,3 @@ flutter:
     - assets/stemup2.png
     - assets/stemup3.jpg
     - assets/stemup4.jpg
-
-
