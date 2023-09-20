@@ -36,9 +36,11 @@ class _GpaPageState extends State<GpaPageforeign> {
           "Foreign GPA Calculator",
           style: TextStyle(
               fontWeight: FontWeight.w900,
-              fontSize: 30,
+              fontSize: 20,
               color: Color.fromARGB(255, 2, 76, 55)),
         ),
+        // Set the icon color to black
+        iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -90,31 +92,6 @@ class _GpaPageState extends State<GpaPageforeign> {
                 },
               ),
             ),
-            /*  ElevatedButton(
-              onPressed: () async {
-                final result = await Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GpaPage1()),
-                );
-                if (result != null) {
-                  setState(() {
-                    courses.add(result);
-                  });
-                }
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(223, 5, 119, 106),
-                fixedSize: const Size(
-                    300, 40),  // Set the width and height of the button
-              ),
-              child: const Text(
-                'Add Course',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 244, 241, 241),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500),
-              ),
-            ),*/
             MaterialButton(
               color: const Color.fromARGB(223, 5, 119, 106),
               shape: RoundedRectangleBorder(
@@ -146,47 +123,13 @@ class _GpaPageState extends State<GpaPageforeign> {
               height: 20,
             ),
             Container(
-                margin: EdgeInsets.only(
-                    bottom: 20), // Add top margin to adjust the position
-                child: MaterialButton(
-                  color: const Color.fromARGB(223, 5, 119, 106),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  onPressed: () {
-                    double gpa = calculateGpa(courses);
-                    String gpaMessage = getGpaMessage(gpa);
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return AlertDialog(
-                          title: const Text('GPA Result'),
-                          content: Text('Your GPA is: $gpa\n$gpaMessage'),
-                          actions: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              child: const Text('OK'),
-                            ),
-                          ],
-                        );
-                      },
-                    );
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: Text(
-                      'CALCULATE GPA',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 251, 248, 248),
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                )
-
-/* ElevatedButton(
+              margin: EdgeInsets.only(
+                  bottom: 20), // Add top margin to adjust the position
+              child: MaterialButton(
+                color: const Color.fromARGB(223, 5, 119, 106),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 onPressed: () {
                   double gpa = calculateGpa(courses);
                   String gpaMessage = getGpaMessage(gpa);
@@ -208,23 +151,22 @@ class _GpaPageState extends State<GpaPageforeign> {
                     },
                   );
                 },
-                style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(223, 5, 119, 106),
-                  fixedSize: const Size(
-                      300, 40), // Set the width and height of the button
+                child: const Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Text(
+                    'CALCULATE GPA',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 251, 248, 248),
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
-                child: const Text(
-                  'Calculate GPA',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 248, 245, 245),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                ),
-              ), */
-                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
