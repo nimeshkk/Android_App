@@ -24,6 +24,7 @@ class _GpaPage1State extends State<GpaPage1> {
               fontSize: 30,
               color: Color.fromARGB(255, 2, 76, 55)),
         ),
+        iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -37,7 +38,7 @@ class _GpaPage1State extends State<GpaPage1> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             const Padding(
               padding: EdgeInsets.all(16.0),
@@ -53,7 +54,7 @@ class _GpaPage1State extends State<GpaPage1> {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
             const Padding(
               padding: EdgeInsets.all(16.0),
@@ -68,11 +69,11 @@ class _GpaPage1State extends State<GpaPage1> {
                 textAlign: TextAlign.center,
               ),
             ),
-
+      
             // coures name
             Container(
-              width: 300, // Set the desired width
-              height: 50, // Set the desired height
+              width: 280, // Set the desired width
+              height: 40, // Set the desired height
               child: TextField(
                 onChanged: (value) {
                   setState(() {
@@ -85,9 +86,9 @@ class _GpaPage1State extends State<GpaPage1> {
                 ),
               ),
             ),
-
+      
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             const Padding(
               padding: EdgeInsets.all(16.0),
@@ -102,7 +103,7 @@ class _GpaPage1State extends State<GpaPage1> {
                 textAlign: TextAlign.center,
               ),
             ),
-
+      
             DropdownButton<String>(
               value: selectedGrade,
               onChanged: (newValue) {
@@ -119,7 +120,7 @@ class _GpaPage1State extends State<GpaPage1> {
                 },
               ).toList(),
             ),
-
+      
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
@@ -147,7 +148,7 @@ class _GpaPage1State extends State<GpaPage1> {
               label: selectedCredits.toString(),
             ),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             /*ElevatedButton(
               onPressed: () {
@@ -159,7 +160,7 @@ class _GpaPage1State extends State<GpaPage1> {
                 primary: Color.fromARGB(
                     223, 5, 119, 106), // Set your desired button color
                 minimumSize: const Size(120, 48),
-
+      
                 // Set the width and height of the button
               ),
               child: const Text(

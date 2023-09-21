@@ -36,6 +36,7 @@ class _EditCoursePageState extends State<EditCoursePage> {
               fontSize: 30,
               color: Color.fromARGB(255, 2, 76, 55)),
         ),
+        iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -97,7 +98,7 @@ class _EditCoursePageState extends State<EditCoursePage> {
               ),
               controller: TextEditingController(text: editedCredits.toString()),
             ),
-
+      
             SizedBox(
               height: 30,
             ),
@@ -114,7 +115,7 @@ class _EditCoursePageState extends State<EditCoursePage> {
                 primary: Color.fromARGB(
                     223, 5, 119, 106), // Set your desired button color
                 minimumSize: const Size(120, 48),
-
+      
                 // Set the width and height of the button
               ),
               child: const Text(

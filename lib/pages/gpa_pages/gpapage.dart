@@ -122,7 +122,7 @@ class _GpaPageState extends State<GpaPage> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 5,
             ),
             Container(
               margin: EdgeInsets.only(

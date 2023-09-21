@@ -22,7 +22,7 @@ class Gpahome extends StatelessWidget {
             //  fit: BoxFit.cover,
             // ),
             const SizedBox(height: 0),
-
+      
             GestureDetector(
               onTap: () {},
               child: const Text(
@@ -35,7 +35,7 @@ class Gpahome extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 50),
-
+      
             GestureDetector(
               onTap: () {},
               child: const Text(
