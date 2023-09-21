@@ -95,6 +95,7 @@ class LostItemDisplayScreen extends StatelessWidget {
                           fontSize: 30,
                           color: Color.fromARGB(255, 2, 76, 55)),
                     ),
+                    iconTheme: IconThemeData(color: Colors.black),
                   ),
                   body: ListView.builder(
                     itemCount: lostItems.length,

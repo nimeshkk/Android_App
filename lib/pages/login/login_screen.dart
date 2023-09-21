@@ -40,15 +40,15 @@ class _LoginScreenState extends State<LoginScreen> {
   //   }
   // }
 
-  void launchgooglePage() async {
-    const facebookPageUrl =
-        'https://www.instagram.com/nsbmgreenuniversity/?hl=en'; //  insta page URL
-    if (await canLaunch(facebookPageUrl)) {
-      await launch(facebookPageUrl);
-    } else {
-      throw 'Could not launch $facebookPageUrl';
-    }
-  }
+  // void launchgooglePage() async {
+  //   const facebookPageUrl =
+  //       'https://www.instagram.com/nsbmgreenuniversity/?hl=en'; //  insta page URL
+  //   if (await canLaunch(facebookPageUrl)) {
+  //     await launch(facebookPageUrl);
+  //   } else {
+  //     throw 'Could not launch $facebookPageUrl';
+  //   }
+  // }
 
   // void launchTwitterPage() async {
   //   const facebookPageUrl =
@@ -75,24 +75,24 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 20),
+            const SizedBox(height: 1),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.8,
+                width: MediaQuery.of(context).size.width * 0.7,
                 child: const Text(
                   "Welcome back! Glad to see you, Again!",
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 20,
                     fontWeight: FontWeight.w700,
                     color: Color.fromARGB(255, 2, 76, 55),
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 1),
             //email
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 10),
             //password
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -193,7 +193,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 1),
             //login button
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -231,7 +231,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
@@ -293,10 +293,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   // const SizedBox(width: 10),
                   Expanded(
                     child: GestureDetector(
-                      onTap: () {
-                        // This function will be triggered when the Facebook icon is tapped
-                        launchgooglePage(); // You need to implement this function
-                      },
+                      // onTap: () {
+                      //   // This function will be triggered when the Facebook icon is tapped
+                      //   launchgooglePage(); // You need to implement this function
+                      // },
                       child: Container(
                         // decoration: BoxDecoration(
                         //   border: Border.all(

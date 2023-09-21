@@ -78,64 +78,66 @@ class _BoardingHouseInputScreenState extends State<BoardingHouseInputScreen> {
                     // Set the icon color to black
                     iconTheme: IconThemeData(color: Colors.black),
                   ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              SizedBox(height: 25.0),
-              Text(
-                'Add your boarding house details clearly',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 2, 76, 55),
+        body:SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                SizedBox(height: 25.0),
+                Text(
+                  'Add your boarding house details clearly',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 2, 76, 55),
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 25.0),
-              TextField(
-                controller: locationController,
-                decoration: InputDecoration(labelText: 'Location'),
-              ),
-              TextField(
-                controller: descriptionController,
-                decoration: InputDecoration(labelText: 'Description'),
-              ),
-              TextField(
-                controller: contactNumberController,
-                decoration: InputDecoration(labelText: 'Contact Number'),
-                keyboardType: TextInputType.phone,
-              ),
-              SizedBox(height: 16.0),
-              MaterialButton(
-                color: const Color.fromARGB(223, 5, 119, 106),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                SizedBox(height: 25.0),
+                TextField(
+                  controller: locationController,
+                  decoration: InputDecoration(labelText: 'Location'),
                 ),
-                onPressed: () {
-                  saveBoardingHouse(context);
-                },
-                child: const Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
-                    "Save",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                TextField(
+                  controller: descriptionController,
+                  decoration: InputDecoration(labelText: 'Description'),
+                ),
+                TextField(
+                  controller: contactNumberController,
+                  decoration: InputDecoration(labelText: 'Contact Number'),
+                  keyboardType: TextInputType.phone,
+                ),
+                SizedBox(height: 16.0),
+                MaterialButton(
+                  color: const Color.fromARGB(223, 5, 119, 106),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  onPressed: () {
+                    saveBoardingHouse(context);
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: Text(
+                      "Save",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 8.0,
-              ),
-              Image.asset(
-                'assets/bhouse2.png',
-                width: 350,
-                height: 330,
-                fit: BoxFit.cover,
-              ),
-            ],
+                SizedBox(
+                  height: 8.0,
+                ),
+                Image.asset(
+                  'assets/bhouse2.png',
+                  width: 350,
+                  height: 330,
+                  fit: BoxFit.cover,
+                ),
+              ],
+            ),
           ),
         ),
       ),

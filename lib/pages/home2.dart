@@ -146,7 +146,7 @@ class _Home2State extends State<Home2> {
                     List<String> imagePaths = [
                       'assets/bus.png',
                       'assets/events2.png',
-                      'assets/Lost2.png',
+                      'assets/Lost&Foundimg.png',
                       'assets/accommodation.png',
                       'assets/community2.png',
                       'assets/timetable.png',
@@ -199,7 +199,7 @@ class _Home2State extends State<Home2> {
                           );
                         }
 
-                        if (imagePath == 'assets/Lost2.png') {
+                        if (imagePath == 'assets/Lost&Foundimg.png') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(

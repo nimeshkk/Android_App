@@ -25,6 +25,7 @@ class Page3 extends StatelessWidget {
 //               fontWeight: FontWeight.w900, fontSize: 24, color: Color.fromARGB(255, 0, 0, 0)),
 
         ),
+        iconTheme: IconThemeData(color: Colors.black),
         //actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
       ),
       body: SingleChildScrollView(

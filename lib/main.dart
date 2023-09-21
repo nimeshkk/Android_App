@@ -18,15 +18,13 @@ void main() async {
         projectId: "nsbmuniapp"),
   );
   runApp(
-    DevicePreview(
-      builder: (context) => MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (context) => LostItemModel()),
-          ChangeNotifierProvider(create: (context) => eventItemModel()),
-          ChangeNotifierProvider(create: (context) => BoardingHouseModel()),
-        ],
-        child: MyApp(),
-      ),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => LostItemModel()),
+        ChangeNotifierProvider(create: (context) => eventItemModel()),
+        ChangeNotifierProvider(create: (context) => BoardingHouseModel()),
+      ],
+      child: MyApp(),
     ),
   );
 
