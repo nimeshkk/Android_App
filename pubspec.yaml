@@ -66,6 +66,7 @@ dependencies:
   table_calendar: ^3.0.9
 
   rive: ^0.11.16
+  flutter_launcher_icons: ^0.13.1
 
 
 dev_dependencies:
@@ -218,5 +219,8 @@ flutter:
         - asset: assets/Fonts/Poppins-Bold.ttf
           weight: 700
 
-
-
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/ccicon.png"
+  min_sdk_android: 21
