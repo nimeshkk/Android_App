@@ -1,30 +1,31 @@
 # Campus Connect - Flutter App
 
 Campus Connect is a collaborative group project developed using Flutter, designed to assist students in obtaining information about events, clubs and community activities, locating lost and found items, accessing bus schedules, and calculating GPA. This app facilitates seamless communication and networking among students within a campus environment, helping them enhance their overall campus experience.
-<table>
+<table >
   <tr>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss1.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss2.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss3.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss4.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss5.jpg" width="110" height="180"/></td>
-    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss6.jpg" width="110" height="180"/></td>
-    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss7.jpg" width="110" height="180"/></td>
-    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss8.jpg" width="110" height="180"/></td>
-    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss9.jpg" width="110" height="180"/></td>
-   
+    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss6.jpg" width="110" height="180"/></td>   
   </tr>
   <tr>
+   <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss7.jpg" width="110" height="180"/></td>
+    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss8.jpg" width="110" height="180"/></td>
+    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss9.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss10.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss11.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss12.jpg" width="110" height="180"/></td>
+    
+  </tr>
+  <tr>    
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss13.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss14.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss15.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss16.jpg" width="110" height="180"/></td>
     <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss17.jpg" width="110" height="180"/></td>
-    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss18.jpg" width="110" height="180"/></td>
-    
+    <td><img src="https://github.com/nimeshkk/Android_App/blob/main/ssimg/ss18.jpg" width="110" height="180"/></td>    
   </tr>
 </table>
 
