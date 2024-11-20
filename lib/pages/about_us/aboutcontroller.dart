@@ -94,7 +94,7 @@ class _aboutthroughScreenState extends State<aboutthroughScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
+                        backgroundColor: Colors.white,
                       ), // Change the color here
                     ),
                   ),
@@ -116,7 +116,7 @@ class _aboutthroughScreenState extends State<aboutthroughScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
+                        backgroundColor: Colors.white,
                       ), // Change the color here
                     ),
                   ),

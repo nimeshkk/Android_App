@@ -99,7 +99,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
+                        backgroundColor: Colors.white,
                       ), // Change the color here
                     ),
                   ),
@@ -121,7 +121,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
+                        backgroundColor: Colors.white,
                       ), // Change the color here
                     ),
                   ),
@@ -265,7 +265,7 @@ class SliderThree extends StatelessWidget {
                    );
                   },
                       style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 4, 113, 140),
+                      backgroundColor: Color.fromARGB(255, 4, 113, 140),
                       minimumSize: Size(150, 50),
                     ),
                     child: Text(

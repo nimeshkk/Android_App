@@ -112,7 +112,7 @@ class _EditCoursePageState extends State<EditCoursePage> {
                 Navigator.pop(context, editedCourse);
               },
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(
+                backgroundColor: Color.fromARGB(
                     223, 5, 119, 106), // Set your desired button color
                 minimumSize: const Size(120, 48),
       

@@ -28,7 +28,7 @@ class AboutUsScreenthree extends StatelessWidget {
             child: Container(
               //  decoration:
               //  BoxDecoration(borderRadius: BorderRadius.circular(10)),
-              height: 300,
+              height: 400,
 
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
               decoration: BoxDecoration(

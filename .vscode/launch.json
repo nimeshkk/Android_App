@@ -10,7 +10,7 @@
             "name": "Android_App",
             "request": "launch",
             "type": "dart",
-            "program":"lib/pages/main.dart",
+            "program":"lib/main.dart",
         },
         {
             "name": "Android_App (profile mode)",

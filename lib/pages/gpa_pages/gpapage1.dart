@@ -180,7 +180,7 @@ class _GpaPage1State extends State<GpaPage1> {
                 Navigator.pop(context, course);
               },
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(223, 5, 119, 106),
+                backgroundColor: Color.fromARGB(223, 5, 119, 106),
                 minimumSize: const Size(120, 48),
               ),
               child: const Padding(
